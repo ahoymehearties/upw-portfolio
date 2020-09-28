@@ -1,4 +1,3 @@
-## Gatsby Blog
+## Cyrus on the Internet
 
-## Live version [here](https://another-gatsby-blog.netlify.app)
-
+### portfolio page
