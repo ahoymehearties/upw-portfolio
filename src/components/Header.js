@@ -11,20 +11,10 @@ const Header = () => {
 
   return (
     <header className="header shadow-md">
-      <nav className="flex items-center justify-between flex-wrap lg:px-0 p-6 max-w-screen-xl mx-auto">
+      <nav className="flex items-center justify-between flex-wrap  p-6 max-w-screen-xl mx-auto">
         <div className="flex items-center flex-shrink-0 mr-6">
           <Link to="/">
-            {/* <svg
-              className="fill-current h-8 w-8 mr-2"
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-            </svg> */}
             <div className="text-xl font-semibold">CYRUS ON THE INTERNET</div>
-
           </Link>
           <span className="font-semibold text-xl tracking-tight"></span>
         </div>
@@ -54,8 +44,8 @@ const Header = () => {
             <ul className="lg:flex lg:flex-row">
               <li>
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
-                  activeClassName="text-teal-600"
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  activeClassName="text-orange-600"
                   to="/"
                 >
                   Home
@@ -64,9 +54,9 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
-                  activeClassName="text-teal-600"
-                  to="/writing"
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  activeClassName="text-orange-600"
+                  to="/#writing"
                 >
                   Writing
                 </Link>
@@ -74,9 +64,9 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
-                  activeClassName="text-teal-600"
-                  to="/voice"
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  activeClassName="text-orange-600"
+                  to="/#voice"
                 >
                   Voice{" "}
                 </Link>
@@ -84,8 +74,8 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
-                  activeClassName="text-teal-600"
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  activeClassName="text-orange-600"
                   to="/blog"
                 >
                   Blog
@@ -95,9 +85,9 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
-                  activeClassName="text-teal-600"
-                  to="/contact"
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  activeClassName="text-orange-600"
+                  to="/#contact"
                 >
                   Contact
                 </Link>
