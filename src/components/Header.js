@@ -44,8 +44,8 @@ const Header = () => {
             <ul className="lg:flex lg:flex-row">
               <li>
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
-                  activeClassName="text-teal-600"
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  activeClassName="text-orange-600"
                   to="/"
                 >
                   Home
@@ -54,9 +54,9 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
-                  activeClassName="text-teal-600"
-                  to="/writing"
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  activeClassName="text-orange-600"
+                  to="/#writing"
                 >
                   Writing
                 </Link>
@@ -64,9 +64,9 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
-                  activeClassName="text-teal-600"
-                  to="/voice"
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  activeClassName="text-orange-600"
+                  to="/#voice"
                 >
                   Voice{" "}
                 </Link>
@@ -74,8 +74,8 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
-                  activeClassName="text-teal-600"
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  activeClassName="text-orange-600"
                   to="/blog"
                 >
                   Blog
@@ -85,9 +85,9 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
-                  activeClassName="text-teal-600"
-                  to="/contact"
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  activeClassName="text-orange-600"
+                  to="/#contact"
                 >
                   Contact
                 </Link>

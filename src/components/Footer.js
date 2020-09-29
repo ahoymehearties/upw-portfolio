@@ -12,7 +12,7 @@ const Footer = () => {
     }
   `)
   return (
-    <div className="footer rounded-t-md lg:py-2 lg:px-0 p-4 mt-12 flex justify-end">
+    <div className="footer rounded-t-md lg:py-2 lg:px-0 p-4 mt-12 flex justify-end bg-gray-200">
       <p className="pr-3">Created by {data.site.siteMetadata.author}, © 2020</p>
     </div>
   )
