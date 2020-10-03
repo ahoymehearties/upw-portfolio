@@ -145,7 +145,7 @@ const IndexPage = () => {
                 {/* item */}
                 {data.allContentfulWriting.edges.map(post => {
                   return (
-                    <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+                    <div key={post.node.slug} className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
                       <Link to={`/writing/${post.node.slug}`}>
                         <div
                           className="flex items-end justify-end h-56 w-full bg-cover"
@@ -195,7 +195,7 @@ const IndexPage = () => {
             width="100%"
             height="166"
             scrolling="no"
-            frameborder="no"
+            frameBorder="no"
             allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/233727591&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
           ></iframe>
