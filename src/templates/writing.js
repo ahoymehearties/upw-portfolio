@@ -37,7 +37,7 @@ const Writing = props => {
           {props.data.contentfulWriting.title}
         </h1>
       </div>
-      <div class="mx-0 sm:mx-6">
+      <div className="mx-0 sm:mx-6">
         {/* header */}
         <div
           className="w-full p-8 md:p-24 md:pt-2 text-xl md:text-2xl text-grey-darkest leading-normal"
