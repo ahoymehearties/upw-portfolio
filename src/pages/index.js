@@ -20,6 +20,21 @@ const IndexPage = () => {
           bio
         }
       }
+      allContentfulWriting(sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            slug
+            title
+            description
+            publishedDate(formatString: "DD MMMM, YYYY")
+            thumbnail {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
     }
   `)
 
@@ -123,127 +138,34 @@ const IndexPage = () => {
           <h2 className="text-center text-orange-600 text-4xl underline pb-4">
             WRITING
           </h2>
+
           <div className="flex -mx-4">
             <div className="w-screen px-4 mb-8 lg:mb-0">
               <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
                 {/* item */}
-                <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                  <div
-                    className="flex items-end justify-end h-56 w-full bg-cover"
-                    style={{
-                      backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                    }}
-                  ></div>
-                  <div className="px-5 py-3">
-                    <h3 className="text-gray-700 uppercase">
-                      Pyre Voice Acting
-                    </h3>
-                    <span className="text-gray-500 mt-2">Supergiant Games</span>
-                  </div>
-                </div>
-                {/* item */} {/* item */}
-                <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                  <div
-                    className="flex items-end justify-end h-56 w-full bg-cover"
-                    style={{
-                      backgroundImage: `url(https://i2.wp.com/www.earplay.com/wp-content/uploads/2018/06/JWbillboard-large-1.jpg?resize=1200%2C600&ssl=1)`,
-                    }}
-                  ></div>
-                  <div className="px-5 py-3">
-                    <h3 className="text-gray-700 uppercase">
-                      Jurasic World Revealed
-                    </h3>
-                    <span className="text-gray-500 mt-2">Supergiant Games</span>
-                  </div>
-                </div>
+                {data.allContentfulWriting.edges.map(post => {
+                  return (
+                    <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+                      <Link to={`/writing/${post.node.slug}`}>
+                        <div
+                          className="flex items-end justify-end h-56 w-full bg-cover"
+                          style={{
+                            backgroundImage: `url(${post.node.thumbnail.fluid.src})`,
+                          }}
+                        ></div>
+                      </Link>
+                      <div className="px-5 py-3">
+                        <h3 className="text-gray-700 uppercase">
+                          {post.node.title}
+                        </h3>
+                        <span className="text-gray-500 mt-2">
+                          {post.node.description && post.node.description}
+                        </span>
+                      </div>
+                    </div>
+                  )
+                })}
                 {/* item */}
-                <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                  <div
-                    className="flex items-end justify-end h-56 w-full bg-cover"
-                    style={{
-                      backgroundImage: `url(http://cyrusontheinternet.com/img/portfolio/kelvin.png)`,
-                    }}
-                  ></div>
-                  <div className="px-5 py-3">
-                    <h3 className="text-gray-700 uppercase">
-                      KELVIN AND THE INFAMOUS MACHINE
-                    </h3>
-                    <span className="text-gray-500 mt-2">Supergiant Games</span>
-                  </div>
-                </div>
-                {/* item */}
-                <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                  <div
-                    className="flex items-end justify-end h-56 w-full bg-cover"
-                    style={{
-                      backgroundImage: `url(https://pbs.twimg.com/profile_banners/115216851/1600357930/1500x500)`,
-                    }}
-                  ></div>
-                  <div className="px-5 py-3">
-                    <h3 className="text-gray-700 uppercase">Hades</h3>
-                    <span className="text-gray-500 mt-2">Supergiant Games</span>
-                  </div>
-                </div>
-                {/* item */}
-                <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                  <div
-                    className="flex items-end justify-end h-56 w-full bg-cover"
-                    style={{
-                      backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                    }}
-                  ></div>
-                  <div className="px-5 py-3">
-                    <h3 className="text-gray-700 uppercase">
-                      Pyre Voice Acting
-                    </h3>
-                    <span className="text-gray-500 mt-2">Supergiant Games</span>
-                  </div>
-                </div>
-                {/* item */}
-                <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                  <div
-                    className="flex items-end justify-end h-56 w-full bg-cover"
-                    style={{
-                      backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                    }}
-                  ></div>
-                  <div className="px-5 py-3">
-                    <h3 className="text-gray-700 uppercase">
-                      Pyre Voice Acting
-                    </h3>
-                    <span className="text-gray-500 mt-2">Supergiant Games</span>
-                  </div>
-                </div>
-                {/* item */}
-                <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                  <div
-                    className="flex items-end justify-end h-56 w-full bg-cover"
-                    style={{
-                      backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                    }}
-                  ></div>
-                  <div className="px-5 py-3">
-                    <h3 className="text-gray-700 uppercase">
-                      Pyre Voice Acting
-                    </h3>
-                    <span className="text-gray-500 mt-2">Supergiant Games</span>
-                  </div>
-                </div>
-                {/* item */}
-                <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                  <div
-                    className="flex items-end justify-end h-56 w-full bg-cover"
-                    style={{
-                      backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                    }}
-                  ></div>
-                  <div className="px-5 py-3">
-                    <h3 className="text-gray-700 uppercase">
-                      Pyre Voice Acting
-                    </h3>
-                    <span className="text-gray-500 mt-2">Supergiant Games</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
