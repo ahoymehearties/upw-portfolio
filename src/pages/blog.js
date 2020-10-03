@@ -7,17 +7,31 @@ import Head from "../components/Head"
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulWriting{
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
         edges {
           node {
+            id
             title
+            slug
+            publishedDate
+            featured
+            postBody {
+              childMarkdownRemark {
+                timeToRead
+                excerpt
+              }
+            }
+            thumbnail {
+              resize {
+                src
+              }
+            }
           }
         }
       }
     }
   `)
-console.log(data);
-console.log(data.allContentfulWriting.edges[0].node.title);
+  console.log(data)
 
   return (
     <div>
@@ -25,11 +39,10 @@ console.log(data.allContentfulWriting.edges[0].node.title);
         <Head title="Blog" />
         <main className="mt-12">
           <div className="flex mb-4 px-4 lg:px-0 justify-center">
-            <h2 className="font-bold text-3xl">All Posts</h2>
-            <h2>{data.allContentfulWriting.edges[0].node.title}</h2>
+            <h2 className="font-bold text-3xl">Blog</h2>
           </div>
           <div className="grid gap-2 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3 m-5 mb-10">
-            {/* {data.allContentfulBlogPost.edges.map(post => {
+            {data.allContentfulBlogPost.edges.map(post => {
               return (
                 <div key={post.node.slug} className="w-full mb-2 single-post">
                   <Link to={`/blog/${post.node.slug}`}>
@@ -47,9 +60,7 @@ console.log(data.allContentfulWriting.edges[0].node.title);
                           : post.node.title}
                       </h2>
                       <p className="mt-2">
-                        {post.node.postDescription
-                          ? post.node.postDescription.slice(0, 100) + "..."
-                          : ""}
+                        {post.node.postBody.childMarkdownRemark.excerpt}
                       </p>
                     </div>
 
@@ -63,7 +74,7 @@ console.log(data.allContentfulWriting.edges[0].node.title);
                   </div>
                 </div>
               )
-            })} */}
+            })}
           </div>
         </main>
       </Layout>

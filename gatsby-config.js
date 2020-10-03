@@ -29,18 +29,21 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    "gatsby-plugin-sharp",
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          "gatsby-remark-relative-images",
+          `gatsby-remark-responsive-iframe`,
           {
-            resolve: "gatsby-remark-images",
+            resolve: `gatsby-remark-images-contentful`,
             options: {
-              maxWidth: 750,
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+
               linkImagesToOriginal: false,
+              loading: "auto",
             },
           },
         ],

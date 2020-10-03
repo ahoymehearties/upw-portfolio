@@ -120,7 +120,9 @@ const IndexPage = () => {
         </section>
         {/* writing section */}
         <section id="writing" className="md:py-12 px-4">
-          <h2 className="text-center text-orange-600 text-4xl underline pb-4">WRITING</h2>
+          <h2 className="text-center text-orange-600 text-4xl underline pb-4">
+            WRITING
+          </h2>
           <div className="flex -mx-4">
             <div className="w-screen px-4 mb-8 lg:mb-0">
               <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
@@ -256,12 +258,13 @@ const IndexPage = () => {
           {/* embed */}
           <div className="videoWrapper">
             <iframe
+              title="voice showcase"
               width="1280"
               height="720"
               src="https://www.youtube.com/embed/C51iwauiseo"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           {/* embed */}
