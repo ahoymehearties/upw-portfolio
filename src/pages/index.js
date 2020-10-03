@@ -267,6 +267,38 @@ const IndexPage = () => {
               allowFullScreen
             ></iframe>
           </div>
+          {/* soundcloud */}
+          <iframe
+            title="soundcloud demo reel"
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/233727591&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          ></iframe>
+          <div className="soundcloudTest">
+            <a
+              href="https://soundcloud.com/thecyrusvoice"
+              title="TheCyrusVoice"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#cccccc", textDecoration: "none" }}
+            >
+              TheCyrusVoice
+            </a>{" "}
+            ·{" "}
+            <a
+              href="https://soundcloud.com/thecyrusvoice/games-demo-2015"
+              title="Games Demo 2015"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#cccccc", textDecoration: "none" }}
+            >
+              Games Demo 2015
+            </a>
+          </div>
+          {/* soundcloud */}
           {/* embed */}
           <div className="flex -mx-4">
             <div className="w-screen px-4 mb-8 lg:mb-0">
