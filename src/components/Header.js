@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className="header shadow-md">
-      <nav className="flex items-center justify-between flex-wrap  p-6 max-w-screen-xl mx-auto">
+      <nav className=" flex items-center justify-between flex-wrap  p-6 max-w-screen-xl mx-auto">
         <div className="flex items-center flex-shrink-0 mr-6">
           <Link to="/">
             <div className="text-xl font-semibold">CYRUS ON THE INTERNET</div>
