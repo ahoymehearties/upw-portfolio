@@ -67,7 +67,7 @@ const IndexPage = () => {
             </div>
             {/* About*/}
 
-            <div className="flex flex-col h-full p-8 bg-gray-200 rounded">
+            <div className="flex flex-col h-full p-8 bg-gray-200 rounded shadow-md">
               <div className="md:flex">
                 {/* avatar */}
                 <div className="w-48 h-48 mx-auto md:mx-0">
@@ -84,18 +84,18 @@ const IndexPage = () => {
                   <h2 className="text-5xl font-heading pb-2">
                     {data.contentfulAboutMe.name}
                   </h2>
-                  <h3 className="text-2xl font-heading ">
+                  <h3 className="text-2xl font-heading text-gray-900 ">
                     {data.contentfulAboutMe.whatIdo}
                   </h3>
                 </div>
               </div>
-              <p className="max-w mt-auto mb-2 text-gray-500 leading-relaxed">
+              <p className="max-w mt-auto mb-2 text-gray-700 leading-relaxed">
                 {data.contentfulAboutMe.bio.bio}
               </p>
               <Link
                 to="/#contact"
                 role="button"
-                className="text-center bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded"
+                className="text-center bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent hover:shadow-md rounded"
               >
                 Contact Me
               </Link>
@@ -123,7 +123,7 @@ const IndexPage = () => {
                   <h3 className="text-gray-700 uppercase">
                     Hades - Voice Acting
                   </h3>
-                  <span className="text-gray-500 mt-2">
+                  <span className="text-gray-600 mt-2">
                     Vocal Role(s): Ares, Dionysus, Theseus
                   </span>
                 </div>
@@ -139,7 +139,7 @@ const IndexPage = () => {
                 ></div>
                 <div className="px-5 py-3">
                   <h3 className="text-gray-700 uppercase">Pyre Voice Acting</h3>
-                  <span className="text-gray-500 mt-2">Supergiant Games</span>
+                  <span className="text-gray-600 mt-2">Supergiant Games</span>
                 </div>
               </div>
               {/* item side2*/}

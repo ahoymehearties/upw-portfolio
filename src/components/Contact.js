@@ -109,7 +109,7 @@ const Contact = () => {
 
           <p className="flex justify-center">
             <button
-              className="transition duration-500 ease-in-out w-screen shadow bg-orange-500 hover:bg-orange-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+              className="transition duration-500 ease-in-out w-screen shadow-sm bg-orange-500 hover:bg-orange-700 hover:shadow-lg focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
               type="submit"
             >
               Send
