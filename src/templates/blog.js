@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
+// import Layout from "../components/Layout"
 import Head from "../components/Head"
 
 export const query = graphql`
@@ -30,7 +30,7 @@ export const query = graphql`
 
 const Blog = props => {
   return (
-    <Layout>
+    <>
       <Head title={props.data.contentfulBlogPost.title} />
 
       <div className="text-center pt-12 md:pt-32">
@@ -69,7 +69,7 @@ const Blog = props => {
           <div className="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal"></div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 

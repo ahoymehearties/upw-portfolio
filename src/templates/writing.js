@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
 import Head from "../components/Head"
 
 export const query = graphql`
@@ -29,7 +28,7 @@ export const query = graphql`
 
 const Writing = props => {
   return (
-    <Layout>
+    <>
       <Head title={props.data.contentfulWriting.title} />
       {/* header */}
       <div className="text-center mt-12">
@@ -47,7 +46,7 @@ const Writing = props => {
           }}
         ></div>
       </div>
-    </Layout>
+    </>
   )
 }
 export default Writing

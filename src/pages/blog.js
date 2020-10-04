@@ -1,7 +1,8 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
-import Layout from "../components/Layout"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import Head from "../components/Head"
 
 const BlogPage = () => {
@@ -35,7 +36,7 @@ const BlogPage = () => {
 
   return (
     <div>
-      <Layout>
+      <>
         <Head title="Blog" />
         <main className="mt-12">
           <div className="flex mb-4 px-4 lg:px-0 justify-center">
@@ -45,13 +46,13 @@ const BlogPage = () => {
             {data.allContentfulBlogPost.edges.map(post => {
               return (
                 <div key={post.node.slug} className="w-full mb-2 single-post">
-                  <Link to={`/blog/${post.node.slug}`}>
+                  <AniLink cover to={`/blog/${post.node.slug}`}>
                     <img
                       src={post.node.thumbnail.resize.src}
                       className="object-cover h-64 lg:h-48 w-full  "
                       alt="technology"
                     />
-                  </Link>
+                  </AniLink>
                   <div className="lg:p-2 flex flex-col justify-between h-64">
                     <div>
                       <h2 className="font-bold text-2xl ">
@@ -64,20 +65,21 @@ const BlogPage = () => {
                       </p>
                     </div>
 
-                    <Link
+                    <AniLink
+                      cover
                       to={`/blog/${post.node.slug}`}
                       className="inline-block py-2"
                     >
                       {" "}
                       Read more ▶
-                    </Link>
+                    </AniLink>
                   </div>
                 </div>
               )
             })}
           </div>
         </main>
-      </Layout>
+      </>
     </div>
   )
 }
