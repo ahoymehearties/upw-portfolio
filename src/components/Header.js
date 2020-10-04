@@ -15,7 +15,7 @@ const Header = () => {
       <nav className="flex items-center justify-between flex-wrap  p-6 max-w-screen-xl mx-auto">
         <div className="flex items-center flex-shrink-0 mr-6">
           <Link to="/">
-            <div className="text-xl font-semibold">CYRUS ON THE INTERNET</div>
+            <div className="transition duration-500 hover:text-orange-500 text-xl font-semibold">CYRUS ON THE INTERNET</div>
           </Link>
           <span className="font-semibold text-xl tracking-tight"></span>
         </div>
@@ -47,7 +47,7 @@ const Header = () => {
                 <AniLink
                   cover
                   bg="#da5e0c"
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  className="transition duration-300 ease-in-out font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
                   activeClassName="text-orange-600"
                   to="/"
                 >
@@ -58,7 +58,7 @@ const Header = () => {
                 {" "}
                 <AniLink
                   cover
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  className="transition duration-300 ease-in-out font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
                   activeClassName="text-orange-600"
                   to="/#writing"
                 >
@@ -69,7 +69,7 @@ const Header = () => {
                 {" "}
                 <AniLink
                   cover
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  className="transition duration-300 font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
                   activeClassName="text-orange-600"
                   to="/#voice"
                 >
@@ -80,7 +80,7 @@ const Header = () => {
                 {" "}
                 <AniLink
                   cover
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  className="transition duration-300 font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
                   activeClassName="text-orange-600"
                   to="/blog"
                 >
@@ -92,7 +92,7 @@ const Header = () => {
                 {" "}
                 <AniLink
                   cover
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                  className="transition duration-300 font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
                   activeClassName="text-orange-600"
                   to="/#contact"
                 >

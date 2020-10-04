@@ -43,7 +43,7 @@ const Blog = props => {
         <div
           className="container w-full max-w-4xl mx-auto bg-white bg-cover mt-8 rounded"
           style={{
-            backgroundImage: `url(http://benjaminway.co.uk/wp-content/uploads/2019/05/cropped-header-image-5-1.jpg)`,
+            backgroundImage: `url(${props.data.contentfulBlogPost.headerImage.fluid.src} )`,
             height: "75vh",
           }}
         ></div>

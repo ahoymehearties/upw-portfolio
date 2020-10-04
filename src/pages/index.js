@@ -37,13 +37,28 @@ const IndexPage = () => {
           }
         }
       }
+      allContentfulVoice(sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            slug
+            title
+            description
+            publishedDate(formatString: "DD MMMM, YYYY")
+            thumbnail {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
     }
   `)
 
   return (
     <div>
       <Head title="Home" />
-      <section className="py-12 px-4">
+      <section className="py-16 px-4">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
             {/* About title*/}
@@ -133,7 +148,7 @@ const IndexPage = () => {
         </div>
       </section>
       {/* writing section */}
-      <section id="writing" className="md:py-12 px-4">
+      <section id="writing" className="md:pb-12 px-4">
         <h2 className="text-center text-orange-600 text-4xl underline pb-4">
           WRITING
         </h2>
@@ -174,13 +189,12 @@ const IndexPage = () => {
       </section>
       {/* writing section end*/}
       {/* voice section */}
-      <section id="voice" className="md:py-12 px-4">
+      <section id="voice" className="md:pb-12 px-4">
         <h2 className="text-center text-orange-600 text-4xl underline pb-4">
           VOICE
         </h2>
-
-        {/* embed */}
-        <div className="videoWrapper">
+        {/* embeds */}
+        <div className="videoWrapper mb-2">
           <iframe
             title="voice showcase"
             width="1280"
@@ -201,140 +215,40 @@ const IndexPage = () => {
           allow="autoplay"
           src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/233727591&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
         ></iframe>
-        <div className="soundcloudTest">
-          <a
-            href="https://soundcloud.com/thecyrusvoice"
-            title="TheCyrusVoice"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: "#cccccc", textDecoration: "none" }}
-          >
-            TheCyrusVoice
-          </a>{" "}
-          ·{" "}
-          <a
-            href="https://soundcloud.com/thecyrusvoice/games-demo-2015"
-            title="Games Demo 2015"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: "#cccccc", textDecoration: "none" }}
-          >
-            Games Demo 2015
-          </a>
-        </div>
+
         {/* soundcloud */}
         {/* embed */}
+
         <div className="flex -mx-4">
           <div className="w-screen px-4 mb-8 lg:mb-0">
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
               {/* item */}
-              <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div
-                  className="flex items-end justify-end h-56 w-full bg-cover"
-                  style={{
-                    backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                  }}
-                ></div>
-                <div className="px-5 py-3">
-                  <h3 className="text-gray-700 uppercase">Pyre Voice Acting</h3>
-                  <span className="text-gray-500 mt-2">Supergiant Games</span>
-                </div>
-              </div>
-              {/* item */} {/* item */}
-              <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div
-                  className="flex items-end justify-end h-56 w-full bg-cover"
-                  style={{
-                    backgroundImage: `url(https://i2.wp.com/www.earplay.com/wp-content/uploads/2018/06/JWbillboard-large-1.jpg?resize=1200%2C600&ssl=1)`,
-                  }}
-                ></div>
-                <div className="px-5 py-3">
-                  <h3 className="text-gray-700 uppercase">
-                    Jurasic World Revealed
-                  </h3>
-                  <span className="text-gray-500 mt-2">Supergiant Games</span>
-                </div>
-              </div>
+              {data.allContentfulVoice.edges.map(post => {
+                return (
+                  <div
+                    key={post.node.slug}
+                    className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+                  >
+                    <AniLink cover to={`/voice/${post.node.slug}`}>
+                      <div
+                        className="flex items-end justify-end h-56 w-full bg-cover"
+                        style={{
+                          backgroundImage: `url(${post.node.thumbnail.fluid.src})`,
+                        }}
+                      ></div>
+                    </AniLink>
+                    <div className="px-5 py-3">
+                      <h3 className="text-gray-700 uppercase">
+                        {post.node.title}
+                      </h3>
+                      <span className="text-gray-500 mt-2">
+                        {post.node.description && post.node.description}
+                      </span>
+                    </div>
+                  </div>
+                )
+              })}
               {/* item */}
-              <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div
-                  className="flex items-end justify-end h-56 w-full bg-cover"
-                  style={{
-                    backgroundImage: `url(http://cyrusontheinternet.com/img/portfolio/kelvin.png)`,
-                  }}
-                ></div>
-                <div className="px-5 py-3">
-                  <h3 className="text-gray-700 uppercase">
-                    KELVIN AND THE INFAMOUS MACHINE
-                  </h3>
-                  <span className="text-gray-500 mt-2">Supergiant Games</span>
-                </div>
-              </div>
-              {/* item */}
-              <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div
-                  className="flex items-end justify-end h-56 w-full bg-cover"
-                  style={{
-                    backgroundImage: `url(https://pbs.twimg.com/profile_banners/115216851/1600357930/1500x500)`,
-                  }}
-                ></div>
-                <div className="px-5 py-3">
-                  <h3 className="text-gray-700 uppercase">Hades</h3>
-                  <span className="text-gray-500 mt-2">Supergiant Games</span>
-                </div>
-              </div>
-              {/* item */}
-              <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div
-                  className="flex items-end justify-end h-56 w-full bg-cover"
-                  style={{
-                    backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                  }}
-                ></div>
-                <div className="px-5 py-3">
-                  <h3 className="text-gray-700 uppercase">Pyre Voice Acting</h3>
-                  <span className="text-gray-500 mt-2">Supergiant Games</span>
-                </div>
-              </div>
-              {/* item */}
-              <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div
-                  className="flex items-end justify-end h-56 w-full bg-cover"
-                  style={{
-                    backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                  }}
-                ></div>
-                <div className="px-5 py-3">
-                  <h3 className="text-gray-700 uppercase">Pyre Voice Acting</h3>
-                  <span className="text-gray-500 mt-2">Supergiant Games</span>
-                </div>
-              </div>
-              {/* item */}
-              <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div
-                  className="flex items-end justify-end h-56 w-full bg-cover"
-                  style={{
-                    backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                  }}
-                ></div>
-                <div className="px-5 py-3">
-                  <h3 className="text-gray-700 uppercase">Pyre Voice Acting</h3>
-                  <span className="text-gray-500 mt-2">Supergiant Games</span>
-                </div>
-              </div>
-              {/* item */}
-              <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div
-                  className="flex items-end justify-end h-56 w-full bg-cover"
-                  style={{
-                    backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                  }}
-                ></div>
-                <div className="px-5 py-3">
-                  <h3 className="text-gray-700 uppercase">Pyre Voice Acting</h3>
-                  <span className="text-gray-500 mt-2">Supergiant Games</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

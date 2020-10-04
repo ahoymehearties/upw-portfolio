@@ -35,7 +35,7 @@ const Contact = () => {
       </h1>
       <div className="flex flex-wrap mx-3 mb-6 justify-center">
         <form
-          className="w-full max-w-lg"
+          className="w-full max-w-3xl"
           name="contact"
           method="post"
           action="/thanks/"
@@ -109,7 +109,7 @@ const Contact = () => {
 
           <p className="flex justify-center">
             <button
-              className="w-screen shadow bg-orange-700 hover:bg-orange-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+              className="transition duration-500 ease-in-out w-screen shadow bg-orange-500 hover:bg-orange-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
               type="submit"
             >
               Send
