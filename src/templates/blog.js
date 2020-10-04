@@ -33,18 +33,23 @@ const Blog = props => {
     <>
       <Head title={props.data.contentfulBlogPost.title} />
 
-      <div className="text-center pt-12 md:pt-32">
+      <div className="text-center pt-12">
         <p className="text-sm md:text-base text-teal-500 font-bold uppercase">
           {props.data.contentfulBlogPost.publishedDate}{" "}
         </p>
         <h1 className="font-bold break-normal text-3xl md:text-5xl">
           {props.data.contentfulBlogPost.title}
         </h1>
+
         <div
-          className="container w-full max-w-4xl mx-auto bg-white bg-cover mt-8 rounded"
+          className="container w-full mx-auto mt-1 bg-white bg-cover max-w-screen-xl"
           style={{
+            height: "40vh",
             backgroundImage: `url(${props.data.contentfulBlogPost.headerImage.fluid.src} )`,
-            height: "75vh",
+            backgroundPosition: "center 40%",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            width: "100%",
           }}
         ></div>
       </div>

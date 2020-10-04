@@ -64,7 +64,7 @@ const Footer = () => {
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
                 <div className="w-full lg:w-4/12 px-4 ml-auto"></div>
-                <div className="w-full lg:w-4/12 lg:px-4 text-center">
+                <div className="w-full lg:w-4/12 lg:px-4 pt-4">
                   <ul className="list-unstyled">
                     <li></li>
                     <li>

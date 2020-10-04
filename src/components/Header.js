@@ -11,7 +11,7 @@ const Header = () => {
   }
 
   return (
-    <header className="header shadow-md">
+    <header className="header shadow-md z-10">
       <nav className="flex items-center justify-between flex-wrap  p-6 max-w-screen-xl mx-auto">
         <div className="flex items-center flex-shrink-0 mr-6">
           <Link to="/">
