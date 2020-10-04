@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+import Link from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 // import DarkModeToggle from "../components/DarkModeToggle"
 const Header = () => {
@@ -11,7 +12,7 @@ const Header = () => {
 
   return (
     <header className="header shadow-md">
-      <nav className=" flex items-center justify-between flex-wrap  p-6 max-w-screen-xl mx-auto">
+      <nav className="flex items-center justify-between flex-wrap  p-6 max-w-screen-xl mx-auto">
         <div className="flex items-center flex-shrink-0 mr-6">
           <Link to="/">
             <div className="text-xl font-semibold">CYRUS ON THE INTERNET</div>
@@ -43,54 +44,60 @@ const Header = () => {
           <div className="text-sm lg:flex-grow">
             <ul className="lg:flex lg:flex-row">
               <li>
-                <Link
+                <AniLink
+                  cover
+                  bg="#da5e0c"
                   className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
                   activeClassName="text-orange-600"
                   to="/"
                 >
                   Home
-                </Link>
+                </AniLink>
               </li>
               <li>
                 {" "}
-                <Link
+                <AniLink
+                  cover
                   className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
                   activeClassName="text-orange-600"
                   to="/#writing"
                 >
                   Writing
-                </Link>
+                </AniLink>
               </li>
               <li>
                 {" "}
-                <Link
+                <AniLink
+                  cover
                   className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
                   activeClassName="text-orange-600"
                   to="/#voice"
                 >
                   Voice{" "}
-                </Link>
+                </AniLink>
               </li>
               <li>
                 {" "}
-                <Link
+                <AniLink
+                  cover
                   className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
                   activeClassName="text-orange-600"
                   to="/blog"
                 >
                   Blog
-                </Link>
+                </AniLink>
               </li>
 
               <li>
                 {" "}
-                <Link
+                <AniLink
+                  cover
                   className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
                   activeClassName="text-orange-600"
                   to="/#contact"
                 >
                   Contact
-                </Link>
+                </AniLink>
               </li>
               <li> {/* <DarkModeToggle /> */}</li>
             </ul>

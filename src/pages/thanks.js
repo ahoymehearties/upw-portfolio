@@ -1,18 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/Layout"
+
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import Head from "../components/Head"
 
 const Thanks = () => {
   return (
-    <Layout>
+    <>
       <Head title="404" />
       <main className="mt-12 text-center">
         <div>
           <h2 className="text-2xl">Message sent, you'll hear from us soon!</h2>
-          <Link to="/">
+          <AniLink cover to="/">
             <h3 className="pt-4 font-semibold underline">Go Back!</h3>
-          </Link>
+          </AniLink>
         </div>
         <div className="p-16 lg:p-0">
           <svg
@@ -218,7 +219,7 @@ const Thanks = () => {
           </svg>
         </div>
       </main>
-    </Layout>
+    </>
   )
 }
 
