@@ -43,7 +43,7 @@ module.exports = {
               // base for generating different widths of each image.
               withWebp: true,
               linkImagesToOriginal: false,
-              loading: "auto",
+              loading: "lazy",
             },
           },
         ],

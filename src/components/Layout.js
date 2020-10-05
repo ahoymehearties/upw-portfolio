@@ -8,11 +8,14 @@ if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
   require("smooth-scroll")('a[href*="#"]')
 }
-const layout = ({children}) => {
+const layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div className="max-w-screen-xl mx-auto flex flex-col min-h-screen py-12">
+      <div
+        id="home"
+        className="max-w-screen-xl mx-auto flex flex-col min-h-screen pt-24 pb-6"
+      >
         <div className="flex-grow">{children}</div>
       </div>
       <Footer />

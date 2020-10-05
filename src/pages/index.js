@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Link from "gatsby-plugin-transition-link"
 
 import Head from "../components/Head"
 import Contact from "../components/Contact"
-
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import Link from "gatsby-plugin-transition-link"
+import HeadingTitle from "../components/HeadingTitle"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -58,15 +58,13 @@ const IndexPage = () => {
   return (
     <div>
       <Head title="Home" />
-      <section id="home" className="py-16 px-4">
+      <section className="px-4 mb-32">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-            {/* About title*/}
-            <div className="text-left">
-              <h3>About Me:</h3>
-            </div>
             {/* About*/}
-
+            <div className="text-white text-center mb-4 lg:m-0 pb-10">
+              {/* <h3>About</h3> */}
+            </div>
             <div className="flex flex-col h-full p-8 bg-gray-200 rounded shadow-md">
               <div className="md:flex">
                 {/* avatar */}
@@ -105,8 +103,8 @@ const IndexPage = () => {
           {/* featured container */}
           <div className="w-full lg:w-1/2 px-4 mt-8 lg:m-0">
             {/* Featured title*/}
-            <div className="text-center mt-6 mb-4 lg:m-0">
-              <h3>Featured:</h3>
+            <div className="text-center mt-6 mb-4 lg:m-0 pb-1">
+              <h3>Featured</h3>
             </div>
 
             {/* Featured title*/}
@@ -148,11 +146,8 @@ const IndexPage = () => {
         </div>
       </section>
       {/* writing section */}
-      <section id="writing" className="md:pb-12 px-4">
-        <h2 className="text-center text-orange-600 text-4xl underline pb-4">
-          WRITING
-        </h2>
-
+      <section id="writing" className="md:mt-16">
+        <HeadingTitle title="writing" />
         <div className="flex -mx-4">
           <div className="w-screen px-4 mb-8 lg:mb-0">
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
@@ -189,10 +184,8 @@ const IndexPage = () => {
       </section>
       {/* writing section end*/}
       {/* voice section */}
-      <section id="voice" className="md:pb-12 px-4">
-        <h2 className="text-center text-orange-600 text-4xl underline pb-4">
-          VOICE
-        </h2>
+      <section id="voice" className="md:mt-16 px-4">
+        <HeadingTitle title="voice" />
         {/* embeds */}
         <div className="videoWrapper mb-2">
           <iframe
