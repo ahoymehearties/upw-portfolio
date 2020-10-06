@@ -58,13 +58,9 @@ const IndexPage = () => {
   return (
     <div>
       <Head title="Home" />
-      <section className="px-4 mb-32">
+      <section className="px-4 mt-6 -mb-6">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-            {/* About*/}
-            <div className="text-white text-center mb-4 lg:m-0 pb-10">
-              {/* <h3>About</h3> */}
-            </div>
             <div className="flex flex-col h-full p-8 bg-gray-200 rounded shadow-md">
               <div className="md:flex">
                 {/* avatar */}
@@ -102,14 +98,14 @@ const IndexPage = () => {
 
           {/* featured container */}
           <div className="w-full lg:w-1/2 px-4 mt-8 lg:m-0">
-            {/* Featured title*/}
-            <div className="text-center mt-6 mb-4 lg:m-0 pb-1">
-              <h3>Featured</h3>
-            </div>
-
-            {/* Featured title*/}
-            <div className="flex flex-wrap lg:h-full">
+            <div className="flex flex-wrap lg:h-full justify-center">
               {/* item side1*/}
+              <div>
+                <h3 className="uppercase font-semibold italic text-2xl">
+                  Featured
+                </h3>
+              </div>
+
               <div className="w-full rounded-md shadow-md overflow-hidden mx-4 mb-8 lg:mb-auto">
                 <div
                   className="flex items-end justify-end h-56 w-full bg-cover"
@@ -146,8 +142,8 @@ const IndexPage = () => {
         </div>
       </section>
       {/* writing section */}
-      <section id="writing" className="md:mt-16">
-        <HeadingTitle title="writing" />
+      <HeadingTitle id="writing" title="writing" />
+      <section className="-my-8">
         <div className="flex -mx-4">
           <div className="w-screen px-4 mb-8 lg:mb-0">
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
@@ -184,8 +180,8 @@ const IndexPage = () => {
       </section>
       {/* writing section end*/}
       {/* voice section */}
-      <section id="voice" className="md:mt-16 px-4">
-        <HeadingTitle title="voice" />
+      <HeadingTitle id="voice" title="voice" />
+      <section id="voice" className="px-4 -my-6">
         {/* embeds */}
         <div className="videoWrapper mb-2">
           <iframe

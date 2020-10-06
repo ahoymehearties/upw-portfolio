@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { navigate } from "gatsby-link"
 
+// import HeadingTitle from './HeadingTitle'
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -29,10 +31,11 @@ const Contact = () => {
       .catch(error => alert(error))
   }
   return (
-    <section id="contact" className="mt-12">
-      <h1 className="text-center text-orange-600 text-4xl underline pb-4">
+    <section id="contact" className="mt-20">
+      <h1 className="text-center text-orange-600 text-4xl font-semibold underline pb-4">
         CONTACT ME
       </h1>
+      {/* <HeadingTitle id="contact" title="contact" /> */}
       <div className="flex flex-wrap mx-3 mb-6 justify-center">
         <form
           className="w-full max-w-3xl"

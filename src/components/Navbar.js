@@ -43,7 +43,7 @@ const Header = () => {
             }
           >
             <div className="text-sm lg:flex-grow">
-              <ul className="lg:flex lg:flex-row">
+              <ul className="lg:flex lg:flex-row ">
                 <li>
                   <AniLink
                     onClick={mobileMenuHandler}
