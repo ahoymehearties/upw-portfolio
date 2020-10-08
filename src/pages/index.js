@@ -92,7 +92,6 @@ const IndexPage = () => {
   data.allContentfulWriting.edges.forEach(featured => {
     featured.node.featured && featuredPosts.push(featured.node)
   })
-  console.log("featured: ", featuredPosts)
 
   return (
     <div>
@@ -146,7 +145,7 @@ const IndexPage = () => {
               </div>
               {/* featured*/}
               {featuredPosts.slice("0", "2").map((featured, index) => {
-                var cls = (index === 0) ? 'mb-8' : '';
+                var cls = index === 0 ? "mb-8" : ""
                 return (
                   <div
                     key={featured.slug}
@@ -181,7 +180,7 @@ const IndexPage = () => {
       </section>
       {/* writing section */}
       <HeadingTitle id="writing" title="writing" />
-      <section className="-my-8">
+      <section className="px-4 -my-8">
         <div className="flex -mx-4">
           <div className="w-screen px-4 mb-8 lg:mb-0">
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
@@ -219,7 +218,7 @@ const IndexPage = () => {
       {/* writing section end*/}
       {/* voice section */}
       <HeadingTitle id="voice" title="voice" />
-      <section id="voice" className="px-4 -my-6">
+      <section className="px-4 -my-6">
         {/* embeds */}
         <div className="videoWrapper mb-2">
           <iframe
