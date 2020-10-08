@@ -39,7 +39,7 @@ const Writing = props => {
       <div className="mx-0 sm:mx-6">
         {/* header */}
         <div
-          className="w-full p-8 md:p-24 md:pt-2 text-xl md:text-2xl text-grey-darkest leading-normal"
+          className="mx-6 md:mx-auto max-w-screen-lg my-10"
           style={{ fontFamily: `Georgia,serif` }}
           dangerouslySetInnerHTML={{
             __html: props.data.contentfulWriting.body.childMarkdownRemark.html,

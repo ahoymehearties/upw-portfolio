@@ -36,6 +36,29 @@ const Voice = props => {
   return (
     <>
       <Head title={props.data.contentfulVoice.title} />
+      {/* banner */}
+      {/* <div
+        className="bg-cover bg-center h-auto text-white py-24 px-10 object-fit flex bg-gradient-to-r from-black"
+        style={{
+          background: `linear-gradient: (90deg, rgba(246,246,246,0.7063200280112045) 0%, rgba(0,0,0,0.5298494397759104) 51%, rgba(5,5,5,1) 100%), url(${props.data.contentfulVoice.thumbnail.fluid.src}) `,
+        }}
+      >
+        <div className="w-1/2"></div>
+        <div className="md:w-1/2">
+          <p className="font-bold text-sm uppercase">Services</p>
+          <p className="text-3xl font-bold">Multimedia products</p>
+          <p className="text-2xl mb-10 leading-none">
+            Atractive designs for your brand!
+          </p>
+          <a
+            href="#"
+            className="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800"
+          >
+            Contact us
+          </a>
+        </div>
+      </div> */}
+      {/* banner */}
       <div className="md:flex shadow-lg mx-6 md:mx-auto max-w-screen-lg my-10 h-auto">
         <img
           className="h-full w-full md:w-1/2 object-cover md:rounded-lg rounded-r-none pb-5/6"
@@ -44,9 +67,11 @@ const Voice = props => {
         />
         <div className="w-full md:w-1/2 md:pl-10 p-4 pt-2 bg-orange-100 rounded-lg flex items-center">
           <div>
-            <div className="text-gray-800 text-6xl font-semibold uppercase">
+            <div className="pb-4">
               {/* <span className="text-gray-800 text-3xl font-semibold">Title: </span> */}
-              {props.data.contentfulVoice.title}
+              <h2 className="text-gray-800 text-4xl font-semibold uppercase underline">
+                {props.data.contentfulVoice.title}
+              </h2>
             </div>
             <div className="text-xl pb-2">
               <span className="font-semibold">Position: </span>
@@ -77,7 +102,7 @@ const Voice = props => {
         </div>
       </div>
       <div
-        className="w-full p-8 md:p-24 md:pt-2 text-xl md:text-2xl text-grey-darkest leading-normal"
+        className="mx-6 md:mx-auto max-w-screen-lg my-10"
         style={{ fontFamily: `Georgia,serif` }}
         dangerouslySetInnerHTML={{
           __html: props.data.contentfulVoice.body.childMarkdownRemark.html,
