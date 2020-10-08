@@ -28,6 +28,8 @@ const IndexPage = () => {
             slug
             title
             description
+            featured
+            category
             publishedDate(formatString: "DD MMMM, YYYY")
             thumbnail {
               fluid {
@@ -43,7 +45,32 @@ const IndexPage = () => {
             slug
             title
             description
+            featured
+            category
             publishedDate(formatString: "DD MMMM, YYYY")
+            thumbnail {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            slug
+            title
+            featured
+            description
+            category
+            publishedDate(formatString: "DD MMMM, YYYY")
+            postBody {
+              childMarkdownRemark {
+                timeToRead
+                excerpt
+              }
+            }
             thumbnail {
               fluid {
                 src
@@ -54,6 +81,18 @@ const IndexPage = () => {
       }
     }
   `)
+
+  const featuredPosts = []
+  data.allContentfulVoice.edges.forEach(featured => {
+    featured.node.featured && featuredPosts.push(featured.node)
+  })
+  data.allContentfulBlogPost.edges.forEach(featured => {
+    featured.node.featured && featuredPosts.push(featured.node)
+  })
+  data.allContentfulWriting.edges.forEach(featured => {
+    featured.node.featured && featuredPosts.push(featured.node)
+  })
+  console.log("featured: ", featuredPosts)
 
   return (
     <div>
@@ -105,38 +144,37 @@ const IndexPage = () => {
                   Featured
                 </h3>
               </div>
-
-              <div className="w-full rounded-md shadow-md overflow-hidden mx-4 mb-8 lg:mb-auto">
-                <div
-                  className="flex items-end justify-end h-56 w-full bg-cover"
-                  style={{
-                    backgroundImage: `url(https://pbs.twimg.com/profile_banners/115216851/1600357930/1500x500)`,
-                  }}
-                ></div>
-                <div className="px-5 py-3">
-                  <h3 className="text-gray-700 uppercase">
-                    Hades - Voice Acting
-                  </h3>
-                  <span className="text-gray-600 mt-2">
-                    Vocal Role(s): Ares, Dionysus, Theseus
-                  </span>
-                </div>
-              </div>
-              {/* item side1*/}
-              {/* item side2*/}
-              <div className="w-full rounded-md shadow-md overflow-hidden mx-4">
-                <div
-                  className="flex items-end justify-end h-56 w-full bg-cover"
-                  style={{
-                    backgroundImage: `url(https://images.ctfassets.net/5owu3y35gz1g/7Kvhe2mHksgq4Su6kuY2oK/71902d1f38828cc3da069617bb86c0cf/Pyre_Wallpaper_01.jpg?w=1920&q=80)`,
-                  }}
-                ></div>
-                <div className="px-5 py-3">
-                  <h3 className="text-gray-700 uppercase">Pyre Voice Acting</h3>
-                  <span className="text-gray-600 mt-2">Supergiant Games</span>
-                </div>
-              </div>
-              {/* item side2*/}
+              {/* featured*/}
+              {featuredPosts.slice("0", "2").map((featured, index) => {
+                var cls = (index === 0) ? 'mb-8' : '';
+                return (
+                  <div
+                    key={featured.slug}
+                    className={`w-full rounded-md shadow-md overflow-hidden mx-4 ${cls}`}
+                  >
+                    <AniLink
+                      cover
+                      to={`/${featured.category}/${featured.slug}`}
+                    >
+                      <div
+                        className="flex items-end justify-end h-56 w-full bg-cover"
+                        style={{
+                          backgroundImage: `url(${featured.thumbnail.fluid.src})`,
+                        }}
+                      ></div>
+                      <div className="px-5 py-3">
+                        <h3 className="text-gray-700 uppercase">
+                          {featured.title}
+                        </h3>
+                        <span className="text-gray-600 mt-2">
+                          {featured.description}
+                        </span>
+                      </div>
+                    </AniLink>
+                  </div>
+                )
+              })}
+              {/* featured*/}
             </div>
           </div>
         </div>

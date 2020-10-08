@@ -23,7 +23,7 @@ const BlogPage = () => {
               }
             }
             thumbnail {
-              resize {
+              fluid {
                 src
               }
             }
@@ -48,7 +48,7 @@ const BlogPage = () => {
                 <div key={post.node.slug} className="w-full mb-2 single-post">
                   <AniLink cover to={`/blog/${post.node.slug}`}>
                     <img
-                      src={post.node.thumbnail.resize.src}
+                      src={post.node.thumbnail.fluid.src}
                       className="object-cover h-64 lg:h-48 w-full  "
                       alt="technology"
                     />
