@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Cyrus on the Internet`,
-    description: `Portfolio`,
+    description: `Portfolio of Cyrus Nemati`,
+    url: "https://cyrusontheinternet.com",
+    twitterUsername: "@ahoymehearties",
     author: `Edin Džabija`,
   },
   plugins: [
