@@ -23,7 +23,7 @@ const BlogPage = () => {
               }
             }
             thumbnail {
-              fluid {
+              fluid{
                 src
               }
             }

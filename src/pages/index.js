@@ -32,7 +32,7 @@ const IndexPage = () => {
             category
             publishedDate(formatString: "DD MMMM, YYYY")
             thumbnail {
-              fluid {
+              fluid(maxWidth: 1024, quality:100) {
                 src
               }
             }
@@ -49,7 +49,7 @@ const IndexPage = () => {
             category
             publishedDate(formatString: "DD MMMM, YYYY")
             thumbnail {
-              fluid {
+              fluid(maxWidth: 1024, quality:100) {
                 src
               }
             }
@@ -72,7 +72,7 @@ const IndexPage = () => {
               }
             }
             thumbnail {
-              fluid {
+              fluid(maxWidth: 1024, quality:100) {
                 src
               }
             }
