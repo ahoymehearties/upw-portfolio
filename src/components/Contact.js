@@ -39,7 +39,7 @@ const Contact = () => {
       <div className="flex flex-wrap mx-3 mb-6 justify-center">
         <form
           className="w-full max-w-3xl"
-          name="contact"
+          name="Contact-Portfolio"
           method="post"
           action="/thanks/"
           data-netlify="true"
