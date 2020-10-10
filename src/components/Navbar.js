@@ -13,7 +13,7 @@ const Header = () => {
       <header className="header shadow-md bg-white fixed w-screen z-10 h-auto">
         <nav className="flex items-center justify-between flex-wrap  p-6 max-w-screen-xl mx-auto">
           <div className="flex items-center flex-shrink-0">
-            <AniLink cover bg="#da5e0c" to="/">
+            <AniLink cover bg="#da5e0c" to="/#home">
               <div className="transition duration-500 hover:text-orange-500 text-xl font-semibold">
                 CYRUS ON THE INTERNET
               </div>
