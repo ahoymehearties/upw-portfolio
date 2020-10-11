@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { navigate } from "gatsby-link"
 
-// import HeadingTitle from './HeadingTitle'
+import HeadingTitle from "./HeadingTitle"
 
 function encode(data) {
   return Object.keys(data)
@@ -32,9 +32,9 @@ const Contact = () => {
   }
   return (
     <section id="contact" className="mt-20">
-      <h1 className="text-center text-orange-600 text-4xl font-semibold underline pb-4">
-        CONTACT ME
-      </h1>
+      <div className="flex justify-center py-12">
+        <HeadingTitle textSize="text-3xl" title="contact" />
+      </div>
       {/* <HeadingTitle id="contact" title="contact" /> */}
       <div className="flex flex-wrap mx-3 mb-6 justify-center">
         <form

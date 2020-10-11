@@ -2,17 +2,20 @@ import React from "react"
 import Link from "gatsby-plugin-transition-link"
 
 import Head from "../components/Head"
+import HeadingTitle from "../components/HeadingTitle"
 
 const NotFound = () => {
   return (
     <>
       <Head title="404" />
-      <main className="mt-2">
-        <h1>Page not found</h1>
-        <p>
+      <div className="flex flex-col w-auto">
+        <div className="py-12 ">
+          <HeadingTitle textSize="text-3xl" title="Page not found" />
+        </div>
+        <button className="text-2xl text-white rounded bg-gray-700 hover:bg-gray-600 transition ease-in-out duration-500">
           <Link to="/">Take me Back!</Link>
-        </p>
-      </main>
+        </button>
+      </div>
     </>
   )
 }

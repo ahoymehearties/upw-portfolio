@@ -9,7 +9,7 @@ export const query = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       headerImage {
-        fluid(maxWidth: 1280, quality:100) {
+        fluid(maxWidth: 1280, quality: 100) {
           src
         }
       }
@@ -62,13 +62,6 @@ const Blog = props => {
             props.data.contentfulBlogPost.postBody.childMarkdownRemark.html,
         }}
       ></div>
-
-      {/* <div className="container max-w-2xl mx-auto -mt-32"
-        dangerouslySetInnerHTML={{
-          __html:
-            props.data.contentfulBlogPost.postBody.childMarkdownRemark.html,
-        }}
-      /> */}
       <div className="container max-w-5xl mx-auto -mt-32">
         <div className="mx-0 sm:mx-6">
           <div className="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal"></div>
