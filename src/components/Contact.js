@@ -33,7 +33,7 @@ const Contact = () => {
   return (
     <section id="contact" className="pt-20">
       <div className="flex justify-center py-12">
-        <HeadingTitle textSize="text-3xl" title="contact" />
+        <HeadingTitle textSize="text-4xl" title="contact" />
       </div>
       {/* <HeadingTitle id="contact" title="contact" /> */}
       <div className="flex flex-wrap mx-3 mb-6 justify-center">
