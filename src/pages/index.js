@@ -32,7 +32,7 @@ const IndexPage = () => {
             category
             publishedDate(formatString: "DD MMMM, YYYY")
             thumbnail {
-              fluid(maxWidth: 1024, quality:100) {
+              fluid(maxWidth: 1024, quality: 100) {
                 src
               }
             }
@@ -49,7 +49,7 @@ const IndexPage = () => {
             category
             publishedDate(formatString: "DD MMMM, YYYY")
             thumbnail {
-              fluid(maxWidth: 1024, quality:100) {
+              fluid(maxWidth: 1024, quality: 100) {
                 src
               }
             }
@@ -72,7 +72,7 @@ const IndexPage = () => {
               }
             }
             thumbnail {
-              fluid(maxWidth: 1024, quality:100) {
+              fluid(maxWidth: 1024, quality: 100) {
                 src
               }
             }
@@ -138,25 +138,23 @@ const IndexPage = () => {
           <div className="w-full lg:w-1/2 px-4 mt-8 lg:m-0">
             <div className="flex flex-wrap lg:h-full justify-center">
               {/* item side1*/}
-              <div>
-                <h3 className="uppercase font-semibold italic text-2xl">
-                  Featured
-                </h3>
+              <div className="mb-6 md:mb-3">
+                <HeadingTitle textSize="text-2xl" title="featured" />
               </div>
               {/* featured*/}
               {featuredPosts.slice("0", "2").map((featured, index) => {
-                var cls = index === 0 ? "mb-8" : ""
+                var cls = index === 0 ? "mb-4" : ""
                 return (
                   <div
                     key={featured.slug}
-                    className={`w-full rounded-md shadow-md overflow-hidden mx-4 ${cls}`}
+                    className={`w-full rounded-md shadow-md overflow-hidden mx-4 h-auto ${cls}`}
                   >
                     <AniLink
                       cover
                       to={`/${featured.category}/${featured.slug}`}
                     >
                       <div
-                        className="flex items-end justify-end h-56 w-full bg-cover"
+                        className="flex items-end justify-end h-48 w-full bg-cover"
                         style={{
                           backgroundImage: `url(${featured.thumbnail.fluid.src})`,
                         }}
@@ -179,7 +177,9 @@ const IndexPage = () => {
         </div>
       </section>
       {/* writing section */}
-      <HeadingTitle id="writing" title="writing" />
+      <div id="writing" className="flex justify-center py-20">
+        <HeadingTitle textSize="text-4xl" title="writing" />
+      </div>
       <section className="px-4 -my-8">
         <div className="flex -mx-4">
           <div className="w-screen px-4 mb-8 lg:mb-0">
@@ -217,7 +217,9 @@ const IndexPage = () => {
       </section>
       {/* writing section end*/}
       {/* voice section */}
-      <HeadingTitle id="voice" title="voice" />
+      <div id="voice" className="flex justify-center py-20">
+        <HeadingTitle textSize="text-4xl" title="voice" />
+      </div>
       <section className="px-4 -my-6">
         {/* embeds */}
         <div className="videoWrapper mb-2">
