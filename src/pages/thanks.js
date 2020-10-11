@@ -3,19 +3,21 @@ import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Head from "../components/Head"
+import HeadingTitle from "../components/HeadingTitle"
 
 const Thanks = () => {
   return (
     <>
-      <Head title="404" />
+      <Head title="Message Sent" />
       <main className="mt-12 text-center">
-        <div>
-          <h2 className="text-2xl">Message sent, you'll hear from us soon!</h2>
-          <AniLink cover to="/">
-            <h3 className="pt-4 font-semibold underline">Go Back!</h3>
-          </AniLink>
+        <div className="flex justify-center ">
+          <HeadingTitle textSize="2xl" title="Message sent" />
         </div>
-        <div className="p-16 lg:p-0">
+
+        <AniLink cover to="/">
+          <h3 className="pt-4 font-semibold underline">Go Back!</h3>
+        </AniLink>
+        <div className="p-16 lg:px-64 lg:py-0 ">
           <svg
             id="aaafdec0-95c8-49a3-a8f8-64216c6da511"
             data-name="Layer 1"
@@ -50,7 +52,7 @@ const Thanks = () => {
               width="354"
               height="354"
               rx="26.1811"
-              fill="#6c63ff"
+              fill="#DD6B20"
             />
             <polygon
               points="657.454 395.942 657.454 590.492 303.454 590.492 303.454 395.942 480.454 481.492 657.454 395.942"

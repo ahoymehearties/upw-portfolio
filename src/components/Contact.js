@@ -31,7 +31,7 @@ const Contact = () => {
       .catch(error => alert(error))
   }
   return (
-    <section id="contact" className="mt-20">
+    <section id="contact" className="pt-20">
       <div className="flex justify-center py-12">
         <HeadingTitle textSize="text-3xl" title="contact" />
       </div>

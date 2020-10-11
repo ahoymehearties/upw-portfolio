@@ -42,7 +42,7 @@ const Blog = props => {
         </h1>
 
         <div
-          className="container w-full mx-auto mt-1 bg-white bg-cover max-w-screen-lg"
+          className="container w-full mx-auto my-4 bg-white bg-cover max-w-screen-lg "
           style={{
             height: "40vh",
             backgroundImage: `url(${props.data.contentfulBlogPost.headerImage.fluid.src} )`,
