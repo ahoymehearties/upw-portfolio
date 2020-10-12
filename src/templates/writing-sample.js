@@ -5,7 +5,7 @@ import Head from "../components/Head"
 
 export const query = graphql`
   query($slug: String!) {
-    contentfulBlogPost(slug: { eq: $slug }) {
+    contentfulWritingSample(slug: { eq: $slug }) {
       title
       headerImage {
         fluid(maxWidth: 1280, quality: 100) {
@@ -27,24 +27,24 @@ export const query = graphql`
   }
 `
 
-const Blog = props => {
+const WritingSample = props => {
   return (
     <>
-      <Head title={props.data.contentfulBlogPost.title} />
+      <Head title={props.data.contentfulWritingSample.title} />
 
       <div className="text-center pt-12">
         <p className="text-sm md:text-base text-teal-500 font-bold uppercase">
-          {props.data.contentfulBlogPost.publishedDate}{" "}
+          {props.data.contentfulWritingSample.publishedDate}{" "}
         </p>
         <h1 className="font-bold break-normal text-3xl md:text-5xl">
-          {props.data.contentfulBlogPost.title}
+          {props.data.contentfulWritingSample.title}
         </h1>
 
         <div
           className="container w-full mx-auto my-4 bg-white bg-cover max-w-screen-lg p-2 md:p-0"
           style={{
             height: "40vh",
-            backgroundImage: `url(${props.data.contentfulBlogPost.headerImage.fluid.src} )`,
+            backgroundImage: `url(${props.data.contentfulWritingSample.headerImage.fluid.src} )`,
             backgroundPosition: "center 40%",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -58,7 +58,8 @@ const Blog = props => {
         style={{ fontFamily: `Georgia,serif` }}
         dangerouslySetInnerHTML={{
           __html:
-            props.data.contentfulBlogPost.postBody.childMarkdownRemark.html,
+            props.data.contentfulWritingSample.postBody.childMarkdownRemark
+              .html,
         }}
       ></div>
       <div className="container max-w-5xl mx-auto -mt-32">
@@ -70,4 +71,4 @@ const Blog = props => {
   )
 }
 
-export default Blog
+export default WritingSample

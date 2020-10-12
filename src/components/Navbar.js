@@ -92,7 +92,18 @@ const Header = () => {
                     Blog
                   </AniLink>
                 </li>
-
+                <li>
+                  {" "}
+                  <AniLink
+                    onClick={mobileMenuHandler}
+                    cover
+                    className="transition duration-300 ease-in-out font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-orange-400 mr-4"
+                    activeClassName="text-orange-600"
+                    to="/writing-samples"
+                  >
+                    Writing Samples
+                  </AniLink>
+                </li>
                 <li>
                   {" "}
                   <AniLink
