@@ -36,12 +36,10 @@ const WritingSamplePage = () => {
   return (
     <div>
       <>
-        <Head title="Writing Samples" />
+        <Head title="Samples" />
         <main className="mt-12">
           <div className="flex mb-4 px-4 lg:px-0 justify-center">
-            <h2 className="font-bold text-4xl uppercase italic">
-              Writing Samples
-            </h2>
+            <h2 className="font-bold text-4xl uppercase italic">Samples</h2>
           </div>
           <div className="grid gap-2 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3 m-5 mb-10">
             {data.allContentfulWritingSample.edges.map(post => {

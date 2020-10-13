@@ -101,7 +101,7 @@ const Header = () => {
                     activeClassName="text-orange-600"
                     to="/writing-samples"
                   >
-                    Writing Samples
+                    Samples
                   </AniLink>
                 </li>
                 <li>
