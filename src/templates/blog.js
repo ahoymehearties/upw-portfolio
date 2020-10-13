@@ -7,6 +7,7 @@ export const query = graphql`
   query($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
+      description
       headerImage {
         fluid(maxWidth: 1280, quality: 100) {
           src
@@ -21,6 +22,7 @@ export const query = graphql`
       postBody {
         childMarkdownRemark {
           html
+          excerpt
         }
       }
     }
@@ -30,8 +32,12 @@ export const query = graphql`
 const Blog = props => {
   return (
     <>
-      <Head title={props.data.contentfulBlogPost.title} />
-
+      <Head
+        title={props.data.contentfulBlogPost.title}
+        description={
+          props.data.contentfulBlogPost.postBody.childMarkdownRemark.excerpt
+        }
+      />
       <div className="text-center pt-12">
         <p className="text-sm md:text-base text-teal-500 font-bold uppercase">
           {props.data.contentfulBlogPost.publishedDate}{" "}

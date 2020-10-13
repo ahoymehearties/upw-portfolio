@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Cyrus on the Internet`,
-    description: `Portfolio of Cyrus Nemati`,
+    description: `Telling stories with tons of tools.`,
     url: "https://cyrusontheinternet.com",
     twitterUsername: "@ahoymehearties",
+    lang: "en_US",
     author: `Edin Džabija`,
   },
   plugins: [

@@ -26,6 +26,7 @@ export const query = graphql`
       body {
         childMarkdownRemark {
           html
+          excerpt
         }
       }
     }
@@ -35,7 +36,13 @@ export const query = graphql`
 const Voice = props => {
   return (
     <>
-      <Head title={props.data.contentfulVoice.title} />
+      <Head
+        title={props.data.contentfulVoice.title}
+        description={
+          props.data.contentfulVoice.body.childMarkdownRemark.excerpt
+        }
+      />
+
       <div className="md:flex shadow-lg mx-6 md:mx-auto max-w-screen-lg my-10 h-auto">
         <img
           className="h-full w-full md:w-1/2 object-cover md:rounded-lg rounded-r-none pb-5/6"

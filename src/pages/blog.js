@@ -23,7 +23,7 @@ const BlogPage = () => {
               }
             }
             thumbnail {
-              fluid{
+              fluid {
                 src
               }
             }
@@ -37,7 +37,7 @@ const BlogPage = () => {
   return (
     <div>
       <>
-        <Head title="Blog" />
+        <Head title="Blog | Cyrus on the Internet" />
         <main className="mt-12">
           <div className="flex mb-4 px-4 lg:px-0 justify-center">
             <h2 className="font-bold text-4xl uppercase italic">Blog</h2>

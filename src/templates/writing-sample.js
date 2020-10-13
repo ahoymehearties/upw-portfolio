@@ -21,6 +21,7 @@ export const query = graphql`
       postBody {
         childMarkdownRemark {
           html
+          excerpt
         }
       }
     }
@@ -30,7 +31,13 @@ export const query = graphql`
 const WritingSample = props => {
   return (
     <>
-      <Head title={props.data.contentfulWritingSample.title} />
+      <Head
+        title={props.data.contentfulWritingSample.title}
+        description={
+          props.data.contentfulWritingSample.postBody.childMarkdownRemark
+            .excerpt
+        }
+      />
 
       <div className="text-center pt-12">
         <p className="text-sm md:text-base text-teal-500 font-bold uppercase">

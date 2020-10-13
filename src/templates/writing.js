@@ -20,6 +20,7 @@ export const query = graphql`
       body {
         childMarkdownRemark {
           html
+          excerpt
         }
       }
     }
@@ -29,7 +30,12 @@ export const query = graphql`
 const Writing = props => {
   return (
     <>
-      <Head title={props.data.contentfulWriting.title} />
+      <Head
+        title={props.data.contentfulWriting.title}
+        description={
+          props.data.contentfulWriting.body.childMarkdownRemark.excerpt
+        }
+      />
       {/* header */}
       <div className="text-center mt-12">
         <h1 className="font-bold break-normal text-3xl md:text-5xl">

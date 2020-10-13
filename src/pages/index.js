@@ -95,7 +95,7 @@ const IndexPage = () => {
 
   return (
     <div>
-      <Head title="Home" />
+      <Head title="Home | Cyrus on the Internet" />
       <section className="px-4 mt-6 -mb-6">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
@@ -105,6 +105,8 @@ const IndexPage = () => {
                 <div className="w-48 h-48 mx-auto md:mx-0">
                   <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
                     <img
+                      width="190"
+                      height="160"
                       src={data.contentfulAboutMe.image.fluid.src}
                       alt="lovely avatar"
                       className="object-cover object-center w-full h-full visible group-hover:hidden"
