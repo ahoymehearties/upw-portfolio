@@ -3,7 +3,7 @@ import React from "react"
 const Footer = () => {
   return (
     <>
-      <footer className="relative bg-orange-100 pt-2 pb-6 border-t border-gray-400">
+      <footer className="relative  pt-2 pb-6 border-t border-gray-400">
         <div className="container mx-auto px-4">
           <div className="mt-6 flex flex-row mb-4 justify-center">
             <a href="https://twitter.com/ahoymehearties">
