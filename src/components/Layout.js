@@ -16,7 +16,7 @@ const layout = ({ children }) => {
         id="home"
         className="max-w-screen-xl mx-auto flex flex-col min-h-screen pt-24 pb-6"
       >
-        <div className="flex-grow">{children}</div>
+        <div>{children}</div>
       </div>
       <Footer />
     </>
