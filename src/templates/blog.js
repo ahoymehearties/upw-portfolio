@@ -38,7 +38,7 @@ const Blog = props => {
           props.data.contentfulBlogPost.postBody.childMarkdownRemark.excerpt
         }
       />
-      <div className="text-center pt-12">
+      <div className="text-center pt-12 px-2 lg:px-0">
         <p className="text-sm md:text-base text-teal-500 font-bold uppercase">
           {props.data.contentfulBlogPost.publishedDate}{" "}
         </p>
@@ -60,7 +60,7 @@ const Blog = props => {
       </div>
 
       <div
-        className="bg-white w-full max-w-screen-lg mx-auto text-xl md:text-2xl text-grey-darkest leading-normal"
+        className="bg-white w-full max-w-screen-lg mx-auto text-xl md:text-2xl text-grey-darkest leading-normal px-4 lg:px-0"
         style={{ fontFamily: `Georgia,serif` }}
         dangerouslySetInnerHTML={{
           __html:

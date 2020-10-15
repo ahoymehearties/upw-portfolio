@@ -39,7 +39,7 @@ const WritingSample = props => {
         }
       />
 
-      <div className="text-center pt-12">
+      <div className="text-center pt-12  px-4 lg:px-0">
         {/* <p className="text-sm md:text-base text-teal-500 font-bold uppercase">
           {props.data.contentfulWritingSample.publishedDate}{" "}
         </p> */}
@@ -62,7 +62,7 @@ const WritingSample = props => {
       </div>
 
       <div
-        className="bg-white w-full max-w-screen-lg mx-auto text-xl md:text-2xl text-grey-darkest leading-normal"
+        className="bg-white w-full max-w-screen-lg mx-auto text-xl md:text-2xl text-grey-darkest leading-normal px-4 lg:px-0"
         style={{ fontFamily: `Georgia,serif` }}
         dangerouslySetInnerHTML={{
           __html:
