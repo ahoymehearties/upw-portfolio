@@ -161,15 +161,15 @@ const IndexPage = () => {
                           backgroundImage: `url(${featured.thumbnail.fluid.src})`,
                         }}
                       ></div>
-                      <div className="px-5 py-3">
-                        <h3 className="text-gray-700 uppercase">
-                          {featured.title}
-                        </h3>
-                        <span className="text-gray-600 mt-2">
-                          {featured.description}
-                        </span>
-                      </div>
                     </AniLink>
+                    <div className="px-5 py-3">
+                      <h3 className="text-gray-700 uppercase">
+                        {featured.title}
+                      </h3>
+                      <span className="text-gray-600 mt-2">
+                        {featured.description}
+                      </span>
+                    </div>
                   </div>
                 )
               })}
