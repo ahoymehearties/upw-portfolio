@@ -267,7 +267,7 @@ const IndexPage = () => {
                         }}
                       ></div>
                     </AniLink>
-                    <div className="px-5 py-3">
+                    <div>
                       <h3 className="text-gray-700 uppercase">
                         {post.node.title}
                       </h3>
