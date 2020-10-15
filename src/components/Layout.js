@@ -14,9 +14,9 @@ const layout = ({ children }) => {
       <Navbar />
       <div
         id="home"
-        className="max-w-screen-xl mx-auto flex flex-col min-h-screen pt-24 pb-6"
+        className="max-w-screen-xl mx-auto flex flex-col min-h-screen pt-24"
       >
-        <div>{children}</div>
+        <div className="flex-grow">{children}</div>
       </div>
       <Footer />
     </>
