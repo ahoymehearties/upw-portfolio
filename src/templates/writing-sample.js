@@ -40,9 +40,10 @@ const WritingSample = props => {
       />
 
       <div className="text-center pt-12">
-        <p className="text-sm md:text-base text-teal-500 font-bold uppercase">
+        {/* <p className="text-sm md:text-base text-teal-500 font-bold uppercase">
           {props.data.contentfulWritingSample.publishedDate}{" "}
-        </p>
+        </p> */}
+        {/* uncomment line above for date to be shown */}
         <h1 className="font-bold break-normal text-3xl md:text-5xl">
           {props.data.contentfulWritingSample.title}
         </h1>

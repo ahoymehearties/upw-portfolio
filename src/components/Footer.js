@@ -3,9 +3,9 @@ import React from "react"
 const Footer = () => {
   return (
     <>
-      <footer className="relative  pt-2 pb-6 border-t border-gray-400">
+      <footer className="relative border-t border-gray-200 ">
         <div className="container mx-auto px-4">
-          <div className="mt-6 flex flex-row mb-4 justify-center">
+          <div className="my-3 flex flex-row mb-4 justify-center">
             <a href="https://twitter.com/ahoymehearties">
               <svg
                 className="mx-1 h-12 w-12 fill-current text-gray-500 hover:text-blue-500 transition duration-500 ease-in-out"

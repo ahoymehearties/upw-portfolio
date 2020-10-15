@@ -58,5 +58,14 @@ module.exports = {
         layout: require.resolve(`./src/components/Layout.js`),
       },
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        lang: `en`,
+        start_url: `/`,
+        theme_color_in_head: false,
+        icon: "src/images/favicon.svg",
+      },
+    },
   ],
 }
