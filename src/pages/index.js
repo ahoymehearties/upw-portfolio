@@ -151,10 +151,7 @@ const IndexPage = () => {
                     key={featured.slug}
                     className={`w-full rounded-md shadow-md overflow-hidden mx-4 h-auto ${cls}`}
                   >
-                    <AniLink
-                      cover
-                      to={`/${featured.category}/${featured.slug}`}
-                    >
+                    <Link cover to={`/${featured.category}/${featured.slug}`}>
                       <div
                         className="flex items-end justify-end h-48 w-full bg-cover"
                         style={{
@@ -169,7 +166,7 @@ const IndexPage = () => {
                           {featured.description}
                         </span>
                       </div>
-                    </AniLink>
+                    </Link>
                   </div>
                 )
               })}
@@ -193,14 +190,14 @@ const IndexPage = () => {
                     key={post.node.slug}
                     className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
                   >
-                    <AniLink cover to={`/writing/${post.node.slug}`}>
+                    <Link cover to={`/writing/${post.node.slug}`}>
                       <div
                         className="flex items-end justify-end h-56 w-full bg-cover"
                         style={{
                           backgroundImage: `url(${post.node.thumbnail.fluid.src})`,
                         }}
                       ></div>
-                    </AniLink>
+                    </Link>
                     <div className="px-5 py-3">
                       <h3 className="text-gray-700 uppercase">
                         {post.node.title}
@@ -259,14 +256,14 @@ const IndexPage = () => {
                     key={post.node.slug}
                     className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
                   >
-                    <AniLink cover to={`/voice/${post.node.slug}`}>
+                    <Link cover to={`/voice/${post.node.slug}`}>
                       <div
                         className="flex items-end justify-end h-56 w-full bg-cover"
                         style={{
                           backgroundImage: `url(${post.node.thumbnail.fluid.src})`,
                         }}
                       ></div>
-                    </AniLink>
+                    </Link>
                     <div className="px-5 py-3">
                       <h3 className="text-gray-700 uppercase">
                         {post.node.title}
