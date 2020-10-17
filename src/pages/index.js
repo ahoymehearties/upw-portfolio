@@ -266,19 +266,23 @@ const IndexPage = () => {
                       key={post.node.slug}
                       className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
                     >
-                      <div
-                        className="flex items-end justify-end h-56 w-full bg-cover"
-                        style={{
-                          backgroundImage: `url(${post.node.thumbnail.fluid.src})`,
-                        }}
-                      ></div>
+                      {post.node.thumbnail && (
+                        <div
+                          className="flex items-end justify-end h-56 w-full bg-cover"
+                          style={{
+                            backgroundImage: `url(${post.node.thumbnail.fluid.src})`,
+                          }}
+                        ></div>
+                      )}
                       <div className={fix}>
                         <h3 className="text-gray-700 uppercase">
                           {post.node.title}
                         </h3>
-                        <span className="text-gray-500 mt-2">
-                          {post.node.description && post.node.description}
-                        </span>
+                        {post.node.description && (
+                          <span className="text-gray-500 mt-2">
+                            {post.node.description}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </AniLink>

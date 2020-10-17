@@ -59,7 +59,9 @@ const Voice = props => {
             </div>
             <div className="text-xl pb-2">
               <span className="font-semibold">Position: </span>
-              <span>{props.data.contentfulVoice.position}</span>
+              {props.data.contentfulVoice.position && (
+                <span>{props.data.contentfulVoice.position}</span>
+              )}
             </div>
             <div className="text-xl pb-2">
               <span className="font-semibold">Vocal Role(s): </span>
