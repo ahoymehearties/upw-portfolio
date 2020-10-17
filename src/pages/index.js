@@ -147,7 +147,6 @@ const IndexPage = () => {
               {/* featured*/}
               {featuredPosts.slice("0", "2").map((featured, index) => {
                 const cls = index === 0 ? "mb-4" : ""
-                const fix = "px-5 py-3"
                 return (
                   <div
                     key={featured.slug}
@@ -164,13 +163,15 @@ const IndexPage = () => {
                         }}
                       ></div>
                     </AniLink>
-                    <div className={fix}>
+                    <div className="px-5 py-3">
                       <h3 className="text-gray-700 uppercase">
                         {featured.title}
                       </h3>
-                      <span className="text-gray-600 mt-2">
-                        {featured.description}
-                      </span>
+                      {featured.description && (
+                        <span className="text-gray-600 mt-2">
+                          {featured.description}
+                        </span>
+                      )}
                     </div>
                   </div>
                 )
@@ -190,8 +191,6 @@ const IndexPage = () => {
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
               {/* item */}
               {data.allContentfulWriting.edges.map(post => {
-                const fix = "px-5 py-3"
-
                 return (
                   <AniLink cover to={`/writing/${post.node.slug}`}>
                     <div
@@ -204,13 +203,15 @@ const IndexPage = () => {
                           backgroundImage: `url(${post.node.thumbnail.fluid.src})`,
                         }}
                       ></div>
-                      <div className={fix}>
+                      <div className="px-5 py-3">
                         <h3 className="text-gray-700 uppercase">
                           {post.node.title}
                         </h3>
-                        <span className="text-gray-500 mt-2">
-                          {post.node.description && post.node.description}
-                        </span>
+                        {post.node.description && (
+                          <span className="text-gray-500 mt-2">
+                            {post.node.description}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </AniLink>
@@ -258,8 +259,6 @@ const IndexPage = () => {
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
               {/* item */}
               {data.allContentfulVoice.edges.map(post => {
-                const fix = "px-5 py-3"
-
                 return (
                   <AniLink cover to={`/voice/${post.node.slug}`}>
                     <div
@@ -274,7 +273,7 @@ const IndexPage = () => {
                           }}
                         ></div>
                       )}
-                      <div className={fix}>
+                      <div className="px-5 py-3">
                         <h3 className="text-gray-700 uppercase">
                           {post.node.title}
                         </h3>
