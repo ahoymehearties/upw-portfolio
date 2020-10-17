@@ -23,7 +23,7 @@ const IndexPage = () => {
           bio
         }
       }
-      allContentfulWriting(sort: { fields: publishedDate, order: DESC }) {
+      allContentfulWriting {
         edges {
           node {
             slug
@@ -31,7 +31,7 @@ const IndexPage = () => {
             description
             featured
             category
-            publishedDate(formatString: "DD MMMM, YYYY")
+
             thumbnail {
               fluid(maxWidth: 1024, quality: 100) {
                 src
@@ -40,7 +40,7 @@ const IndexPage = () => {
           }
         }
       }
-      allContentfulVoice(sort: { fields: publishedDate, order: DESC }) {
+      allContentfulVoice {
         edges {
           node {
             slug
@@ -48,7 +48,7 @@ const IndexPage = () => {
             description
             featured
             category
-            publishedDate(formatString: "DD MMMM, YYYY")
+
             thumbnail {
               fluid(maxWidth: 1024, quality: 100) {
                 src
