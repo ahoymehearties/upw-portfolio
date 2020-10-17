@@ -44,8 +44,12 @@ const WritingSamplePage = () => {
           <div className="grid gap-2 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3 m-5 mb-10">
             {data.allContentfulWritingSample.edges.map(post => {
               return (
-                <AniLink cover to={`/writing-sample/${post.node.slug}`}>
-                  <div key={post.node.slug} className="w-full mb-2 single-post">
+                <AniLink
+                  key={post.node.slug}
+                  cover
+                  to={`/writing-sample/${post.node.slug}`}
+                >
+                  <div className="w-full mb-2 single-post">
                     <img
                       src={post.node.thumbnail.fluid.src}
                       className="object-cover h-64 lg:h-48 w-full  "

@@ -192,11 +192,12 @@ const IndexPage = () => {
               {/* item */}
               {data.allContentfulWriting.edges.map(post => {
                 return (
-                  <AniLink cover to={`/writing/${post.node.slug}`}>
-                    <div
-                      key={post.node.slug}
-                      className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
-                    >
+                  <AniLink
+                    key={post.node.slug}
+                    cover
+                    to={`/writing/${post.node.slug}`}
+                  >
+                    <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
                       <div
                         className="flex items-end justify-end h-56 w-full bg-cover"
                         style={{
@@ -260,11 +261,12 @@ const IndexPage = () => {
               {/* item */}
               {data.allContentfulVoice.edges.map(post => {
                 return (
-                  <AniLink cover to={`/voice/${post.node.slug}`}>
-                    <div
-                      key={post.node.slug}
-                      className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
-                    >
+                  <AniLink
+                    key={post.node.slug}
+                    cover
+                    to={`/voice/${post.node.slug}`}
+                  >
+                    <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
                       {post.node.thumbnail && (
                         <div
                           className="flex items-end justify-end h-56 w-full bg-cover"
