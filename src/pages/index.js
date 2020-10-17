@@ -8,6 +8,8 @@ import Head from "../components/Head"
 import Contact from "../components/Contact"
 import HeadingTitle from "../components/HeadingTitle"
 
+import scrollTo from "gatsby-plugin-smoothscroll"
+
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -126,27 +128,28 @@ const IndexPage = () => {
               <p className="max-w mt-auto mb-2 text-gray-700 leading-relaxed">
                 {data.contentfulAboutMe.bio.bio}
               </p>
-              {/* <Link
-                download
-                src="../../oreilly-modern-web-development-on-the-jamstack.pdf"
-                role="button"
-                className="text-center bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent hover:shadow-md rounded"
-              >
-                Contact Me
-              </Link> */}
+              {/* This is where you link your cv:
+              Step 1. Comment or delete <Link> below*/}
               <Link
-                href="/oreilly-modern-web-development-on-the-jamstack.pdf"
-                download
+                onClick={() => scrollTo("#contact")}
+                to="/#contact"
                 role="button"
                 className="text-center bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent hover:shadow-md rounded"
               >
                 Contact Me
               </Link>
+              {/* Step 2. Uncomment link below, 
+              add file name to href, 
+              it must be placed in the STATIC folder in the root of the project,
+              There is curently one file and you can delete it put your file in there and rebuild page, 
+              you can trigger the rebuild from netlify, but it should trigger a build when you 'push' on the master branch by adding the file */}
               {/* <Link
-                href="/oreilly-modern-web-development-on-the-jamstack.pdf"
+                href="/resume.pdf"
                 download
+                role="button"
+                className="text-center bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent hover:shadow-md rounded"
               >
-                dl
+                Contact Me
               </Link> */}
             </div>
           </div>
