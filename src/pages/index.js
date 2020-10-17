@@ -48,7 +48,6 @@ const IndexPage = () => {
             description
             featured
             category
-
             thumbnail {
               fluid(maxWidth: 1024, quality: 100) {
                 src
@@ -127,13 +126,28 @@ const IndexPage = () => {
               <p className="max-w mt-auto mb-2 text-gray-700 leading-relaxed">
                 {data.contentfulAboutMe.bio.bio}
               </p>
+              {/* <Link
+                download
+                src="../../oreilly-modern-web-development-on-the-jamstack.pdf"
+                role="button"
+                className="text-center bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent hover:shadow-md rounded"
+              >
+                Contact Me
+              </Link> */}
               <Link
-                to="/#contact"
+                href="/oreilly-modern-web-development-on-the-jamstack.pdf"
+                download
                 role="button"
                 className="text-center bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent hover:shadow-md rounded"
               >
                 Contact Me
               </Link>
+              {/* <Link
+                href="/oreilly-modern-web-development-on-the-jamstack.pdf"
+                download
+              >
+                dl
+              </Link> */}
             </div>
           </div>
 
