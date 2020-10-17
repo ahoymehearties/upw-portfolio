@@ -58,6 +58,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: "gatsby-plugin-manifest",
       options: {

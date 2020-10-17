@@ -5,10 +5,6 @@ import Footer from "../components/Footer"
 
 import "../styles/index.scss"
 
-// if (typeof window !== "undefined") {
-//   // eslint-disable-next-line global-require
-//   require("smooth-scroll")('a[href*="#"]')
-// }
 const layout = ({ children }) => {
   return (
     <>
