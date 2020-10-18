@@ -35,7 +35,12 @@ export const query = graphql`
 const Writing = props => {
   return (
     <>
-      <Head title={props.data.contentfulWriting.title} />
+      <Head
+        title={props.data.contentfulWriting.title}
+        description={
+          props.data.contentfulWriting.body.childMarkdownRemark.excerpt
+        }
+      />
 
       <div className="md:flex shadow-lg mx-6 md:mx-auto max-w-screen-lg my-10 h-auto">
         <img
