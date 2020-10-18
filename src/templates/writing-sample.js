@@ -31,13 +31,7 @@ export const query = graphql`
 const WritingSample = props => {
   return (
     <>
-      <Head
-        title={props.data.contentfulWritingSample.title}
-        description={
-          props.data.contentfulWritingSample.postBody.childMarkdownRemark
-            .excerpt
-        }
-      />
+      <Head title={props.data.contentfulWritingSample.title} />
 
       <div className="text-center pt-12  px-4 lg:px-0">
         {/* <p className="text-sm md:text-base text-teal-500 font-bold uppercase">

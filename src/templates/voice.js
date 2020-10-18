@@ -36,12 +36,7 @@ export const query = graphql`
 const Voice = props => {
   return (
     <>
-      <Head
-        title={props.data.contentfulVoice.title}
-        description={
-          props.data.contentfulVoice.body.childMarkdownRemark.excerpt
-        }
-      />
+      <Head title={props.data.contentfulVoice.title} />
 
       <div className="md:flex shadow-lg mx-6 md:mx-auto max-w-screen-lg my-10 h-auto">
         {props.data.contentfulVoice.headerImage && (

@@ -32,12 +32,7 @@ export const query = graphql`
 const Blog = props => {
   return (
     <>
-      <Head
-        title={props.data.contentfulBlogPost.title}
-        description={
-          props.data.contentfulBlogPost.postBody.childMarkdownRemark.excerpt
-        }
-      />
+      <Head title={props.data.contentfulBlogPost.title} />
       <div className="text-center pt-12 px-2 lg:px-0">
         <p className="text-sm md:text-base text-teal-500 font-bold uppercase">
           {props.data.contentfulBlogPost.publishedDate}{" "}
