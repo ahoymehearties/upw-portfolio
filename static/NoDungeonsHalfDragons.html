@@ -271,7 +271,7 @@ You needed to roll a 9 to succeed. You rolled a $insightroll.
 *Gained an inspiration point.*
 
 0. [[Let&#39;s talk of something else.]]
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="48" name="Help Garth" tags="" position="3641,1296" size="100,100">GARTHIR: Ah, my dear Orielle! She is the loveliest of humans. Red of hair, rosy of cheek. She is strong and delicate all at once, large of frame but with the grace of a deva. 
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="48" name="Help Garth" tags="" position="3641,1296" size="100,100">GARTHIR: Ah, my dear Orielle! She is the loveliest of humans. Red of hair, rosy of cheek. She is strong and delicate all at once, large of frame and possessing all the grace of a deva. 
 
 [[Continue-&gt;help1]]</tw-passagedata><tw-passagedata pid="49" name="Don&#39;t help Garth" tags="" position="3643,1524" size="100,100">GARTHIR: I should have assumed. Looking at the assortment of weapons you carry, I imagine most of your problem-solving is done by forcefully embedding steel in flesh. Worry not, t&#39;was my fault for even asking.
 
@@ -290,11 +290,19 @@ You needed to roll a 9 to succeed. You rolled a $insightroll.
 
 [[Continue-&gt;help nexus]]</tw-passagedata><tw-passagedata pid="52" name="help nexus" tags="" position="4776,1441" size="100,100">GARTHIR: She is my muse, you see. I will go nowhere if I cannot go with her.
 
-0. [[Where did you see her last?]]
-0. [[How did you meet each other?]]
-(if: $class is &quot;druid&quot;)[0. [[DRUID: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]]
-(if: $class is &quot;cleric&quot;)[0. [[CLERIC: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]]
-(if: $class is &quot;wizard&quot;)[0. [[WIZARD: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]]</tw-passagedata><tw-passagedata pid="53" name="*Take your leave.*" tags="" position="2668,707" size="100,100">*You turn on your heels and leave.*
+{
+	&lt;ol&gt;
+		&lt;li&gt;[[Where did you see her last?]]&lt;/li&gt;
+		&lt;li&gt;[[What happened to that building?-&gt;what start]]&lt;/li&gt;
+		(unless: $charismafail is &quot;true&quot;)[&lt;li&gt;[[How did you meet each other?]]&lt;/li&gt;]
+		(if: $class is &quot;druid&quot;)[&lt;li&gt;[[DRUID: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
+(if: $class is &quot;cleric&quot;)[&lt;li&gt;[[CLERIC: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
+(if: $class is &quot;wizard&quot;)[&lt;li&gt;[[WIZARD: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
+		&lt;li&gt;[[Let&#39;s talk of something else.]]&lt;/li&gt;
+		&lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
+	&lt;/ol&gt;
+}
+</tw-passagedata><tw-passagedata pid="53" name="*Take your leave.*" tags="" position="2668,707" size="100,100">*You turn on your heels and leave.*
 
 I hope you enjoyed this writing test! If you&#39;d like to restart, you can do so here and try some other paths. I tried to emulate BG3&#39;s options, so some results may occur with specific classes or races. You can also retry some of the dice rolls.
 
@@ -334,11 +342,18 @@ Otherwise, I&#39;ll look forward to speaking with you again soon!
 
 [[Continue-&gt;accusedorielle1]]</tw-passagedata><tw-passagedata pid="65" name="I had more questions about Orielle." tags="" position="4770,1297" size="100,100">GARTHIR: By all means, ask. 
 
-0. [[Where did you see her last?]]
-(unless: $charismafail is &quot;true&quot;)[0. [[How did you meet each other?]]]
-(if: $class is &quot;druid&quot;)[0. [[DRUID: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]]
-(if: $class is &quot;cleric&quot;)[0. [[CLERIC: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]]
-(if: $class is &quot;wizard&quot;)[0. [[WIZARD: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]]</tw-passagedata><tw-passagedata pid="66" name="accusedorielle1" tags="" position="6073,994" size="100,100">(set: $accusedorielle to &quot;true&quot;)
+{
+	&lt;ol&gt;
+		&lt;li&gt;[[Where did you see her last?]]&lt;/li&gt;
+		&lt;li&gt;[[What happened to that building?-&gt;what start]]&lt;/li&gt;
+		(unless: $charismafail is &quot;true&quot;)[&lt;li&gt;[[How did you meet each other?]]&lt;/li&gt;]
+		(if: $class is &quot;druid&quot;)[&lt;li&gt;[[DRUID: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
+(if: $class is &quot;cleric&quot;)[&lt;li&gt;[[CLERIC: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
+(if: $class is &quot;wizard&quot;)[&lt;li&gt;[[WIZARD: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
+		&lt;li&gt;[[Let&#39;s talk of something else.]]&lt;/li&gt;
+		&lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
+	&lt;/ol&gt;
+}</tw-passagedata><tw-passagedata pid="66" name="accusedorielle1" tags="" position="6073,994" size="100,100">(set: $accusedorielle to &quot;true&quot;)
 GARTHIR: Orielle saved me when all others thought me a monster, though  they were quite correct. I have put that monster in my past, though you tempt him greatly when you cast suspicion upon one so dear.
 
 [[Continue-&gt;accusedorielle2]]</tw-passagedata><tw-passagedata pid="67" name="accusedorielle2" tags="" position="6247,990" size="100,100">GARTHIR: I will assume that you meant no ill and I won&#39;t have to defend her honor?
@@ -387,9 +402,13 @@ You needed to roll a 6 to succeed. You rolled a $charismaroll.
 0. [[*Take your leave.*]]
 </tw-passagedata><tw-passagedata pid="79" name="dragonstuff1" tags="" position="3874,680" size="100,100">GARTHIR: I&#39;ve learned all I wish to know about dragonkind, thank you very much.
 
-0. [[I had more questions about you.]]
-(unless: $dragonquestion is &quot;true&quot;)[0. [[PERSUADE: What makes you feel so strongly about dragons?]]]
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="80" name="I had more questions about you." tags="" position="3368,808" size="100,100">0. [[What happened in Murann?-&gt;Murann intro]]
+{
+&lt;ol&gt;
+&lt;li&gt;[[I had more questions about you.]]&lt;/li&gt;
+(unless: $dragonquestion is &quot;true&quot;)[&lt;li&gt;[[PERSUADE: What makes you feel so strongly about dragons?]]&lt;/li&gt;]
+&lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
+&lt;/ol&gt;
+}</tw-passagedata><tw-passagedata pid="80" name="I had more questions about you." tags="" position="3368,808" size="100,100">0. [[What happened in Murann?-&gt;Murann intro]]
 0. [[What do you intend to do in Baldur&#39;s Gate?-&gt;Baldur&#39;s Gate intro]]
 0. [[You don&#39;t see a lot of half-dragons about.-&gt;half dragon intro]]
 0. [[What is your play about?]]
