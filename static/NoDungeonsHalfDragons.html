@@ -61,21 +61,21 @@ Let&#39;s start with picking a race:
 [[Elf]]
 [[Half-Elf]]
 [[Halfling]]
-[[Tiefling]]</tw-passagedata><tw-passagedata pid="2" name="Greeting" tags="" position="1534,955" size="100,100">(track: &#39;greeting&#39;, &#39;playwhenpossible&#39;)
+[[Tiefling]]</tw-passagedata><tw-passagedata pid="2" name="Greeting" tags="" position="1534,955" size="100,100">(track: &#39;greeting&#39;, &#39;play&#39;)
 GARTHIR: Oh, I don&#39;t seem to be alone any longer. I suppose you must have a thousand questions for the handsome half-dragon seeming to be watching a fire with glee.
 
 [[Continue-&gt;Greeting2]]</tw-passagedata><tw-passagedata pid="3" name="Greeting2" tags="" position="1724,955" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;greeting2&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;greeting2&#39;, &#39;play&#39;)
 GARTHIR: Well, I can assure you I had nothing to do with it, and I resent the accusation.
 
 [[1. I didn&#39;t accuse you of anything.-&gt;Not Accuse]]
 [[2. You do look pretty suspicious.-&gt;Accuse]]</tw-passagedata><tw-passagedata pid="4" name="Not Accuse" tags="" position="1953,877" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;notaccuse&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;notaccuse&#39;, &#39;play&#39;)
 Ah. Perhaps I should not let arrows fly when none have been sent my way. Well. Please accept my apologies.
 
 (set: $accusedgarth to &quot;false&quot;)
 [[Continue-&gt;Main Nexus]]</tw-passagedata><tw-passagedata pid="5" name="Accuse" tags="" position="1958,1034" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;accuse&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;accuse&#39;, &#39;play&#39;)
 {(if: $race is &#39;drow&#39;)[GARTHIR: You know, though I might be part dragon, I can still control my baser instincts, just as I imagine you can. For instance, drow, I don&#39;t see you snarling in some dark cave somewhere, now do I?]
 
 (else-if: $race is &#39;human&#39;)[GARTHIR: You know, though I might be part dragon, I can still control my baser instincts, just as I imagine you can. For instance, human, I don&#39;t currently see you slaughtering your own kind over land disputes.]
@@ -198,7 +198,7 @@ Now [[let&#39;s get started!-&gt;Start]]</tw-passagedata><tw-passagedata pid="21
 (set: $class to &quot;druid&quot;)
 
 Now [[let&#39;s get started!-&gt;Start]]</tw-passagedata><tw-passagedata pid="22" name="Main Nexus" tags="" position="2123,979" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;mainnexus&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;mainnexus&#39;, &#39;play&#39;)
 GARTHIR: Though, I must admit that fire still holds a certain visual appeal. Look at the way the flames dance. A sort of elemental ballet, isn&#39;t it?
 
 
@@ -206,21 +206,21 @@ GARTHIR: Though, I must admit that fire still holds a certain visual appeal. Loo
 0. [[What happened to that building?-&gt;what start]]
 0. [[&amp;#91;INSIGHT&amp;#93; You seem to be quite pleased to watch a building burn.-&gt;Insight check]]
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="23" name="who start" tags="" position="2981,862" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;whostart&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;whostart&#39;, &#39;play&#39;)
 {(if: $accusedgarth is &#39;false&#39;)[GARTHIR: I am Garthir Ancalagar, poet, actor, and playwright. My friends call me Garth, and you may call me friend if you wish.]
 
 (else:)[GARTHIR: I am Garthir Ancalagar, poet, actor, and playwright. My friends call me Garth, but given the nature of our introduction, I believe we can hold that name in reserve.]}
 
 [[Continue-&gt;whostart2]]</tw-passagedata><tw-passagedata pid="24" name="what start" tags="" position="3013,1309" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;whatstart&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;whatstart&#39;, &#39;play&#39;)
 GARTHIR: A building has caught fire, clearly. I have no doubt that the city guard will look at the half-dragon and assume he did it, but I assure you, it had nothing to do with me.
 
-[[Continue-&gt;what nexus]]</tw-passagedata><tw-passagedata pid="25" name="whostart2" tags="" position="3118,793" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;whostart2&#39;, &#39;playwhenpossible&#39;)
+[[Continue-&gt;what nexus]]</tw-passagedata><tw-passagedata pid="25" name="whostart2" tags="" position="3125,802" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;whostart2&#39;, &#39;play&#39;)
 GARTHIR: You might know my name already if you&#39;ve lived anywhere near Murann. I was a performer of some note there, once upon a time.
 
 [[Continue-&gt;who nexus]]</tw-passagedata><tw-passagedata pid="26" name="who nexus" tags="" position="3317,700" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;whonexus&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;whonexus&#39;, &#39;play&#39;)
 GARTHIR: I was but a child then, having only just come into my talent. And then my opportunities vanished. I was unprepared to face the world of the stage alone. But now things are different. I have my own play, and my sights are set on the stage of Baldur&#39;s Gate.
 
 0. [[What happened in Murann?-&gt;Murann intro]]
@@ -228,15 +228,15 @@ GARTHIR: I was but a child then, having only just come into my talent. And then 
 0. [[You don&#39;t see a lot of half-dragons about.-&gt;half dragon intro]]
 0. [[What is your play about?]]
 0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="27" name="Murann intro" tags="" position="3657,251" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;murannintro&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;murannintro&#39;, &#39;play&#39;)
 GARTHIR: Ah, to find that out, you&#39;ll have to see my play! It&#39;s autobiographical, you see. And a marvelous story it is.
 
 [[Continue-&gt;murannintro2]]</tw-passagedata><tw-passagedata pid="28" name="Baldur&#39;s Gate intro" tags="" position="3661,459" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;baldursgateintro&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;baldursgateintro&#39;, &#39;play&#39;)
 GARTHIR: Yes, we will - eventually - perform one of the greatest plays ever written in the ever-flawed jewel of Amn herself, Baldur&#39;s Gate. The greatest tales in Faerûn have some start or end in Baldur&#39;s Gate, do they not? 
 
 [[Continue-&gt;bg2]]</tw-passagedata><tw-passagedata pid="29" name="murannintro2" tags="" position="3880,234" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;murannintro2-1&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;murannintro2-1&#39;, &#39;play&#39;)
 GARTHIR: The short story is that I was once quite the star of the stage in Murann as a youth. My mother knew how to showcase my talents, and I made the best of it. Alas, such times never last forever.
 [[Continue-&gt;murannintro3]]</tw-passagedata><tw-passagedata pid="30" name="Insight check" tags="" position="2867,1964" size="100,100">(set: $insightroll to (random: 1,20))
 You needed to roll a 9 to succeed. You rolled a $insightroll.
@@ -244,23 +244,23 @@ You needed to roll a 9 to succeed. You rolled a $insightroll.
 {(if: $insightroll is &gt;= 9)[[[Continue-&gt;Insight Success]]]
 
 (else:)[[[Continue-&gt;Insight Failure]]]}</tw-passagedata><tw-passagedata pid="31" name="murannintro3" tags="" position="4049,230" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;murannintro3&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;murannintro3&#39;, &#39;play&#39;)
 GARTHIR: Would that we could find a stage to tell this tale upon! I had hoped to find one here, but alas, there are those who can see only my more monstrous side. 
 
 0. [[I had more questions about you.]]
 0. [[Let&#39;s talk of something else.]] 
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="32" name="what nexus" tags="" position="3225,1322" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;whatnexus&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;whatnexus&#39;, &#39;play&#39;)
 GARTHIR: I suppose I must be on my way before the inevitable mob arrives, once I find my Orielle. You haven&#39;t seen her, have you? Perhaps you could help me find her. I fear time may be of the essence.
 
 [[1. Sure, I&#39;ll help you. Describe her for me.-&gt;Help Garth]]
 [[2. I don&#39;t have time to help you.-&gt;Don&#39;t help Garth]]</tw-passagedata><tw-passagedata pid="33" name="Insight Success" tags="" position="3031,1964" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;insightsuccess&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;insightsuccess&#39;, &#39;play&#39;)
 GARTHIR: If you must know, my partner and I had a rather unsatisfactory meeting with the owner of this residence.
 
 (set: $insightquestion to &quot;true&quot;)
 [[Continue-&gt;insightsuccess]]</tw-passagedata><tw-passagedata pid="34" name="Insight Failure" tags="" position="3032,2092" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;insightfailure&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;insightfailure&#39;, &#39;play&#39;)
 GARTHIR: As I told you, I am still part dragon. Fire simply has a raw appeal for me, the way enchanted swords or rings of power have appeal for you. I would ask that you not judge me based on my appearance.
 
 (set: $insightquestion to &quot;true&quot;)
@@ -268,11 +268,11 @@ GARTHIR: As I told you, I am still part dragon. Fire simply has a raw appeal for
 0. [[Who are you?-&gt;who start]]
 0. [[What happened to that building?-&gt;what start]]
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="35" name="insightsuccess" tags="" position="3301,1957" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;insightsuccess2&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;insightsuccess2&#39;, &#39;play&#39;)
 GARTHIR: You see, I had hoped that we could perform our play here. A simple sponsorship would have been all we required. But our would-be patron who lives in this building had... opinions about the union of a half-dragon and a human.
 
 [[Continue-&gt;insightsuccess3]]</tw-passagedata><tw-passagedata pid="36" name="insightsuccess3" tags="" position="3489,1955" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;insightsuccess3&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;insightsuccess3&#39;, &#39;play&#39;)
 GARTHIR: So you will excuse me if tears do not fall for him. I *can* cry on command, however. Would you like to see?
 
 0. [[I&#39;d love to see that. It sounds like an impressive feat.-&gt;I&#39;d love to see that. It sounds quite impressive.]]
@@ -285,33 +285,33 @@ GARTHIR: So you will excuse me if tears do not fall for him. I *can* cry on comm
 [[Continue-&gt;cry4]]</tw-passagedata><tw-passagedata pid="40" name="cry4" tags="" position="4237,1873" size="100,100">*Garthir appears shaken for a moment, but the fog clears and he smiles weakly at you.*
 
 [[Continue-&gt;cry5]]</tw-passagedata><tw-passagedata pid="41" name="cry5" tags="" position="4394,1846" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;cry5&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;cry5&#39;, &#39;play&#39;)
 GARTHIR: There. A genuine half-dragon tear. I hope it satisfied.
 
 0. [[Incredible! How were you able to cry on command?-&gt;howcry]]
 0. [[*Politely clap.*]]</tw-passagedata><tw-passagedata pid="42" name="cried1" tags="" position="4702,1706" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;cried1&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;cried1&#39;, &#39;play&#39;)
 GARTHIR: I think of the day I lost my mother when I was young, back in Murann. I had no idea how much of herself she had given to keep me safe.
 
-[[Continue-&gt;cried2]]</tw-passagedata><tw-passagedata pid="43" name="cried2" tags="" position="4847,1704" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;cried2&#39;, &#39;playwhenpossible&#39;)
+[[Continue-&gt;cried2]]</tw-passagedata><tw-passagedata pid="43" name="cried2" tags="" position="4850,1702" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;cried2&#39;, &#39;play&#39;)
 GARTHIR: But worry not. The immediate pain has dulled. Neverthless, I appreciate that you have some interest in my craft. Would that others had the same curiosity.
 
 *Gained an inspiration point.*
 
 0. [[Let&#39;s talk of something else.]]
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="44" name="Help Garth" tags="" position="3641,1296" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;helpgarth&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;helpgarth&#39;, &#39;play&#39;)
 GARTHIR: Thank you. What can I say about my Orielle? She is the loveliest of humans. Red of hair, rosy of cheek. She is strong and delicate all at once, delightfully robust and possessing all the grace of a deva. 
 
 [[Continue-&gt;help1]]</tw-passagedata><tw-passagedata pid="45" name="Don&#39;t help Garth" tags="" position="3643,1524" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;donthelpgarth&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;donthelpgarth&#39;, &#39;play&#39;)
 GARTHIR: I should have assumed. Looking at the assortment of weapons you carry, I imagine most of your problem solving is done by forcefully embedding steel in flesh. Worry not, &#39;twas my fault for even asking.
 
 0. [[Let&#39;s talk of something else.]]
 0. [[On second thought, I&#39;ve changed my mind.-&gt;Help Garth]] 
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="46" name="Let&#39;s talk of something else." tags="" position="2124,1103" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;letstalkofsomethingelse&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;letstalkofsomethingelse&#39;, &#39;play&#39;)
 GARTHIR: If we must.
 
 {
@@ -322,11 +322,11 @@ GARTHIR: If we must.
 		&lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
 	&lt;/ol&gt;
 }</tw-passagedata><tw-passagedata pid="47" name="help1" tags="" position="3877,1298" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;help1&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;help1&#39;, &#39;play&#39;)
 GARTHIR: And her voice! She sculpts words and song from the air itself, smoothing the edges of the wind until she achieves perfect resonance.
 
 [[Continue-&gt;help nexus]]</tw-passagedata><tw-passagedata pid="48" name="help nexus" tags="" position="4776,1441" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;helpnexus&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;helpnexus&#39;, &#39;play&#39;)
 GARTHIR: She is my muse, you see. I will go nowhere if I cannot go with her.
 
 {
@@ -350,55 +350,55 @@ In case it would be helpful, I&#39;ve recorded a few lines as Garth, just to giv
 Otherwise, I&#39;ll look forward to speaking with you again soon!
 
 (link: &quot;Restart&quot;)[(reload:)]
-[[Hire Cyrus]]</tw-passagedata><tw-passagedata pid="50" name="Where did you see her last?" tags="" position="5293,1170" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;wherediduseeher&#39;, &#39;playwhenpossible&#39;)
+[[Hire Cyrus]]</tw-passagedata><tw-passagedata pid="50" name="Where did you see her last?" tags="" position="5293,1167" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;wherediduseeher&#39;, &#39;play&#39;)
 GARTHIR: She was quite upset, the dear thing. We met with the resident of this house, a potential patron. He was disgusted at the idea of a half-dragon and a human in a romantic scene.
 
 [[Continue-&gt;where1]]</tw-passagedata><tw-passagedata pid="51" name="I&#39;d love to see that. It sounds quite impressive." tags="" position="3623,1842" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;idlovetoseethat&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;idlovetoseethat&#39;, &#39;play&#39;)
 GARTHIR: Oh, most excellent. Here. Look me in the eyes. 
 
 [[Continue-&gt;cry1]]</tw-passagedata><tw-passagedata pid="52" name="I don&#39;t actually have a lot of interest in seeing you cry." tags="" position="3683,2154" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;idontactuallyhavealot&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;idontactuallyhavealot&#39;, &#39;play&#39;)
 GARTHIR: Naturally. Given the equipment you carry, I imagine you&#39;re far more interested in the &quot;craft&quot; of embedding bits of steel into flesh than the theatre. More&#39;s the pity.
 
 0. [[Hold on a moment... I&#39;ve changed my mind. Let&#39;s see you cry.-&gt;I&#39;d love to see that. It sounds quite impressive.]]
 0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="53" name="howcry" tags="" position="4562,1680" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;ashimhow&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;ashimhow&#39;, &#39;play&#39;)
 GARTHIR: Acting comes from the wellspring of life. We all carry pains, do we not? I simply recollect mine.
 
 [[Continue-&gt;cried1]]</tw-passagedata><tw-passagedata pid="54" name="*Politely clap.*" tags="" position="4546,1866" size="100,100">*Garthir bows magnanimously, then wipes the tear away with his sleeve.*
 
 0. [[Let&#39;s talk of something else.]]
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="55" name="oriellemagicresponse" tags="" position="5285,1324" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;oriellemagicresponse&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;oriellemagicresponse&#39;, &#39;play&#39;)
 GARTHIR: Of course. Elemental magic is simply another of her considerable talents. I am a lucky fellow, don&#39;t you think?
 
 0. [[I had more questions about Orielle.]]
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="56" name="half dragon intro" tags="" position="3663,642" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;halfdragonintro&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;halfdragonintro&#39;, &#39;play&#39;)
 GARTHIR: Indeed, no, and I have little interest in my kind, nor do I have any affinity for dragonkind.
 
 [[Continue-&gt;dragonstuff1]]</tw-passagedata><tw-passagedata pid="57" name="How did you meet each other?" tags="" position="5260,1436" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;howdidyoumeet&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;howdidyoumeet&#39;, &#39;play&#39;)
 GARTHIR: I&#39;m afraid that the play I have written is the best way to hear that story. I don&#39;t think that&#39;s information you require anyway.
 
 0. [[CHARISMA: I like a good love story. I&#39;m sure yours must be quite special.-&gt;CHARISMA: I do love a good love story. I&#39;m sure yours must be quite special.]]
 0. [[I had more questions about Orielle.]]
 0. [[Let&#39;s talk of something else.]]
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="58" name="where1" tags="" position="5510,1153" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;where1&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;where1&#39;, &#39;play&#39;)
 GARTHIR: I&#39;m afraid she shared some rather choice words with the man. She&#39;s quite the darling lamb in normal circumstances, but she&#39;s protective of me.
 
 [[Continue-&gt;where2]]</tw-passagedata><tw-passagedata pid="59" name="where2" tags="" position="5698,1087" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;where2&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;where2&#39;, &#39;play&#39;)
 GARTHIR: I&#39;m sure she&#39;ll be alright. A walk ought to clear her head.
 
 0. [[Do you think she had anything to do with this?]]
 0. [[I had more questions about Orielle.]]</tw-passagedata><tw-passagedata pid="60" name="Do you think she had anything to do with this?" tags="" position="5851,1021" size="100,100">*Garthir&#39;s eyes narrow.*
 
 [[Continue-&gt;accusedorielle1]]</tw-passagedata><tw-passagedata pid="61" name="I had more questions about Orielle." tags="" position="4770,1297" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;ihadmorequestionsorielle&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;ihadmorequestionsorielle&#39;, &#39;play&#39;)
 GARTHIR: By all means, ask. 
 
 {
@@ -413,12 +413,12 @@ GARTHIR: By all means, ask.
 		&lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
 	&lt;/ol&gt;
 }</tw-passagedata><tw-passagedata pid="62" name="accusedorielle1" tags="" position="6069,994" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;accusedorielle1&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;accusedorielle1&#39;, &#39;play&#39;)
 (set: $accusedorielle to &quot;true&quot;)
 GARTHIR: Orielle saved me when all others thought me a monster, though  they were quite correct. I have put that monster in my past, though you tempt him greatly when you cast suspicion upon one so dear.
 
 [[Continue-&gt;accusedorielle2]]</tw-passagedata><tw-passagedata pid="63" name="accusedorielle2" tags="" position="6247,990" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;accusedorielle2&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;accusedorielle2&#39;, &#39;play&#39;)
 GARTHIR: I will assume that you meant no ill, and I won&#39;t have to defend her honor?
 
 0. [[PERSUADE: I meant nothing by it.]]
@@ -431,13 +431,13 @@ You needed to roll a 6 to succeed. You rolled a $persuaderoll.
 (else:)[[[Continue-&gt;Persuade Failure]]]}</tw-passagedata><tw-passagedata pid="65" name="*Attack him.*" tags="" position="6373,1157" size="100,100">*You attack Garthir. He&#39;s far more powerful than his bearing would indicate, and he quickly turns you to a pile of ash.*
 
 [[Restart-&gt;Intro]]</tw-passagedata><tw-passagedata pid="66" name="Persuade Success" tags="" position="6520,781" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;persuadesuccess&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;persuadesuccess&#39;, &#39;play&#39;)
 GARTHIR: Yes, well. I suppose I was a bit oversensitive. Actor&#39;s trait, you know?  I&#39;m sure you&#39;re just looking for information. 
 
 0. [[I had more questions about Orielle.]]
 0. [[Let&#39;s talk of something else.]]
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="67" name="Persuade Failure" tags="" position="6517,975" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;persuadefailure&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;persuadefailure&#39;, &#39;play&#39;)
 GARTHIR: You know, I&#39;m not sure why I decided to confide in you in the first place. Please leave.
 
 0. [[*Attack him.*]]
@@ -452,25 +452,25 @@ You needed to roll a 6 to succeed. You rolled a $charismaroll.
 {(if: $charismaroll is &gt;= 9)[[[Continue-&gt;Charisma Success]]]
 
 (else:)[[[Continue-&gt;Charisma Failure]]]}</tw-passagedata><tw-passagedata pid="70" name="Charisma Success" tags="" position="5617,1284" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;charismasuccess&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;charismasuccess&#39;, &#39;play&#39;)
 GARTHIR: Oh, it is very special indeed. Would it surprise you to learn that one such as I once adopted the manner of my draconic father? 
 
 [[Continue-&gt;charismasuccess1]]</tw-passagedata><tw-passagedata pid="71" name="Charisma Failure" tags="" position="5616,1473" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;charismafailure&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;charismafailure&#39;, &#39;play&#39;)
 GARTHIR: Now, now. If I gave away my entire story, what would you pay for?
 (set: $charismatest to &quot;true&quot;)
 0. [[I had more questions about Orielle.]]
 0. [[Let&#39;s talk of something else.]]
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="72" name="charismasuccess1" tags="" position="5772,1298" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;charismasuccess1&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;charismasuccess1&#39;, &#39;play&#39;)
 GARTHIR: That I lived in a cave, hoarding gold, causing terror wherever I roamed? That I did not rely on the fire in my words, but the fire in my throat?
 
 [[Continue-&gt;charismasuccess2]]</tw-passagedata><tw-passagedata pid="73" name="charismasuccess2" tags="" position="5915,1289" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;charismasuccess2&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;charismasuccess2&#39;, &#39;play&#39;)
 GARTHIR: I&#39;m afraid it is true. But Orielle... she saved me. She made me remember what I loved about my old life, and she gave me hope that I could have that life again.
 
-[[Continue-&gt;charismasuccess3]]</tw-passagedata><tw-passagedata pid="74" name="charismasuccess3" tags="" position="6069,1297" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;charismasuccess3&#39;, &#39;playwhenpossible&#39;)
+[[Continue-&gt;charismasuccess3]]</tw-passagedata><tw-passagedata pid="74" name="charismasuccess3" tags="" position="6071,1297" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;charismasuccess3&#39;, &#39;play&#39;)
 GARTHIR: Oh, but you are a charmer, enticing me into giving away my story. I will speak no more on the matter until it be upon the stage.
 
 (set: $charismatest to &quot;true&quot;)
@@ -478,7 +478,7 @@ GARTHIR: Oh, but you are a charmer, enticing me into giving away my story. I wil
 0. [[Let&#39;s talk of something else.]]
 0. [[*Take your leave.*]]
 </tw-passagedata><tw-passagedata pid="75" name="dragonstuff1" tags="" position="3874,680" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;dragonstuff1&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;dragonstuff1&#39;, &#39;play&#39;)
 GARTHIR: I&#39;ve learned all I wish to know about dragonkind, thank you very much.
 
 {
@@ -487,36 +487,36 @@ GARTHIR: I&#39;ve learned all I wish to know about dragonkind, thank you very mu
 (unless: $dragonquestion is &quot;true&quot;)[&lt;li&gt;[[PERSUADE: What makes you feel so strongly about dragons?]]&lt;/li&gt;]
 &lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
 &lt;/ol&gt;
-}</tw-passagedata><tw-passagedata pid="76" name="I had more questions about you." tags="" position="3368,808" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;ihadmorequestionsaboutu&#39;, &#39;playwhenpossible&#39;)
+}</tw-passagedata><tw-passagedata pid="76" name="I had more questions about you." tags="" position="3368,806" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;ihadmorequestionsaboutu&#39;, &#39;play&#39;)
 GARTHIR: Of course. Ask away.
 
 0. [[What happened in Murann?-&gt;Murann intro]]
 0. [[What do you intend to do in Baldur&#39;s Gate?-&gt;Baldur&#39;s Gate intro]]
 0. [[I don&#39;t see a lot of half-dragons about.-&gt;half dragon intro]]
 0. [[What is your play about?]]
-0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="77" name="PERSUADE: What makes you feel so strongly about dragons?" tags="" position="4052,609" size="100,100">(set: $persuadedragon to (random: 1,20))
+0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="77" name="PERSUADE: What makes you feel so strongly about dragons?" tags="" position="4052,606" size="100,100">(set: $persuadedragon to (random: 1,20))
 You needed to roll a 12 to succeed. You rolled a $persuadedragon.
 
 {(if: $persuadedragon is &gt;= 12)[[[Continue-&gt;Persuade Dragon Success]]]
 
 (else:)[[[Continue-&gt;Persuade Dragon Failure]]]}</tw-passagedata><tw-passagedata pid="78" name="Persuade Dragon Success" tags="" position="4203,534" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;persuadedragonsuccess&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;persuadedragonsuccess&#39;, &#39;play&#39;)
 GARTHIR: If you must know, I never knew my father. All I know is that he *used* my mother. Toyed with her emotions.
 
 [[Continue-&gt;dragonsuccess2]]</tw-passagedata><tw-passagedata pid="79" name="Persuade Dragon Failure" tags="" position="4202,741" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;persuadedragonfailure&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;persuadedragonfailure&#39;, &#39;play&#39;)
 GARTHIR: We&#39;ve only just met. I don&#39;t think it&#39;s quite the right time to talk about our deep-seated issues, do you?
 
 (set: $dragonquestion to &quot;true&quot;)
 0. [[I had more questions about you.]]
 0. [[Let&#39;s talk of something else.]] 
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="80" name="dragonsuccess2" tags="" position="4396,542" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;dragonsuccess2&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;dragonsuccess2&#39;, &#39;play&#39;)
 GARTHIR: My mother loved him, but he saw her as little more than a plaything. Dragons are self-important creatures, and I have no love for them.
 
-[[Continue-&gt;dragonsuccess3]]</tw-passagedata><tw-passagedata pid="81" name="dragonsuccess3" tags="" position="4611,564" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;dragonsuccess3&#39;, &#39;playwhenpossible&#39;)
+[[Continue-&gt;dragonsuccess3]]</tw-passagedata><tw-passagedata pid="81" name="dragonsuccess3" tags="" position="4611,562" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;dragonsuccess3&#39;, &#39;play&#39;)
 GARTHIR: My life is far more interesting than that of some roaming lizard anyway, which I why I wrote a play about myself.
 
 (set: $dragonquestion to &quot;true&quot;)
@@ -524,17 +524,17 @@ GARTHIR: My life is far more interesting than that of some roaming lizard anyway
 [[I had more questions about you.]]
 [[Let&#39;s talk of something else.]] 
 [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="82" name="What is your play about?" tags="" position="3667,866" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;whatisyourplay&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;whatisyourplay&#39;, &#39;play&#39;)
 GARTHIR: It&#39;s about myself. It chronicles the rise of a talented young half-dragon who could bring audiences to tears of both joy and sadness, his descent into grief and madness, and the muse who saw his true soul and brought him back.
 
-[[Continue-&gt;playdescribe1]]</tw-passagedata><tw-passagedata pid="83" name="bg2" tags="" position="3859,432" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;bg2&#39;, &#39;playwhenpossible&#39;)
+[[Continue-&gt;playdescribe1]]</tw-passagedata><tw-passagedata pid="83" name="bg2" tags="" position="3859,437" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;bg2&#39;, &#39;play&#39;)
 GARTHIR: It is in Baldur&#39;s Gate that I will find my greatest audience and all the fame and fortune I deserve. I am sure of it.
 
 0. [[I had more questions about you.]]
 0. [[Let&#39;s talk of something else.]] 
 0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="84" name="playdescribe1" tags="" position="3830,882" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;playdescribe1&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;playdescribe1&#39;, &#39;play&#39;)
 GARTHIR: It could very well be the greatest play of all time, and none but myself is fit to bring the star character to life.
 
 [[Continue-&gt;playdescribe2]]</tw-passagedata><tw-passagedata pid="85" name="hal.tracks" tags="" position="310,845" size="100,100">accuse: ./NoDungeonsHalfDragons_files/accuse.mp3
@@ -593,7 +593,7 @@ wherediduseeher: ./NoDungeonsHalfDragons_files/wherediduseeher.mp3
 whonexus: ./NoDungeonsHalfDragons_files/whonexus.mp3
 whostart: ./NoDungeonsHalfDragons_files/whostart.mp3
 whostart2: ./NoDungeonsHalfDragons_files/whostart2.mp3</tw-passagedata><tw-passagedata pid="86" name="playdescribe2" tags="" position="4064,870" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;playdescribe2&#39;, &#39;playwhenpossible&#39;)
+(track: &#39;playdescribe2&#39;, &#39;play&#39;)
 GARTHIR: I do hope you can see it some day.
 
 [[I had more questions about you.]]
