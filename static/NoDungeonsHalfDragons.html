@@ -434,7 +434,7 @@ You needed to roll a 6 to succeed. You rolled a $persuaderoll.
 
 (else:)[[[Continue-&gt;Persuade Failure]]]}</tw-passagedata><tw-passagedata pid="65" name="*Attack him.*" tags="" position="6373,1157" size="100,100">*You attack Garthir. He&#39;s far more powerful than his bearing would indicate, and he quickly turns you to a pile of ash.*
 
-[[Restart-&gt;Intro]]</tw-passagedata><tw-passagedata pid="66" name="Persuade Success" tags="" position="6520,781" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[You died.]]</tw-passagedata><tw-passagedata pid="66" name="Persuade Success" tags="" position="6520,781" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;persuadesuccess&#39;, &#39;play&#39;)
 GARTHIR: Yes, well. I suppose I was a bit oversensitive. Actor&#39;s trait, you know?  I&#39;m sure you&#39;re just looking for information. 
 
@@ -607,7 +607,16 @@ GARTHIR: I do hope you can see it some day.
 
 [[I had more questions about you.]]
 [[Let&#39;s talk of something else.]] 
-[[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="87" name="hal.config" tags="" position="449,843" size="100,100">sidebarStartClosed: false</tw-passagedata></tw-storydata>
+[[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="87" name="hal.config" tags="" position="449,843" size="100,100">sidebarStartClosed: false</tw-passagedata><tw-passagedata pid="88" name="You died." tags="" position="6456,1325" size="100,100">Congratulations! You found the only way to die in this test.
+
+I hope you enjoyed yourself! If you&#39;d like to restart, you can do so here and try some other paths. I tried to emulate BG3&#39;s options, so some results may occur with specific classes or races. You can also retry some of the dice rolls.
+
+In case you&#39;re curious about Garth, I can provide some backstory for him upon request.
+
+Otherwise, I&#39;ll look forward to speaking with you again soon!
+
+(link: &quot;Restart&quot;)[(reload:)]
+[[Hire Cyrus]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
