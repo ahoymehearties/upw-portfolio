@@ -48,7 +48,7 @@ body {background-color: #6b4c71; !important}
 /** End of HAL code */</script><tw-passagedata pid="1" name="Intro" tags="" position="161,294" size="100,100">&lt;img style=&quot;display:block; margin-left: auto; margin-right: auto;&quot; src=&quot;https://upload.wikimedia.org/wikipedia/en/d/dc/Baldur%27s_Gate_III_Logo.png&quot;&gt;
 Hi, Larian! My name is Cyrus Nemati, and this is my writing test. I&#39;ve done my best to maintain the structure and style of Baldur&#39;s Gate 3&#39;s dialogue. I&#39;ve recorded dialogue for all the lines as well, as that is something I do.
 
-If you want a pure Twine experience, you can mute here.
+If you want a pure Twine experience, you can use the mute button in the lefthand drawer (or simply mute your computer).
 
 Just a little setup before we get started. Let&#39;s pick a race and class just to set a couple of variables. 
 
@@ -61,8 +61,8 @@ Let&#39;s start with picking a race:
 [[Elf]]
 [[Half-Elf]]
 [[Halfling]]
-[[Tiefling]]</tw-passagedata><tw-passagedata pid="2" name="Greeting" tags="" position="1534,955" size="100,100">(track: &#39;greeting&#39;, &#39;play&#39;)
-GARTHIR: Oh, I don&#39;t seem to be alone any longer. I suppose you must have a thousand questions for the handsome half-dragon seeming to be watching a fire with glee.
+[[Tiefling]]</tw-passagedata><tw-passagedata pid="2" name="Greeting" tags="" position="1537,953" size="100,100">(track: &#39;greeting&#39;, &#39;play&#39;)
+GARTHIR: Oh, I don&#39;t seem to be alone any more. I suppose you must have a thousand questions for the handsome half-dragon seeming to be watching a fire with glee.
 
 [[Continue-&gt;Greeting2]]</tw-passagedata><tw-passagedata pid="3" name="Greeting2" tags="" position="1724,955" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;greeting2&#39;, &#39;play&#39;)
@@ -71,7 +71,7 @@ GARTHIR: Well, I can assure you I had nothing to do with it, and I resent the ac
 [[1. I didn&#39;t accuse you of anything.-&gt;Not Accuse]]
 [[2. You do look pretty suspicious.-&gt;Accuse]]</tw-passagedata><tw-passagedata pid="4" name="Not Accuse" tags="" position="1953,877" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;notaccuse&#39;, &#39;play&#39;)
-Ah. Perhaps I should not let arrows fly when none have been sent my way. Well. Please accept my apologies.
+GARTHIR: Ah. Perhaps I should not let arrows fly when none have been sent my way. Well. Please accept my apologies.
 
 (set: $accusedgarth to &quot;false&quot;)
 [[Continue-&gt;Main Nexus]]</tw-passagedata><tw-passagedata pid="5" name="Accuse" tags="" position="1958,1034" size="100,100">(masteraudio: &#39;stopall&#39;)
@@ -95,7 +95,7 @@ Ah. Perhaps I should not let arrows fly when none have been sent my way. Well. P
 (set: $accusedgarth to &#39;true&#39;)
 [[Continue-&gt;Main Nexus]]</tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="1369,947" size="100,100">*You see a brightly dressed half-dragon looking intently at the burning building in front of him.*
 
-*He senses you looking and turns to face you. You recognize him as part copper dragon, a proud species infamous for their playful, but mercurial whims.* 
+*He senses you looking and turns to face you. You recognize him as part brass dragon, a proud species infamous for their mercurial whims and chatty nature.* 
 
 [[Continue-&gt;Greeting]]</tw-passagedata><tw-passagedata pid="7" name="Drow" tags="" position="120,443" size="100,100">Got it. You&#39;re a drow, but don&#39;t be blue. Now let&#39;s pick a class.
 
@@ -233,12 +233,14 @@ GARTHIR: Ah, to find that out, you&#39;ll have to see my play! It&#39;s autobiog
 
 [[Continue-&gt;murannintro2]]</tw-passagedata><tw-passagedata pid="28" name="Baldur&#39;s Gate intro" tags="" position="3661,459" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;baldursgateintro&#39;, &#39;play&#39;)
-GARTHIR: Yes, we will - eventually - perform one of the greatest plays ever written in the ever-flawed jewel of Amn herself, Baldur&#39;s Gate. The greatest tales in Faerûn have some start or end in Baldur&#39;s Gate, do they not? 
+GARTHIR: Yes, we will - eventually - perform one of the greatest plays ever written in the ever-flawed jewel of the Sword Coast herself, Baldur&#39;s Gate. The greatest tales in Faerûn have some start or end in Baldur&#39;s Gate, do they not? 
 
 [[Continue-&gt;bg2]]</tw-passagedata><tw-passagedata pid="29" name="murannintro2" tags="" position="3880,234" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;murannintro2-1&#39;, &#39;play&#39;)
 GARTHIR: The short story is that I was once quite the star of the stage in Murann as a youth. My mother knew how to showcase my talents, and I made the best of it. Alas, such times never last forever.
-[[Continue-&gt;murannintro3]]</tw-passagedata><tw-passagedata pid="30" name="Insight check" tags="" position="2867,1964" size="100,100">(set: $insightroll to (random: 1,20))
+[[Continue-&gt;murannintro3]]</tw-passagedata><tw-passagedata pid="30" name="Insight check" tags="" position="2867,1964" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;diceroll&#39;, &#39;play&#39;)
+(set: $insightroll to (random: 1,20))
 You needed to roll a 9 to succeed. You rolled a $insightroll.
 
 {(if: $insightroll is &gt;= 9)[[[Continue-&gt;Insight Success]]]
@@ -345,7 +347,7 @@ GARTHIR: She is my muse, you see. I will go nowhere if I cannot go with her.
 
 I hope you enjoyed this writing test! If you&#39;d like to restart, you can do so here and try some other paths. I tried to emulate BG3&#39;s options, so some results may occur with specific classes or races. You can also retry some of the dice rolls.
 
-In case it would be helpful, I&#39;ve recorded a few lines as Garth, just to give an idea of where I&#39;m drawing character from. I can provide some backstory for him upon request.
+In case you&#39;re curious about Garth, I can provide some backstory for him upon request.
 
 Otherwise, I&#39;ll look forward to speaking with you again soon!
 
@@ -364,7 +366,7 @@ GARTHIR: Naturally. Given the equipment you carry, I imagine you&#39;re far more
 
 0. [[Hold on a moment... I&#39;ve changed my mind. Let&#39;s see you cry.-&gt;I&#39;d love to see that. It sounds quite impressive.]]
 0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="53" name="howcry" tags="" position="4562,1680" size="100,100">(masteraudio: &#39;stopall&#39;)
-(track: &#39;ashimhow&#39;, &#39;play&#39;)
+(track: &#39;askhimhow&#39;, &#39;play&#39;)
 GARTHIR: Acting comes from the wellspring of life. We all carry pains, do we not? I simply recollect mine.
 
 [[Continue-&gt;cried1]]</tw-passagedata><tw-passagedata pid="54" name="*Politely clap.*" tags="" position="4546,1866" size="100,100">*Garthir bows magnanimously, then wipes the tear away with his sleeve.*
@@ -423,7 +425,9 @@ GARTHIR: I will assume that you meant no ill, and I won&#39;t have to defend her
 
 0. [[PERSUADE: I meant nothing by it.]]
 0. [[*Attack him.*]]
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="64" name="PERSUADE: I meant nothing by it." tags="" position="6377,888" size="100,100">(set: $persuaderoll to (random: 1,20))
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="64" name="PERSUADE: I meant nothing by it." tags="" position="6377,888" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;diceroll&#39;, &#39;play&#39;)
+(set: $persuaderoll to (random: 1,20))
 You needed to roll a 6 to succeed. You rolled a $persuaderoll.
 
 {(if: $persuaderoll is &gt;= 6)[[[Continue-&gt;Persuade Success]]]
@@ -446,7 +450,9 @@ GARTHIR: You know, I&#39;m not sure why I decided to confide in you in the first
 
 I can&#39;t help you with that, though. You&#39;ll have to talk to HR.
 
-[[Restart-&gt;Intro]]</tw-passagedata><tw-passagedata pid="69" name="CHARISMA: I do love a good love story. I&#39;m sure yours must be quite special." tags="" position="5463,1321" size="100,100">(set: $charismaroll to (random: 1,20))
+[[Restart-&gt;Intro]]</tw-passagedata><tw-passagedata pid="69" name="CHARISMA: I do love a good love story. I&#39;m sure yours must be quite special." tags="" position="5463,1321" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;diceroll&#39;, &#39;play&#39;)
+(set: $charismaroll to (random: 1,20))
 You needed to roll a 6 to succeed. You rolled a $charismaroll.
 
 {(if: $charismaroll is &gt;= 9)[[[Continue-&gt;Charisma Success]]]
@@ -495,7 +501,9 @@ GARTHIR: Of course. Ask away.
 0. [[What do you intend to do in Baldur&#39;s Gate?-&gt;Baldur&#39;s Gate intro]]
 0. [[I don&#39;t see a lot of half-dragons about.-&gt;half dragon intro]]
 0. [[What is your play about?]]
-0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="77" name="PERSUADE: What makes you feel so strongly about dragons?" tags="" position="4052,606" size="100,100">(set: $persuadedragon to (random: 1,20))
+0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="77" name="PERSUADE: What makes you feel so strongly about dragons?" tags="" position="4052,606" size="100,100">(masteraudio: &#39;stopall&#39;)
+(track: &#39;diceroll&#39;, &#39;play&#39;)
+(set: $persuadedragon to (random: 1,20))
 You needed to roll a 12 to succeed. You rolled a $persuadedragon.
 
 {(if: $persuadedragon is &gt;= 12)[[[Continue-&gt;Persuade Dragon Success]]]
@@ -556,6 +564,7 @@ donthelpgarth: ./NoDungeonsHalfDragons_files/donthelpgarth.mp3
 dragonstuff1: ./NoDungeonsHalfDragons_files/dragonstuff1.mp3
 dragonsuccess2: ./NoDungeonsHalfDragons_files/dragonsuccess2.mp3
 dragonsuccess3: ./NoDungeonsHalfDragons_files/dragonsuccess3.mp3
+diceroll: ./NoDungeonsHalfDragons_files/diceroll.mp3
 greeting: ./NoDungeonsHalfDragons_files/greeting.mp3
 greeting2: ./NoDungeonsHalfDragons_files/greeting2.mp3
 halfdragonintro: ./NoDungeonsHalfDragons_files/halfdragonintro.mp3
