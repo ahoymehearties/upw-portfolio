@@ -48,6 +48,8 @@ body {background-color: #6b4c71; !important}
 /** End of HAL code */</script><tw-passagedata pid="1" name="Intro" tags="" position="161,294" size="100,100">&lt;img style=&quot;display:block; margin-left: auto; margin-right: auto;&quot; src=&quot;https://upload.wikimedia.org/wikipedia/en/d/dc/Baldur%27s_Gate_III_Logo.png&quot;&gt;
 Hi, Larian! My name is Cyrus Nemati, and this is my writing test. I&#39;ve done my best to maintain the structure and style of Baldur&#39;s Gate 3&#39;s dialogue. I&#39;ve recorded dialogue for all the lines as well (in conditional cases, there may be only a first half of a line), as an actor&#39;s perspective is something I bring to the table.
 
+**Please view on a desktop browser for the best experience.**
+
 If you want a pure Twine experience, you can use the mute button in the lefthand drawer (or simply mute your computer).
 
 Just a little setup before we get started. Let&#39;s pick a race and class just to set a couple of variables. 
@@ -74,23 +76,23 @@ GARTHIR: Well, I can assure you I had nothing to do with it, and I resent the ac
 GARTHIR: Ah. Perhaps I should not let arrows fly when none have been sent my way. Well. Please accept my apologies.
 
 (set: $accusedgarth to &quot;false&quot;)
-[[Continue-&gt;Main Nexus]]</tw-passagedata><tw-passagedata pid="5" name="Accuse" tags="" position="1958,1034" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;Main Nexus]]</tw-passagedata><tw-passagedata pid="5" name="Accuse" tags="" position="1956,1034" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;accuse&#39;, &#39;play&#39;)
-{(if: $race is &#39;drow&#39;)[GARTHIR: You know, though I might be part dragon, I can still control my baser instincts, just as I imagine you can. For instance, drow, I don&#39;t see you snarling in some dark cave somewhere, now do I?]
+{(if: $race is &#39;drow&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, drow, I don&#39;t see you snarling in some dark cave somewhere, now do I?]
 
-(else-if: $race is &#39;human&#39;)[GARTHIR: You know, though I might be part dragon, I can still control my baser instincts, just as I imagine you can. For instance, human, I don&#39;t currently see you slaughtering your own kind over land disputes.]
+(else-if: $race is &#39;human&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, human, I don&#39;t currently see you slaughtering your own kind over land disputes.]
 
-(else-if: $race is &#39;githyanki&#39;)[GARTHIR: You know, though I might be part dragon, I can still control my baser instincts, just as I imagine you can. For instance, gith, you haven&#39;t yet plundered this town, have you?]
+(else-if: $race is &#39;githyanki&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, gith, you haven&#39;t yet plundered this town, have you?]
 
-(else-if: $race is &#39;dwarf&#39;)[GARTHIR: You know, though I might be part dragon, I can still control my baser instincts, just as I imagine you can. For instance, dwarf, you&#39;re talking to me instead of digging for jewels, aren&#39;t you?]
+(else-if: $race is &#39;dwarf&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, dwarf, you&#39;re talking to me instead of digging for jewels, aren&#39;t you?]
 
-(else-if: $race is &#39;half-elf&#39;)[GARTHIR: You know, though I might be part dragon, I can still control my baser instincts, just as I imagine you can. For instance, half-elf... well, honestly, I find half-elves to be rather decent folk, most of the time. It&#39;s unfortunate that I found one so judgmental.]
+(else-if: $race is &#39;half-elf&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, half-elf... well, honestly, I find half-elves to be rather decent folk, most of the time. It&#39;s unfortunate that I found one so judgmental.]
 
-(else-if: $race is &#39;tiefling&#39;)[GARTHIR: You know, though I might be part dragon, I can still control my baser instincts, just as I imagine you can. For instance, tiefling, I don&#39;t see you whining about your lot in some gutter.]
+(else-if: $race is &#39;tiefling&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, tiefling, I don&#39;t see you whining about your lot in some gutter.]
 
-(else-if: $race is &#39;halfling&#39;)[GARTHIR: You know, though I might be part dragon, I can still control my baser instincts, just as I imagine you can. I don&#39;t see you eating your third lunch of the day after all, halfling.]
+(else-if: $race is &#39;halfling&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. I don&#39;t see you eating your third lunch of the day after all, halfling.]
 
-(else:)[GARTHIR: You know, though I might be part dragon, I can still control my baser instincts, just as I imagine you can. For instance, elf, you&#39;re at least deigning to speak to me.]}
+(else:)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, elf, you&#39;re at least deigning to speak to me.]}
 
 (set: $accusedgarth to &#39;true&#39;)
 [[Continue-&gt;Main Nexus]]</tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="1369,947" size="100,100">*You see a brightly dressed half-dragon looking intently at the burning building in front of him.*
