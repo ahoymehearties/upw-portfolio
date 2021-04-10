@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play No Dungeons, Half Dragons Revision.</tw-noscript></noscript></tw-story>
-<tw-storydata name="No Dungeons, Half Dragons Revision" startnode="1" creator="Twine" creator-version="2.3.13" ifid="AEBB0EB9-7430-43FF-9546-7C31B2FDC4A6" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(https://fonts.googleapis.com/css2?family=Fanwood+Text);
+<tw-storydata name="No Dungeons, Half Dragons Revision" startnode="1" creator="Twine" creator-version="2.3.13" ifid="AEBB0EB9-7430-43FF-9546-7C31B2FDC4A6" zoom="0.6" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(https://fonts.googleapis.com/css2?family=Fanwood+Text);
 
 html {
 	font-family: 'Fanwood Text', serif !important;
@@ -52,8 +52,8 @@ Hi, Larian! My name is Cyrus Nemati, and this the revision of my writing test fi
 In this revision, I&#39;ve taken this feedback into account:
 
 * Split up dialogue to get closer to BG3 line length
-* Hidden extra information behind skill checks
-* Removed less immediate exposition
+* Gated specific information behind skill checks
+* Removed less-immediate exposition
 * Replaced the crying dragon scene with something more relevant
 
 I&#39;ve done my best to maintain the structure and style of Baldur&#39;s Gate 3&#39;s dialogue. **I&#39;ve recorded dialogue for all character lines** as well (in conditional cases, there may be only a first half of a line), as an actor&#39;s perspective is something I bring to the table.
@@ -74,29 +74,29 @@ Let&#39;s start with picking a race:
 [[Half-Elf]]
 [[Halfling]]
 [[Tiefling]]</tw-passagedata><tw-passagedata pid="2" name="Greeting" tags="" position="1577,1015" size="100,100">(track: &#39;greeting&#39;, &#39;play&#39;)
-GARTHIR: Oh, I don&#39;t seem to be alone any more. Have the torches and pitchforks arrived, then?
+GARTHIR: Oh, I don&#39;t seem to be alone anymore. Have the torches and pitchforks arrived, then?
 
 [[Continue-&gt;Greeting2]]</tw-passagedata><tw-passagedata pid="3" name="Greeting2" tags="" position="1724,955" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;greeting2&#39;, &#39;play&#39;)
 GARTHIR: Go on then, condemn the firebreather for his wanton destruction.
 
 0. [[I didn&#39;t accuse you of anything.-&gt;Not Accuse]]
-0. [[You do look pretty suspicious.-&gt;Accuse]]</tw-passagedata><tw-passagedata pid="4" name="Not Accuse" tags="" position="1865,854" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[You do look pretty suspicious.-&gt;Accuse]]</tw-passagedata><tw-passagedata pid="4" name="Not Accuse" tags="" position="1865,860.6666666666666" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;notaccuse&#39;, &#39;play&#39;)
-GARTHIR: Ah. Perhaps I should not let arrows fly when none have been sent my way. Well. Please accept my apologies.
+GARTHIR: Ah. Perhaps I should not let arrows fly when none have come my way. Well. Please accept my apologies.
 
 (set: $accusedgarth to &quot;false&quot;)
 [[Continue-&gt;Post Accuse]]</tw-passagedata><tw-passagedata pid="5" name="Accuse" tags="" position="1871,1096" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;accuse&#39;, &#39;play&#39;)
 {(if: $race is &#39;drow&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, drow, I don&#39;t see you snarling in some dark cave somewhere, now do I?]
 
-(else-if: $race is &#39;human&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, human, I don&#39;t currently see you slaughtering your own kind over land disputes.]
+(else-if: $race is &#39;human&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, human, I don&#39;t  see you slaughtering your own kind over land disputes.]
 
 (else-if: $race is &#39;githyanki&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, gith, you haven&#39;t yet plundered this town, have you?]
 
 (else-if: $race is &#39;dwarf&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, dwarf, you&#39;re talking to me instead of digging for jewels, aren&#39;t you?]
 
-(else-if: $race is &#39;half-elf&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, half-elf... well, honestly, I find half-elves to be rather decent folk, most of the time. It&#39;s unfortunate that I found one so judgmental.]
+(else-if: $race is &#39;half-elf&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, half-elf... well, honestly, I find half-elves rather decent folk, most of the time. It&#39;s unfortunate that I found one so judgmental.]
 
 (else-if: $race is &#39;tiefling&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, tiefling, I don&#39;t see you whining about your lot in some gutter.]
 
@@ -209,29 +209,29 @@ Now [[let&#39;s get started!-&gt;Start]]</tw-passagedata><tw-passagedata pid="21
 
 (set: $class to &quot;druid&quot;)
 
-Now [[let&#39;s get started!-&gt;Start]]</tw-passagedata><tw-passagedata pid="22" name="Main Nexus" tags="" position="2301,899" size="100,100">(masteraudio: &#39;stopall&#39;)
+Now [[let&#39;s get started!-&gt;Start]]</tw-passagedata><tw-passagedata pid="22" name="Main Nexus" tags="" position="2301,920.6666666666666" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;mainnexus&#39;, &#39;play&#39;)
 GARTHIR: Regardless, I&#39;ll have to be on my way before the real mob arrives.
 
 0. [[Who are you?-&gt;who start]]
 0. [[What happened to that building?-&gt;what start]]
-0. [[&amp;#91;INSIGHT&amp;#93; You seem to be quite pleased to watch a building burn.-&gt;Insight check]]
+0. [[&amp;#91;INSIGHT&amp;#93; You seem to be pleased to watch a building burn.-&gt;Insight check]]
 0. [[Wait... you don&#39;t breathe fire?]]
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="23" name="who start" tags="" position="3207.6666666666665,1231" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="23" name="who start" tags="" position="3207,1231" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whostart&#39;, &#39;play&#39;)
 {(if: $accusedgarth is &#39;false&#39;)[GARTHIR: I am Garthir Ancalagar, poet, actor, and playwright. My friends call me Garth, and you may call me friend if you wish.]
 
 (else:)[GARTHIR: I am Garthir Ancalagar, poet, actor, and playwright. My friends call me Garth, but given the nature of our introduction, I believe we can hold that name in reserve.]}
 
-[[Continue-&gt;whostart2]]</tw-passagedata><tw-passagedata pid="24" name="what start" tags="" position="3074.6666666666665,1805" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;whostart2]]</tw-passagedata><tw-passagedata pid="24" name="what start" tags="" position="3074,1805" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whatstart&#39;, &#39;play&#39;)
 GARTHIR: Well, it seems to have caught fire, clearly. 
 
-[[Continue-&gt;whatstart2]]</tw-passagedata><tw-passagedata pid="25" name="whostart2" tags="" position="3399.6666666666665,1234" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;whatstart2]]</tw-passagedata><tw-passagedata pid="25" name="whostart2" tags="" position="3399,1234" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whostart2&#39;, &#39;play&#39;)
 GARTHIR: You might know my name already if you&#39;ve lived anywhere near Murann. 
 
-[[Continue-&gt;whostart3]]</tw-passagedata><tw-passagedata pid="26" name="who nexus" tags="" position="4044.6666666666665,1220" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;whostart3]]</tw-passagedata><tw-passagedata pid="26" name="who nexus" tags="" position="4044,1220" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whonexus&#39;, &#39;play&#39;)
 
 GARTHIR: It craves an audience only Baldur&#39;s Gate can provide.
@@ -241,26 +241,26 @@ GARTHIR: It craves an audience only Baldur&#39;s Gate can provide.
 0. [[You don&#39;t see a lot of half-dragons about.-&gt;half dragon intro]]
 0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="27" name="Baldur&#39;s Gate intro" tags="" position="5378,898" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;baldursgateintro&#39;, &#39;play&#39;)
-GARTHIR: Yes, we will - eventually - perform one of the greatest plays ever written in the ever-flawed jewel of the Sword Coast herself, Baldur&#39;s Gate. 
+GARTHIR: Yes, the greatest play ever written *must* be performed in The Gate.
 
-[[Continue-&gt;bg2]]</tw-passagedata><tw-passagedata pid="28" name="Insight check" tags="" position="3203.6666666666665,3074" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;bg2]]</tw-passagedata><tw-passagedata pid="28" name="Insight check" tags="" position="3203,3074" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;diceroll&#39;, &#39;play&#39;)
 (set: $insightroll to (random: 1,20))
 You needed to roll a 9 to succeed. You rolled a $insightroll.
 
 {(if: $insightroll is &gt;= 9)[[[Continue-&gt;Insight Success]]]
 
-(else:)[[[Continue-&gt;Insight Failure]]]}</tw-passagedata><tw-passagedata pid="29" name="what nexus" tags="" position="3757.6666666666665,1796" size="100,100">(masteraudio: &#39;stopall&#39;)
+(else:)[[[Continue-&gt;Insight Failure]]]}</tw-passagedata><tw-passagedata pid="29" name="what nexus" tags="" position="3757,1796" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whatnexus&#39;, &#39;play&#39;)
 GARTHIR: You haven&#39;t seen her, have you? I fear time may be of the essence.
 
 [[1. Sure, I&#39;ll help you. Describe her for me.-&gt;Help Garth]]
-[[2. I don&#39;t have time to help you.-&gt;Don&#39;t help Garth]]</tw-passagedata><tw-passagedata pid="30" name="Insight Success" tags="" position="3367.6666666666665,3074" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[2. I don&#39;t have time to help you.-&gt;Don&#39;t help Garth]]</tw-passagedata><tw-passagedata pid="30" name="Insight Success" tags="" position="3367,3074" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;insightsuccess&#39;, &#39;play&#39;)
-GARTHIR: If you must know, my partner and I had a rather unsatisfactory meeting with the owner of this residence.
+GARTHIR: If you must know, my partner and I had an unsatisfactory meeting with the owner of this residence.
 
 (set: $insightquestion to &quot;true&quot;)
-[[Continue-&gt;insightsuccess]]</tw-passagedata><tw-passagedata pid="31" name="Insight Failure3" tags="" position="3670.6666666666665,2890" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;insightsuccess]]</tw-passagedata><tw-passagedata pid="31" name="Insight Failure3" tags="" position="3670,2890" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;insightfailure&#39;, &#39;play&#39;)
 GARTHIR: I would ask that you not judge me based on my appearance.
 
@@ -268,23 +268,23 @@ GARTHIR: I would ask that you not judge me based on my appearance.
 
 0. [[Who are you?-&gt;who start]]
 0. [[What happened to that building?-&gt;what start]]
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="32" name="insightsuccess" tags="" position="3544.6666666666665,3060" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="32" name="insightsuccess" tags="" position="3544,3060" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;insightsuccess2&#39;, &#39;play&#39;)
 GARTHIR: You see, I had hoped that we could perform our play here. A simple sponsorship would have been all we required. 
 
-[[Continue-&gt;insightsuccess2]]</tw-passagedata><tw-passagedata pid="33" name="insightsuccess3" tags="" position="3923.6666666666665,3073" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;insightsuccess2]]</tw-passagedata><tw-passagedata pid="33" name="insightsuccess3" tags="" position="3923,3073" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;insightsuccess3&#39;, &#39;play&#39;)
 GARTHIR: So you will excuse me if tears do not fall for him. 
 
 0. [[Let&#39;s talk of something else.]]
-0. [[That sounds like a motive. Perhaps it would be best if I fetched the guards.-&gt;motivethreat]]
-0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="34" name="Help Garth" tags="" position="3973.6666666666665,1786" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[That sounds like a motive. Perhaps it should fetch the guards.-&gt;motivethreat]]
+0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="34" name="Help Garth" tags="" position="3973,1786" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;helpgarth&#39;, &#39;play&#39;)
 GARTHIR: Thank you. What can I say about my Orielle?  
 
-[[Continue-&gt;orielledescribe1]]</tw-passagedata><tw-passagedata pid="35" name="Don&#39;t help Garth" tags="" position="3979.6666666666665,2014" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;orielledescribe1]]</tw-passagedata><tw-passagedata pid="35" name="Don&#39;t help Garth" tags="" position="3979,2014" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;donthelpgarth&#39;, &#39;play&#39;)
-GARTHIR: I should have assumed. Looking at the assortment of weapons you carry, I imagine most of your problem solving is done by forcefully embedding steel in flesh. Worry not, &#39;twas my fault for even asking.
+GARTHIR: I should have assumed. Looking at the assortment of weapons you carry, I imagine most of your problem solving is done by poking steel into flesh. Worry not, &#39;twas my fault for even asking.
 
 0. [[Let&#39;s talk of something else.]]
 0. [[On second thought, I&#39;ve changed my mind.-&gt;Help Garth]] 
@@ -296,15 +296,15 @@ GARTHIR: If we must.
 	&lt;ol&gt;
 		&lt;li&gt;[[Who are you?-&gt;who start]]&lt;/li&gt;
 		&lt;li&gt;[[What happened to that building?-&gt;what start]]&lt;/li&gt;
-		(unless: $insightquestion is &#39;true&#39;)[&lt;li&gt;[[&amp;#91;INSIGHT&amp;#93; You seem to be quite pleased to watch a building burn.-&gt;Insight check]]&lt;/li&gt;]	
+		(unless: $insightquestion is &#39;true&#39;)[&lt;li&gt;[[&amp;#91;INSIGHT&amp;#93; You seem to be pleased to watch a building burn.-&gt;Insight check]]&lt;/li&gt;]	
 		&lt;li&gt;[[You said you don&#39;t breathe fire?-&gt;Wait... you don&#39;t breathe fire?]]
 		&lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
 	&lt;/ol&gt;
-}</tw-passagedata><tw-passagedata pid="37" name="help1" tags="" position="4537.666666666667,1818" size="100,100">(masteraudio: &#39;stopall&#39;)
+}</tw-passagedata><tw-passagedata pid="37" name="help1" tags="" position="4537,1818" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;help1&#39;, &#39;play&#39;)
 GARTHIR: And her voice! She sculpts words and song from the air itself, smoothing the edges of the wind as if by magic.
 
-[[Continue-&gt;help nexus]]</tw-passagedata><tw-passagedata pid="38" name="help nexus" tags="" position="5779.333333333334,2756" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;help nexus]]</tw-passagedata><tw-passagedata pid="38" name="help nexus" tags="" position="5779,2756" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;helpnexus&#39;, &#39;play&#39;)
 GARTHIR: She is my muse, you see. I will go nowhere if I cannot go with her.
 
@@ -319,7 +319,7 @@ GARTHIR: She is my muse, you see. I will go nowhere if I cannot go with her.
 		&lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
 	&lt;/ol&gt;
 }
-</tw-passagedata><tw-passagedata pid="39" name="*Take your leave.*" tags="" position="3002.6666666666665,1197" size="100,100">*You turn on your heels and leave.*
+</tw-passagedata><tw-passagedata pid="39" name="*Take your leave.*" tags="" position="3002,1197" size="100,100">*You turn on your heels and leave.*
 
 I hope you enjoyed this writing test! If you&#39;d like to restart, you can do so here and try some other paths. I tried to emulate BG3&#39;s options, so some results may occur with specific classes or races. You can also retry some of the dice rolls.
 
@@ -328,32 +328,32 @@ In case you&#39;re curious about Garth, I can provide some backstory for him upo
 Otherwise, I&#39;ll look forward to speaking with you again soon!
 
 (link: &quot;Restart&quot;)[(reload:)]
-[[Hire Cyrus]]</tw-passagedata><tw-passagedata pid="40" name="Where did you see her last?" tags="" position="5767.333333333334,2084" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Hire Cyrus]]</tw-passagedata><tw-passagedata pid="40" name="Where did you see her last?" tags="" position="5767,2084" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;wherediduseeher&#39;, &#39;play&#39;)
 GARTHIR: He was disgusted at the idea of a half-dragon and a human in a romantic scene.
 
-[[Continue-&gt;where1]]</tw-passagedata><tw-passagedata pid="41" name="oriellemagicresponse" tags="" position="6047.333333333334,2467" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;where1]]</tw-passagedata><tw-passagedata pid="41" name="oriellemagicresponse" tags="" position="6047,2467" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;oriellemagicresponse&#39;, &#39;play&#39;)
 GARTHIR: Of course. Elemental magic is simply another of her considerable talents. 
 
 [[Continue-&gt;oriellemagicresponse2]] </tw-passagedata><tw-passagedata pid="42" name="half dragon intro" tags="" position="5654,1255" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;halfdragonintro&#39;, &#39;play&#39;)
-GARTHIR: Indeed, no, and I have little interest in my kind, nor do I have any affinity for dragonkind.
+GARTHIR: Indeed, no. But I have little interest in my kind. Nor do I have any affinity for dragonkind.
 
-[[Continue-&gt;dragonstuff1]]</tw-passagedata><tw-passagedata pid="43" name="How did you meet each other?" tags="" position="6127.333333333334,2826" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;dragonstuff1]]</tw-passagedata><tw-passagedata pid="43" name="How did you meet each other?" tags="" position="6127,2826" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;howdidyoumeet&#39;, &#39;play&#39;)
 GARTHIR: I&#39;m afraid that the play I have written is the best way to hear that story. 
 
-0. [[CHARISMA: Come on. I love a good love story. I&#39;m sure yours must be quite special.-&gt;CHARISMA: I do love a good love story. I&#39;m sure yours must be quite special.]]
+0. [[CHARISMA: Come on. I enjoy a good love story. I&#39;m sure yours must be quite special.-&gt;CHARISMA: I do love a good love story. I&#39;m sure yours must be quite special.]]
 0. [[I had more questions about Orielle.]]
 0. [[Let&#39;s talk of something else.]]
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="44" name="where3" tags="" position="6214.333333333334,2111" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="44" name="where3" tags="" position="6214,2111" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;where3&#39;, &#39;play&#39;)
 GARTHIR: She&#39;s quite the darling lamb in normal circumstances, but she&#39;s protective of me.
 
-[[Continue-&gt;where4]]</tw-passagedata><tw-passagedata pid="45" name="Do you think she had anything to do with this?" tags="" position="6665.333333333334,2110" size="100,100">*Garthir&#39;s eyes narrow.*
+[[Continue-&gt;where4]]</tw-passagedata><tw-passagedata pid="45" name="Do you think she had anything to do with this?" tags="" position="6665,2110" size="100,100">*Garthir&#39;s eyes narrow.*
 
-[[Continue-&gt;accusedorielle1]]</tw-passagedata><tw-passagedata pid="46" name="I had more questions about Orielle." tags="" position="5773.333333333334,2612" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;accusedorielle1]]</tw-passagedata><tw-passagedata pid="46" name="I had more questions about Orielle." tags="" position="5773,2612" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;ihadmorequestionsorielle&#39;, &#39;play&#39;)
 GARTHIR: By all means, ask. 
 
@@ -361,73 +361,73 @@ GARTHIR: By all means, ask.
 	&lt;ol&gt;
 		&lt;li&gt;[[Where did you see her last?]]&lt;/li&gt;
 		(unless: $charismafail is &quot;true&quot;)[&lt;li&gt;[[How did you meet each other?]]&lt;/li&gt;]
-		(if: $class is &quot;druid&quot;)[&lt;li&gt;[[DRUID: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
-(if: $class is &quot;cleric&quot;)[&lt;li&gt;[[CLERIC: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
-(if: $class is &quot;wizard&quot;)[&lt;li&gt;[[WIZARD: The way you describe her voice... it reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
+		(if: $class is &quot;druid&quot;)[&lt;li&gt;[[DRUID: The way you describe her voice... It reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
+(if: $class is &quot;cleric&quot;)[&lt;li&gt;[[CLERIC: The way you describe her voice... It reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
+(if: $class is &quot;wizard&quot;)[&lt;li&gt;[[WIZARD: The way you describe her voice.. .It reminds me of a particular kind of air magic.-&gt;oriellemagicresponse]]&lt;/li&gt;]
 		&lt;li&gt;[[Let&#39;s talk of something else.]]&lt;/li&gt;
 		&lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
 	&lt;/ol&gt;
-}</tw-passagedata><tw-passagedata pid="47" name="accusedorielle1" tags="" position="6851.333333333334,2100" size="100,100">(masteraudio: &#39;stopall&#39;)
+}</tw-passagedata><tw-passagedata pid="47" name="accusedorielle1" tags="" position="6851,2100" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;accusedorielle1&#39;, &#39;play&#39;)
 (set: $accusedorielle to &quot;true&quot;)
 GARTHIR: Orielle saved me when all others thought me a monster. 
 
-[[Continue-&gt;accusedorielle2]]</tw-passagedata><tw-passagedata pid="48" name="accusedorielle3" tags="" position="7224.333333333334,2084" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;accusedorielle2]]</tw-passagedata><tw-passagedata pid="48" name="accusedorielle3" tags="" position="7224,2084" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;accusedorielle3&#39;, &#39;play&#39;)
 GARTHIR: I demand you apologize lest you move me to defend her honor.
 
 0. [[PERSUADE: I meant nothing by it.]]
 0. [[*Attack him.*]]
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="49" name="PERSUADE: I meant nothing by it." tags="" position="7425.333333333334,1970" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="49" name="PERSUADE: I meant nothing by it." tags="" position="7425,1970" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;diceroll&#39;, &#39;play&#39;)
 (set: $persuaderoll to (random: 1,20))
 You needed to roll a 6 to succeed. You rolled a $persuaderoll.
 
 {(if: $persuaderoll is &gt;= 6)[[[Continue-&gt;Persuade Success]]]
 
-(else:)[[[Continue-&gt;Persuade Failure]]]}</tw-passagedata><tw-passagedata pid="50" name="*Attack him.*" tags="" position="7421.333333333334,2239" size="100,100">*You attack Garthir. He&#39;s far more powerful than his bearing would indicate, and he quickly turns you to a pile of ash.*
+(else:)[[[Continue-&gt;Persuade Failure]]]}</tw-passagedata><tw-passagedata pid="50" name="*Attack him.*" tags="" position="7421,2239" size="100,100">*You attack Garthir. He&#39;s far more powerful than his bearing would suggest, and he quickly turns you to a pile of ash.*
 
-[[You died.]]</tw-passagedata><tw-passagedata pid="51" name="Persuade Success" tags="" position="7570.333333333334,1914" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[You died.]]</tw-passagedata><tw-passagedata pid="51" name="Persuade Success" tags="" position="7570,1914" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;persuadesuccess&#39;, &#39;play&#39;)
 GARTHIR: Yes, well. I suppose I was a bit oversensitive. Actor&#39;s trait, you know?  
 
 [[Continue-&gt;persuadesuccess2]]
-</tw-passagedata><tw-passagedata pid="52" name="Persuade Failure" tags="" position="7574.333333333334,2083" size="100,100">(masteraudio: &#39;stopall&#39;)
+</tw-passagedata><tw-passagedata pid="52" name="Persuade Failure" tags="" position="7574,2083" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;persuadefailure&#39;, &#39;play&#39;)
 GARTHIR: You know, I&#39;m not sure why I decided to confide in you in the first place. Please leave.
 
 0. [[*Attack him.*]]
 0. [[*Take your leave.*]]
-</tw-passagedata><tw-passagedata pid="53" name="Hire Cyrus" tags="" position="3024.6666666666665,933" size="100,100">I was hoping you&#39;d click this one. :) 
+</tw-passagedata><tw-passagedata pid="53" name="Hire Cyrus" tags="" position="3024,933" size="100,100">I hoped you&#39;d click this one. :) 
 
 I can&#39;t help you with that, though. You&#39;ll have to talk to HR.
 
-[[Restart-&gt;Intro]]</tw-passagedata><tw-passagedata pid="54" name="CHARISMA: I do love a good love story. I&#39;m sure yours must be quite special." tags="" position="6515.333333333334,2732" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Restart-&gt;Intro]]</tw-passagedata><tw-passagedata pid="54" name="CHARISMA: I do love a good love story. I&#39;m sure yours must be quite special." tags="" position="6515,2732" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;diceroll&#39;, &#39;play&#39;)
 (set: $charismaroll to (random: 1,20))
 You needed to roll a 6 to succeed. You rolled a $charismaroll.
 
 {(if: $charismaroll is &gt;= 9)[[[Continue-&gt;Charisma Success]]]
 
-(else:)[[[Continue-&gt;Charisma Failure]]]}</tw-passagedata><tw-passagedata pid="55" name="Charisma Success" tags="" position="6741.333333333334,2691" size="100,100">(masteraudio: &#39;stopall&#39;)
+(else:)[[[Continue-&gt;Charisma Failure]]]}</tw-passagedata><tw-passagedata pid="55" name="Charisma Success" tags="" position="6741,2691" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;charismasuccess&#39;, &#39;play&#39;)
 GARTHIR: Oh, it is very special indeed. 
 
-[[Continue-&gt;charismasuccess1]]</tw-passagedata><tw-passagedata pid="56" name="Charisma Failure" tags="" position="6740.333333333334,2880" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;charismasuccess1]]</tw-passagedata><tw-passagedata pid="56" name="Charisma Failure" tags="" position="6740,2880" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;charismafailure&#39;, &#39;play&#39;)
 GARTHIR: Now, now. If I gave away my entire story, what would you pay for?
 (set: $charismatest to &quot;true&quot;)
 0. [[I had more questions about Orielle.]]
 0. [[Let&#39;s talk of something else.]]
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="57" name="charismasuccess1" tags="" position="6896.333333333334,2705" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="57" name="charismasuccess1" tags="" position="6896,2705" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;charismasuccess1&#39;, &#39;play&#39;)
 GARTHIR: Would it surprise you to learn that one such as I once adopted the manner of my draconic father? 
 
-[[Continue-&gt;charismasuccess2]]</tw-passagedata><tw-passagedata pid="58" name="charismasuccess2" tags="" position="7039.333333333334,2693" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;charismasuccess2]]</tw-passagedata><tw-passagedata pid="58" name="charismasuccess2" tags="" position="7039,2693" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;charismasuccess2&#39;, &#39;play&#39;)
 GARTHIR: That I lived in a cave, hoarding gold, spreading terror and flame wherever I roamed?
 
-[[Continue-&gt;charismasuccess3]]</tw-passagedata><tw-passagedata pid="59" name="charismasuccess5" tags="" position="7627.333333333334,2697" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;charismasuccess3]]</tw-passagedata><tw-passagedata pid="59" name="charismasuccess5" tags="" position="7627,2697" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;charismasuccess5&#39;, &#39;play&#39;)
 GARTHIR: I will speak no more on the matter until it be upon the stage.
 
@@ -435,7 +435,7 @@ GARTHIR: I will speak no more on the matter until it be upon the stage.
 0. [[I had more questions about Orielle.]]
 0. [[Let&#39;s talk of something else.]]
 0. [[*Take your leave.*]]
-</tw-passagedata><tw-passagedata pid="60" name="dragonstuff1" tags="" position="5924.000000000001,1246" size="100,100">(masteraudio: &#39;stopall&#39;)
+</tw-passagedata><tw-passagedata pid="60" name="dragonstuff1" tags="" position="5924,1246" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;dragonstuff1&#39;, &#39;play&#39;)
 GARTHIR: I&#39;ve learned all I wish to know about dragonkind, thank you very much.
 
@@ -445,50 +445,50 @@ GARTHIR: I&#39;ve learned all I wish to know about dragonkind, thank you very mu
 (unless: $dragonquestion is &quot;true&quot;)[&lt;li&gt;[[PERSUADE: What makes you feel so strongly about dragons?]]&lt;/li&gt;]
 &lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
 &lt;/ol&gt;
-}</tw-passagedata><tw-passagedata pid="61" name="I had more questions about you." tags="" position="4059.6666666666665,1395" size="100,100">(masteraudio: &#39;stopall&#39;)
+}</tw-passagedata><tw-passagedata pid="61" name="I had more questions about you." tags="" position="4059,1395" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;ihadmorequestionsaboutu&#39;, &#39;play&#39;)
 GARTHIR: Of course. Ask away.
 
 0. [[What do you intend to do in Baldur&#39;s Gate?-&gt;Baldur&#39;s Gate intro]]
 0. [[I don&#39;t see a lot of half-dragons about.-&gt;half dragon intro]]
 0. [[What is your play about?]]
-0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="62" name="PERSUADE: What makes you feel so strongly about dragons?" tags="" position="6203.000000000001,1167" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="62" name="PERSUADE: What makes you feel so strongly about dragons?" tags="" position="6203,1167" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;diceroll&#39;, &#39;play&#39;)
 (set: $persuadedragon to (random: 1,20))
 You needed to roll a 12 to succeed. You rolled a $persuadedragon.
 
 {(if: $persuadedragon is &gt;= 12)[[[Continue-&gt;Persuade Dragon Success]]]
 
-(else:)[[[Continue-&gt;Persuade Dragon Failure]]]}</tw-passagedata><tw-passagedata pid="63" name="Persuade Dragon Success" tags="" position="6354.000000000001,1095" size="100,100">(masteraudio: &#39;stopall&#39;)
+(else:)[[[Continue-&gt;Persuade Dragon Failure]]]}</tw-passagedata><tw-passagedata pid="63" name="Persuade Dragon Success" tags="" position="6354,1095" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;persuadedragonsuccess&#39;, &#39;play&#39;)
 GARTHIR: If you must know, I never knew my father. All I know is that he *used* my mother. Toyed with her emotions.
 
-[[Continue-&gt;dragonsuccess2]]</tw-passagedata><tw-passagedata pid="64" name="Persuade Dragon Failure" tags="" position="6355.000000000001,1302" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;dragonsuccess2]]</tw-passagedata><tw-passagedata pid="64" name="Persuade Dragon Failure" tags="" position="6355,1302" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;persuadedragonfailure&#39;, &#39;play&#39;)
 GARTHIR: We&#39;ve only just met. I don&#39;t think it&#39;s quite the right time to talk about our deep-seated issues, do you?
 
 (set: $dragonquestion to &quot;true&quot;)
 0. [[I had more questions about you.]]
 0. [[Let&#39;s talk of something else.]] 
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="65" name="dragonsuccess2" tags="" position="6544.000000000001,1100" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="65" name="dragonsuccess2" tags="" position="6544,1100" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;dragonsuccess2&#39;, &#39;play&#39;)
 GARTHIR: My mother loved him, but he saw her as little more than a plaything. 
 
-[[Continue-&gt;dragonsuccess3]]</tw-passagedata><tw-passagedata pid="66" name="dragonsuccess3" tags="" position="6762.000000000001,1119" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;dragonsuccess3]]</tw-passagedata><tw-passagedata pid="66" name="dragonsuccess3" tags="" position="6762,1119" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;dragonsuccess3&#39;, &#39;play&#39;)
 GARTHIR: Dragons are self-important creatures, and I have no love for them.
 
 [[Continue-&gt;dragonsuccess4]]</tw-passagedata><tw-passagedata pid="67" name="What is your play about?" tags="" position="5487,1571" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whatisyourplay&#39;, &#39;play&#39;)
-GARTHIR: It&#39;s about a naive young half dragon who falls into darkness and the muse who rescues him.
+GARTHIR: It&#39;s about a naive young half-dragon who falls into darkness and the muse who rescues him.
 
-[[Continue-&gt;playdescribe1]]</tw-passagedata><tw-passagedata pid="68" name="bg3" tags="" position="5770.000000000001,892" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;playdescribe1]]</tw-passagedata><tw-passagedata pid="68" name="bg3" tags="" position="5770,892" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;bg3&#39;, &#39;play&#39;)
-GARTHIR: It is in Baldur&#39;s Gate that I will find my greatest audience and all the fame and fortune I deserve. I am sure of it.
+GARTHIR: And I aim to live there. My play deserves no less a stage on the Sword Coast.
 
 0. [[I had more questions about you.]]
 0. [[Let&#39;s talk of something else.]] 
-0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="69" name="playdescribe1" tags="" position="5650.000000000001,1584" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="69" name="playdescribe1" tags="" position="5650,1584" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;playdescribe1&#39;, &#39;play&#39;)
 GARTHIR: It is joyous and sad, terrifying and euphoric, and utterly inspiring.
 
@@ -549,13 +549,13 @@ where2: ./NoDungeonsHalfDragons_files/where2.mp3
 wherediduseeher: ./NoDungeonsHalfDragons_files/wherediduseeher.mp3
 whonexus: ./NoDungeonsHalfDragons_files/whonexus.mp3
 whostart: ./NoDungeonsHalfDragons_files/whostart.mp3
-whostart2: ./NoDungeonsHalfDragons_files/whostart2.mp3</tw-passagedata><tw-passagedata pid="71" name="playdescribe2" tags="" position="5884.000000000001,1575" size="100,100">(masteraudio: &#39;stopall&#39;)
+whostart2: ./NoDungeonsHalfDragons_files/whostart2.mp3</tw-passagedata><tw-passagedata pid="71" name="playdescribe2" tags="" position="5884,1575" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;playdescribe2&#39;, &#39;play&#39;)
 GARTHIR: It&#39;s my life story. I do hope you can see it some day.
 
 0. [[I had more questions about you.]]
 0. [[Let&#39;s talk of something else.]] 
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="72" name="hal.config" tags="" position="449,843" size="100,100">sidebarStartClosed: false</tw-passagedata><tw-passagedata pid="73" name="You died." tags="" position="7793.333333333334,2393" size="100,100">Congratulations! You found the only way to die in this test.
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="72" name="hal.config" tags="" position="449,843" size="100,100">sidebarStartClosed: false</tw-passagedata><tw-passagedata pid="73" name="You died." tags="" position="7793,2393" size="100,100">Congratulations! You found the only way to die in this test.
 
 I hope you enjoyed yourself! If you&#39;d like to restart, you can do so here and try some other paths. I tried to emulate BG3&#39;s options, so some results may occur with specific classes or races. You can also retry some of the dice rolls.
 
@@ -573,58 +573,58 @@ You needed to roll a 10 to succeed. You rolled a $arcanaroll.
 
 (else:)[[[Continue-&gt;Arcana Failure]]]}</tw-passagedata><tw-passagedata pid="75" name="Arcana Success" tags="" position="1292,1025" size="100,100">*You recognize him as part brass dragon, a proud species infamous for their mercurial whims and chatty nature.*
 
-[[Continue-&gt;arcanasuccess2]]</tw-passagedata><tw-passagedata pid="76" name="Arcana Failure" tags="" position="1293,1192" size="100,100">*There isn&#39;t much you can percieve about the half-dragon beyond his not-so-subtle clothing.*
+[[Continue-&gt;arcanasuccess2]]</tw-passagedata><tw-passagedata pid="76" name="Arcana Failure" tags="" position="1293,1192" size="100,100">*There isn&#39;t much you can perceive about the half-dragon beyond his not-so-subtle clothing.*
 
 [[Continue-&gt;Greeting]] </tw-passagedata><tw-passagedata pid="77" name="arcanasuccess2" tags="" position="1449,922" size="100,100">*Engaging the half-dragon in his interests might reveal some valuable information.*
 
-[[Continue-&gt;Greeting]] </tw-passagedata><tw-passagedata pid="78" name="whatstart2" tags="" position="3289.6666666666665,1794.5" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;Greeting]] </tw-passagedata><tw-passagedata pid="78" name="whatstart2" tags="" position="3289,1794" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whatstart2&#39;, &#39;play&#39;)
 GARTHIR: I have no doubt that the city guard will look at the half-dragon and assume he did it, but I assure you, it had nothing to do with me.
 
-[[Continue-&gt;whatstart3]]</tw-passagedata><tw-passagedata pid="79" name="insightsuccess2" tags="" position="3758.6666666666665,3060" size="100,100">GARTHIR: But our would-be patron who lives in this building had... opinions about the union of a half-dragon and a human.
+[[Continue-&gt;whatstart3]]</tw-passagedata><tw-passagedata pid="79" name="insightsuccess2" tags="" position="3758,3060" size="100,100">GARTHIR: But the would-be patron who lives in this building had... opinions about the union of a half-dragon and a human.
 
-[[Continue-&gt;insightsuccess3]]</tw-passagedata><tw-passagedata pid="80" name="Insight Failure" tags="" position="3347.72509765625,2884.04296875" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;insightsuccess3]]</tw-passagedata><tw-passagedata pid="80" name="Insight Failure" tags="" position="3347,2884" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;insightfailure&#39;, &#39;play&#39;)
 GARTHIR: As I told you, I am still part dragon. 
 
-[[Continue-&gt;Insight Failure 2]] </tw-passagedata><tw-passagedata pid="81" name="Insight Failure 2" tags="" position="3501.72509765625,2889.04296875" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;Insight Failure 2]] </tw-passagedata><tw-passagedata pid="81" name="Insight Failure 2" tags="" position="3501,2889" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;insightfailure&#39;, &#39;play&#39;)
 GARTHIR: Fire simply has a raw appeal for me, the way enchanted swords or rings of power must have appeal for you.
 
-[[Continue-&gt;Insight Failure3]] </tw-passagedata><tw-passagedata pid="82" name="Post Accuse" tags="" position="1981.7445068359375,975.1509094238281" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;Insight Failure3]] </tw-passagedata><tw-passagedata pid="82" name="Post Accuse" tags="" position="1976,975" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;postaccuse&#39;, &#39;play&#39;)
 GARTHIR: Still, you know how simple folk are. The one who breathes fire must be the source of every fire.
 
-[[Continue-&gt;postaccuse2]] </tw-passagedata><tw-passagedata pid="83" name="Wait... you don&#39;t breathe fire?" tags="" position="3040,4111.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;postaccuse2]] </tw-passagedata><tw-passagedata pid="83" name="Wait... you don&#39;t breathe fire?" tags="" position="3040,4111" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;waitdontbreathefire&#39;, &#39;play&#39;)
 GARTHIR: No. I&#39;m not an animal.
 
-[[Continue-&gt;firebreathe2]]</tw-passagedata><tw-passagedata pid="84" name="firebreathe2" tags="" position="3310,4113.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;firebreathe2]]</tw-passagedata><tw-passagedata pid="84" name="firebreathe2" tags="" position="3310,4113" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firebreathe2&#39;, &#39;play&#39;)
 GARTHIR: Just because I can breathe fire does not mean that I must.
 
-[[Continue-&gt;firenexus]]</tw-passagedata><tw-passagedata pid="85" name="firenexus" tags="" position="3501,4120.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;firenexus]]</tw-passagedata><tw-passagedata pid="85" name="firenexus" tags="" position="3501,4120" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firenexus&#39;, &#39;play&#39;)
 GARTHIR: I employ my draconic abilities rarely, and never in violence.
 
 0. [[Why don&#39;t you breathe fire?-&gt;whyfire1]]
 0. [[Can you prove this fire isn&#39;t your doing?]]
-0. [[PERSUADE: Oh, come on. Surely you can give a little demonstration.-&gt;persuadefirecheck]]
-0. [[Let&#39;s talk of something else.]] </tw-passagedata><tw-passagedata pid="86" name="whyfire1" tags="" position="3858,3953.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[PERSUADE: But I would love to see a real dragon&#39;s fire...-&gt;persuadefirecheck]]
+0. [[Let&#39;s talk of something else.]] </tw-passagedata><tw-passagedata pid="86" name="whyfire1" tags="" position="3858,3953" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whyfire1&#39;, &#39;play&#39;)
 GARTHIR: Let&#39;s just say I have no desire to become like dear old dad.
 
-[[Continue-&gt;whyfire2]]</tw-passagedata><tw-passagedata pid="87" name="Can you prove this fire isn&#39;t your doing?" tags="" position="3822,4166.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;whyfire2]]</tw-passagedata><tw-passagedata pid="87" name="Can you prove this fire isn&#39;t your doing?" tags="" position="3822,4166" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;canyouprovethisfire&#39;, &#39;play&#39;)
-GARTHIR: The walking armory has the gall to force me to account for every fire they see?
+GARTHIR: Guilt by association from the walking armory? 
 
-[[Continue-&gt;provefire2]]</tw-passagedata><tw-passagedata pid="88" name="whyfire2" tags="" position="4070,3933.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;provefire2]]</tw-passagedata><tw-passagedata pid="88" name="whyfire2" tags="" position="4070,3933" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whyfire2&#39;, &#39;play&#39;)
 GARTHIR: Leave the conflagrations to the lizards, so say I.
 
 0. [[I had more questions about fire breathing.-&gt;firenexus2]]
 0. [[Let&#39;s talk of something else.]] 
-0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="89" name="firenexus2" tags="" position="3508,4242.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="89" name="firenexus2" tags="" position="3508,4242" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firenexus2&#39;, &#39;play&#39;)
 GARTHIR: Of course you did. 
 
@@ -632,48 +632,48 @@ GARTHIR: Of course you did.
 	&lt;ol&gt;
 		&lt;li&gt;[[whyfire1]]&lt;/li&gt;
 		&lt;li&gt;[[Can you prove this fire isn&#39;t your doing?]]&lt;/li&gt;
-		(unless: $firequestion is &#39;true&#39;)[&lt;li&gt;[[PERSUADE: Oh, come on. Surely you can give a little demonstration.-&gt;persuadefirecheck]]&lt;/li&gt;]
+		(unless: $firequestion is &#39;true&#39;)[&lt;li&gt;[[PERSUADE: I was really hoping I could see a real dragon&#39;s fire...-&gt;persuadefirecheck]]&lt;/li&gt;]
 		&lt;li&gt;[[Let&#39;s talk of something else.]]
 		&lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
 	&lt;/ol&gt;
 }
-</tw-passagedata><tw-passagedata pid="90" name="persuadefirecheck" tags="" position="3818,4469.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+</tw-passagedata><tw-passagedata pid="90" name="persuadefirecheck" tags="" position="3818,4469" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;diceroll&#39;, &#39;play&#39;)
 (set: $fireroll to (random: 1,20))
 You needed to roll a 2 to succeed. You rolled a $fireroll.
 
 {(if: $fireroll is &gt;= 2)[[[Continue-&gt;Fire Success]]]
 
-(else:)[[[Continue-&gt;Fire Failure]]]}</tw-passagedata><tw-passagedata pid="91" name="Fire Success" tags="" position="3979,4404.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+(else:)[[[Continue-&gt;Fire Failure]]]}</tw-passagedata><tw-passagedata pid="91" name="Fire Success" tags="" position="3979,4404" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firesuccess&#39;, &#39;play&#39;)
-GARTHIR: Well ... you have been relatively polite.
+GARTHIR: Well ... you *have* been relatively polite.
 
 (set: $firequestion to &quot;true&quot;)
 
-[[Continue-&gt;firesuccess2]]</tw-passagedata><tw-passagedata pid="92" name="Fire Failure" tags="" position="3978,4593.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;firesuccess2]]</tw-passagedata><tw-passagedata pid="92" name="Fire Failure" tags="" position="3978,4593" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firefailure&#39;, &#39;play&#39;)
-GARTHIR: I fear such an action would merely draw more attention to me.
+GARTHIR: I fear such action would merely draw more attention to me.
 
 (set: $firequestion to &quot;true&quot;)
 
-[[Continue-&gt;firefailure2]]</tw-passagedata><tw-passagedata pid="93" name="provefire2" tags="" position="4050,4170.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;firefailure2]]</tw-passagedata><tw-passagedata pid="93" name="provefire2" tags="" position="4210,4170" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;provefire2&#39;, &#39;play&#39;)
-GARTHIR: I don&#39;t believe I have anything to gain from talking to you. Please leave.
+GARTHIR: I don&#39;t believe I have anything to gain from speaking with you. Please leave.
 
 0. [[*Attack him.*]] 
-0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="94" name="firesuccess2" tags="" position="4163,4385.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="94" name="firesuccess2" tags="" position="4163,4385" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firesuccess2&#39;, &#39;play&#39;)
 GARTHIR: I suppose I can&#39;t disappoint a potential fan.
 
-[[Continue-&gt;firesuccess3]]</tw-passagedata><tw-passagedata pid="95" name="firesuccess3" tags="" position="4341,4372.568817138672" size="100,100">*Garthir snorts, sending a small lick of flame to a piece of rotten wood on the ground.*
+[[Continue-&gt;firesuccess3]]</tw-passagedata><tw-passagedata pid="95" name="firesuccess3" tags="" position="4341,4372" size="100,100">*Garthir snorts, sending a small lick of flame to the broken barrel nearby.*
 
-[[Continue-&gt;firesuccess4]]</tw-passagedata><tw-passagedata pid="96" name="firefailure2" tags="" position="4165,4609.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;firesuccess4]]</tw-passagedata><tw-passagedata pid="96" name="firefailure2" tags="" position="4165,4609" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firefailure2&#39;, &#39;play&#39;)
 GARTHIR: I&#39;m afraid you&#39;ll have to wait to see it on stage.
 
 0. [[I had more questions about fire breathing.-&gt;firenexus2]]
 0. [[Let&#39;s talk of something else.]] 
-0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="97" name="firesuccess4" tags="" position="4508,4373.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="97" name="firesuccess4" tags="" position="4508,4373" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firesuccess4&#39;, &#39;play&#39;)
 GARTHIR: There. Not as exciting as good prose, surely, but I hope the flashy lights amuse.
 
@@ -686,100 +686,100 @@ GARTHIR: There. Not as exciting as good prose, surely, but I hope the flashy lig
 		&lt;li&gt;[[INVESTIGATION: See what you can discern about Garthir&#39;s fire.-&gt;investigationcheck]]&lt;/li&gt;
 		&lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
 	&lt;/ol&gt;
-}</tw-passagedata><tw-passagedata pid="98" name="investigationcheck" tags="" position="4650,4369.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+}</tw-passagedata><tw-passagedata pid="98" name="investigationcheck" tags="" position="4650,4369" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;diceroll&#39;, &#39;play&#39;)
 (set: $investigateroll to (random: 1,20))
 You needed to roll a 9 to succeed. You rolled a $investigateroll.
 
 {(if: $investigateroll is &gt;= 13)[[[Continue-&gt;Investigation Success]]]
 
-(else:)[[[Continue-&gt;Investigation Failure]]]}</tw-passagedata><tw-passagedata pid="99" name="Investigation Success" tags="" position="4838,4225.568817138672" size="100,100">*You notice that Garthir&#39;s flames burn white-blue at the base.*
+(else:)[[[Continue-&gt;Investigation Failure]]]}</tw-passagedata><tw-passagedata pid="99" name="Investigation Success" tags="" position="4838,4225" size="100,100">*Garthir&#39;s fire burns merrily, reminding you of the welcoming fire of your camp.*
 
-[[Continue-&gt;investigationsuccess2]]</tw-passagedata><tw-passagedata pid="100" name="Investigation Failure" tags="" position="4831,4415.568817138672" size="100,100">*The fire looks very hot, but you&#39;re not about to reach out and test it.*
+[[Continue-&gt;investigationsuccess2]]</tw-passagedata><tw-passagedata pid="100" name="Investigation Failure" tags="" position="4831,4415" size="100,100">*The fire is warm and relaxing, but you notice nothing strange about it.*
 
-[[Continue-&gt;investigationend]] </tw-passagedata><tw-passagedata pid="101" name="investigationsuccess2" tags="" position="5006,4224.568817138672" size="100,100">*The building fires burn taller and are uniformly yellow.*
+[[Continue-&gt;investigationend]] </tw-passagedata><tw-passagedata pid="101" name="investigationsuccess2" tags="" position="5006,4224" size="100,100">*In comparison, the building&#39;s flames creep slowly, with a sickly greenish-yellow hue.*
 
-[[Continue-&gt;investigationsuccess3]]</tw-passagedata><tw-passagedata pid="102" name="investigationsuccess3" tags="" position="5128,4258.568817138672" size="100,100">*It is clear that this fire was not set by Garthir&#39;s flame.*
+[[Continue-&gt;investigationsuccess3]]</tw-passagedata><tw-passagedata pid="102" name="investigationsuccess3" tags="" position="5128,4258" size="100,100">*There&#39;s definitely something unnatural about the building fire.*
 
-[[Continue-&gt;investigationend]]</tw-passagedata><tw-passagedata pid="103" name="investigationend" tags="" position="5345,4409.568817138672" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;investigationend]]</tw-passagedata><tw-passagedata pid="103" name="investigationend" tags="" position="5345,4409" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;investigationend&#39;, &#39;play&#39;)
 GARTHIR: Transfixed by the pretty lights, are we?
 
 0. [[Sorry, I was just distracted. I had more questions about fire.-&gt;firenexus2]]
 0. [[My apologies. I had other questions.-&gt;Let&#39;s talk of something else.]]
-0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="104" name="classfire" tags="" position="4669,4564.568817138672" size="100,100">*Garthir&#39;s fire seems practically mundane next to the building fire.*
+0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="104" name="classfire" tags="" position="4669,4564" size="100,100">*Compared to Garthir&#39;s pleasant flame, the building&#39;s fire feels far more sinister.*
 
-[[Continue-&gt;classfire2]]</tw-passagedata><tw-passagedata pid="105" name="classfire2" tags="" position="4829,4570.568817138672" size="100,100">*The building&#39;s flames seem to be encouraged, a telltale sign of magic involvement.*
+[[Continue-&gt;classfire2]]</tw-passagedata><tw-passagedata pid="105" name="classfire2" tags="" position="4829,4570" size="100,100">*You realize that the building&#39;s fire was guided by a poorly performed magic spell.*
 
-[[Continue-&gt;investigationend]] </tw-passagedata><tw-passagedata pid="106" name="threatenguards" tags="" position="4307.666666666666,3117" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;investigationend]] </tw-passagedata><tw-passagedata pid="106" name="threatenguards" tags="" position="4307,3117" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;threatenguards&#39;, &#39;play&#39;)
 GARTHIR: Very well, go get your guards. I&#39;ll be gone by the time they arrive.
 
-[[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="107" name="motivethreat" tags="" position="4126.666666666666,3079" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="107" name="motivethreat" tags="" position="4094.3333333333335,3079" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;motivethreat&#39;, &#39;play&#39;)
 GARTHIR: And here I thought you were a more insightful sort.
 
-[[Continue-&gt;threatenguards]]</tw-passagedata><tw-passagedata pid="108" name="whatstart3" tags="" position="3441.11767578125,1802.5806884765625" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;threatenguards]]</tw-passagedata><tw-passagedata pid="108" name="whatstart3" tags="" position="3441,1802" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whatstart3&#39;, &#39;play&#39;)
-GARTHIR: I suppose I must be on my way before the inevitable mob arrives, once I find my Orielle. 
+GARTHIR: I suppose I must be on my way before the inevitable mob arrives, after I find my Orielle. 
 
-[[Continue-&gt;what nexus]]</tw-passagedata><tw-passagedata pid="109" name="orielledescribe1" tags="" position="4144.11767578125,1786.5806884765625" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;what nexus]]</tw-passagedata><tw-passagedata pid="109" name="orielledescribe1" tags="" position="4144,1786" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;orielledescribe1&#39;, &#39;play&#39;)
 GARTHIR: She is the loveliest of humans. Red of hair, rosy of cheek. 
 
-[[Continue-&gt;orielledescribe2]]</tw-passagedata><tw-passagedata pid="110" name="orielledescribe2" tags="" position="4324.666666666667,1789.5806884765625" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;orielledescribe2]]</tw-passagedata><tw-passagedata pid="110" name="orielledescribe2" tags="" position="4324,1789" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;orielledescribe2&#39;, &#39;play&#39;)
 GARTHIR: She is strong and delicate all at once, delightfully robust and possessing all the grace of a deva.
 
-[[Continue-&gt;help1]]</tw-passagedata><tw-passagedata pid="111" name="THIS SECTION IS WRITING COMPLETE" tags="" position="2762.313232421875,4082.3011474609375" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="112" name="THIS SECTION IS WRITING COMPLETE2" tags="" position="2782.313232421875,3059.568115234375" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="113" name="THIS SECTION IS WRITING COMPLETE3" tags="" position="2995.666666666667,1957.1273193359375" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="114" name="THIS SECTION IS WRITING COMPLETE4" tags="" position="982,1241.8602294921875" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="115" name="whostart3" tags="" position="3585.7835693359375,1231.9600830078125" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;help1]]</tw-passagedata><tw-passagedata pid="111" name="THIS SECTION IS WRITING COMPLETE" tags="" position="2762,4082" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="112" name="THIS SECTION IS WRITING COMPLETE2" tags="" position="2782,3059" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="113" name="THIS SECTION IS WRITING COMPLETE3" tags="" position="2995,1957" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="114" name="THIS SECTION IS WRITING COMPLETE4" tags="" position="982,1241" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="115" name="whostart3" tags="" position="3585,1231" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whostart3&#39;, &#39;play&#39;)
 GARTHIR: I was a performer of some note there in more innocent times.
 
-[[Continue-&gt;whostart4]]</tw-passagedata><tw-passagedata pid="116" name="whostart4" tags="" position="3778.7835693359375,1232.9600830078125" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;whostart4]]</tw-passagedata><tw-passagedata pid="116" name="whostart4" tags="" position="3778,1232" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whostart4&#39;, &#39;play&#39;)
 GARTHIR: But Murann is long in my past. I have my own play now.
 
-[[Continue-&gt;who nexus]]</tw-passagedata><tw-passagedata pid="117" name="where4" tags="" position="6457.4765625,2106.94091796875" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;who nexus]]</tw-passagedata><tw-passagedata pid="117" name="where4" tags="" position="6457,2106" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;where4&#39;, &#39;play&#39;)
-GARTHIR: I&#39;m afraid she took off in a huff and I haven&#39;t seen her for the last hour.
+GARTHIR: I&#39;m afraid she took off in a huff. I haven&#39;t seen her in the last hour.
 
 0. [[Do you think she had anything to do with this?]]
-0. [[I had more questions about Orielle.]]</tw-passagedata><tw-passagedata pid="118" name="where1" tags="" position="5913.4765625,2109.94091796875" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[I had more questions about Orielle.]]</tw-passagedata><tw-passagedata pid="118" name="where1" tags="" position="5913,2109" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;where1&#39;, &#39;play&#39;)
 GARTHIR: He was disgusted at the idea of a half-dragon and a human in a romantic scene.
 
-[[Continue-&gt;where2]]</tw-passagedata><tw-passagedata pid="119" name="where2" tags="" position="6064.4765625,2092.94091796875" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;where2]]</tw-passagedata><tw-passagedata pid="119" name="where2" tags="" position="6064,2092" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;where2&#39;, &#39;play&#39;)
 GARTHIR: I&#39;m afraid she shared some rather choice words with the man.
 
-[[Continue-&gt;where3]]</tw-passagedata><tw-passagedata pid="120" name="accusedorielle2" tags="" position="6992.9970703125,2088.94091796875" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;where3]]</tw-passagedata><tw-passagedata pid="120" name="accusedorielle2" tags="" position="6992,2088" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;accusedoirelle2&#39;, &#39;play&#39;)
-GARTHIR: She is pure, good, and utterly incapable of evil.
+GARTHIR: You do not know her as I do. She is utterly incapable of evil.
 
-[[Continue-&gt;accusedorielle3]]</tw-passagedata><tw-passagedata pid="121" name="persuadesuccess2" tags="" position="7747.333333333334,1869" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;accusedorielle3]]</tw-passagedata><tw-passagedata pid="121" name="persuadesuccess2" tags="" position="7747,1869" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;persuadesuccess2&#39;, &#39;play&#39;)
 GARTHIR: I&#39;m sure you were just looking for information. Ask away. 
 
 0. [[I had more questions about Orielle.]]
 0. [[Let&#39;s talk of something else.]]
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="122" name="oriellemagicresponse2" tags="" position="6267.9970703125,2454.94091796875" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="122" name="oriellemagicresponse2" tags="" position="6267,2454" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;oriellemagicresponse2&#39;, &#39;play&#39;)
 GARTHIR: I am a lucky fellow, don&#39;t you think?
 
 0. [[I had more questions about Orielle.]]
-0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="123" name="charismasuccess3" tags="" position="7219.333333333334,2703.947509765625" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="123" name="charismasuccess3" tags="" position="7219,2703" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;charismasuccess3&#39;, &#39;play&#39;)
 GARTHIR: It was Orielle who saved me... from myself.
 
-[[Continue-&gt;charismasuccess4]]</tw-passagedata><tw-passagedata pid="124" name="charismasuccess4" tags="" position="7382.333333333334,2727.947509765625" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;charismasuccess4]]</tw-passagedata><tw-passagedata pid="124" name="charismasuccess4" tags="" position="7382,2727" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;charismasuccess4&#39;, &#39;play&#39;)
 GARTHIR:  Oh, but you are a charmer, enticing me into giving away my story.
 
-[[Continue-&gt;charismasuccess5]]</tw-passagedata><tw-passagedata pid="125" name="THIS SECTION IS WRITING COMPLETE5" tags="" position="5435.8603515625,2319.1339111328125" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="126" name="THIS SECTION IS WRITING COMPLETE6" tags="" position="2755.7835693359375,1372.8602294921875" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="127" name="bg2" tags="" position="5567.185791015625,893.4068298339844" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;charismasuccess5]]</tw-passagedata><tw-passagedata pid="125" name="THIS SECTION IS WRITING COMPLETE5" tags="" position="5435,2319" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="126" name="THIS SECTION IS WRITING COMPLETE6" tags="" position="2755,1372" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="127" name="bg2" tags="" position="5567,893" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;bg2&#39;, &#39;play&#39;)
-GARTHIR: The greatest tales in Faerûn have some start or end in Baldur&#39;s Gate, do they not? 
+GARTHIR: That&#39;s Baldur&#39;s Gate, of course. You&#39;d know that if you&#39;d lived there.
 
-[[Continue-&gt;bg3]]</tw-passagedata><tw-passagedata pid="128" name="dragonsuccess4" tags="" position="6956.185791015625,1119" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;bg3]]</tw-passagedata><tw-passagedata pid="128" name="dragonsuccess4" tags="" position="6956,1119" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;dragonsuccess4&#39;, &#39;play&#39;)
 GARTHIR: My life is far more interesting than that of some roaming lizard anyway, which I why I wrote a play about myself.
 
@@ -787,11 +787,13 @@ GARTHIR: My life is far more interesting than that of some roaming lizard anyway
 
 [[I had more questions about you.]]
 [[Let&#39;s talk of something else.]] 
-[[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="129" name="postaccuse2" tags="" position="2125.9700927734375,970.7670288085938" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="129" name="postaccuse2" tags="" position="2125,970" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;postaccuse2&#39;, &#39;play&#39;)
-GARTHIR: I am no beast, however. I am avowed to keep my flame in my belly.
+GARTHIR: I am no beast, however. I have avowed to keep my flame in my belly.
 
-[[Continue-&gt;Main Nexus]] </tw-passagedata></tw-storydata>
+[[Continue-&gt;Main Nexus]] </tw-passagedata><tw-passagedata pid="130" name="provefire1" tags="" position="4047.366739908854,4155" size="100,100">GARTHIR: You know what they say about those with glass houses.
+
+[[Continue-&gt;provefire2]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
