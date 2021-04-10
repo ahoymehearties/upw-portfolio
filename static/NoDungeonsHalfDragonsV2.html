@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play No Dungeons, Half Dragons Revision.</tw-noscript></noscript></tw-story>
-<tw-storydata name="No Dungeons, Half Dragons Revision" startnode="1" creator="Twine" creator-version="2.3.13" ifid="AEBB0EB9-7430-43FF-9546-7C31B2FDC4A6" zoom="0.6" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(https://fonts.googleapis.com/css2?family=Fanwood+Text);
+<tw-storydata name="No Dungeons, Half Dragons Revision" startnode="1" creator="Twine" creator-version="2.3.13" ifid="AEBB0EB9-7430-43FF-9546-7C31B2FDC4A6" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(https://fonts.googleapis.com/css2?family=Fanwood+Text);
 
 html {
 	font-family: 'Fanwood Text', serif !important;
@@ -67,12 +67,12 @@ Just a little setup before we get started. Let&#39;s pick a race and class just 
 Let&#39;s start with picking a race:
 
 [[Drow]]
-[[Human]]
-[[Githyanki]]
 [[Dwarf]]
 [[Elf]]
+[[Githyanki]]
 [[Half-Elf]]
 [[Halfling]]
+[[Human]]
 [[Tiefling]]</tw-passagedata><tw-passagedata pid="2" name="Greeting" tags="" position="1577,1015" size="100,100">(track: &#39;greeting&#39;, &#39;play&#39;)
 GARTHIR: Oh, I don&#39;t seem to be alone anymore. Have the torches and pitchforks arrived, then?
 
@@ -96,7 +96,7 @@ GARTHIR: Ah. Perhaps I should not let arrows fly when none have come my way. Wel
 
 (else-if: $race is &#39;dwarf&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, dwarf, you&#39;re talking to me instead of digging for jewels, aren&#39;t you?]
 
-(else-if: $race is &#39;half-elf&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, half-elf... well, honestly, I find half-elves rather decent folk, most of the time. It&#39;s unfortunate that I found one so judgmental.]
+(else-if: $race is &#39;half-elf&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, half-elf... well, honestly, I find half-elves rather decent folk, most of the time. It&#39;s unfortunate that I&#39;ve met one so judgmental.]
 
 (else-if: $race is &#39;tiefling&#39;)[GARTHIR: You know, though I might be part dragon, I can control my baser instincts, just as I imagine you can. For instance, tiefling, I don&#39;t see you whining about your lot in some gutter.]
 
@@ -112,76 +112,85 @@ GARTHIR: Ah. Perhaps I should not let arrows fly when none have come my way. Wel
 0. [[&amp;#91;ARCANA&amp;#93; See what you can discern about the half-dragon&#39;s nature.-&gt;Dragon arcana check]]</tw-passagedata><tw-passagedata pid="7" name="Drow" tags="" position="120,443" size="100,100">Got it. You&#39;re a drow, but don&#39;t be blue. Now let&#39;s pick a class.
 
 (set: $race to &quot;drow&quot;)
-[[Fighter]]
-[[Rogue]]
 [[Cleric]]
+[[Druid]]
+[[Fighter]]
 [[Ranger]]
-[[Wizard]]
+[[Rogue]]
 [[Warlock]]
-[[Druid]]</tw-passagedata><tw-passagedata pid="8" name="Human" tags="" position="240,443" size="100,100">Got it. You&#39;re a human. I mean, I hope you are. Now let&#39;s pick a class.
+[[Wizard]]
+
+</tw-passagedata><tw-passagedata pid="8" name="Human" tags="" position="240,443" size="100,100">Got it. You&#39;re a human. I mean, I hope you are. Now let&#39;s pick a class.
 
 (set: $race to &quot;human&quot;)
-[[Fighter]]
-[[Rogue]]
 [[Cleric]]
+[[Druid]]
+[[Fighter]]
 [[Ranger]]
-[[Wizard]]
+[[Rogue]]
 [[Warlock]]
-[[Druid]]</tw-passagedata><tw-passagedata pid="9" name="Githyanki" tags="" position="360,443" size="100,100">Got it. You&#39;re a githyanki. Very 2020s of you. Now let&#39;s pick a class.
+[[Wizard]]
+</tw-passagedata><tw-passagedata pid="9" name="Githyanki" tags="" position="360,443" size="100,100">Got it. You&#39;re a githyanki. Hold on to that 2020s anger, right? Now let&#39;s pick a class.
 
 (set: $race to &quot;githyanki&quot;)
-[[Fighter]]
-[[Rogue]]
 [[Cleric]]
+[[Druid]]
+[[Fighter]]
 [[Ranger]]
-[[Wizard]]
+[[Rogue]]
 [[Warlock]]
-[[Druid]]</tw-passagedata><tw-passagedata pid="10" name="Dwarf" tags="" position="480,443" size="100,100">Got it. You&#39;re a dwarf. I&#39;m sure you&#39;ve got an axe to grind. Now let&#39;s pick a class.
+[[Wizard]]
+</tw-passagedata><tw-passagedata pid="10" name="Dwarf" tags="" position="480,443" size="100,100">Got it. You&#39;re a dwarf. I&#39;m sure you&#39;ve got an axe to grind. Now let&#39;s pick a class.
 
 (set: $race to &quot;dwarf&quot;)
-[[Fighter]]
-[[Rogue]]
 [[Cleric]]
+[[Druid]]
+[[Fighter]]
 [[Ranger]]
-[[Wizard]]
+[[Rogue]]
 [[Warlock]]
-[[Druid]]</tw-passagedata><tw-passagedata pid="11" name="Elf" tags="" position="954,443" size="100,100">Got it. You&#39;re an elf. Come on, Figwit, let&#39;s pick a class.
+[[Wizard]]
+</tw-passagedata><tw-passagedata pid="11" name="Elf" tags="" position="954,443" size="100,100">Got it. You&#39;re an elf. Come on, Figwit, let&#39;s pick a class.
 
 (set: $race to &quot;elf&quot;)
-[[Fighter]]
-[[Rogue]]
 [[Cleric]]
+[[Druid]]
+[[Fighter]]
 [[Ranger]]
-[[Wizard]]
+[[Rogue]]
 [[Warlock]]
-[[Druid]]</tw-passagedata><tw-passagedata pid="12" name="Half-Elf" tags="" position="600,443" size="100,100">Got it. You&#39;re a half-elf. Little indecisive, huh? Now let&#39;s pick a class.
+[[Wizard]]
+</tw-passagedata><tw-passagedata pid="12" name="Half-Elf" tags="" position="600,443" size="100,100">Got it. You&#39;re a half-elf. Little indecisive, huh? Now let&#39;s pick a class.
 
 (set: $race to &quot;halfelf&quot;)
-[[Fighter]]
-[[Rogue]]
 [[Cleric]]
+[[Druid]]
+[[Fighter]]
 [[Ranger]]
-[[Wizard]]
+[[Rogue]]
 [[Warlock]]
-[[Druid]]</tw-passagedata><tw-passagedata pid="13" name="Halfling" tags="" position="720,443" size="100,100">Got it. You&#39;re a halfling. You made short work of that choice. Now let&#39;s pick a class.
+[[Wizard]]
+</tw-passagedata><tw-passagedata pid="13" name="Halfling" tags="" position="720,443" size="100,100">Got it. You&#39;re a halfling. You made short work of that choice. Now let&#39;s pick a class.
 
 (set: $race to &quot;halfling&quot;)
-[[Fighter]]
-[[Rogue]]
 [[Cleric]]
+[[Druid]]
+[[Fighter]]
 [[Ranger]]
-[[Wizard]]
+[[Rogue]]
 [[Warlock]]
-[[Druid]]</tw-passagedata><tw-passagedata pid="14" name="Tiefling" tags="" position="834,445" size="100,100">Got it. You&#39;re a tiefling. You devil, you. Now let&#39;s pick a class.
+[[Wizard]]
+</tw-passagedata><tw-passagedata pid="14" name="Tiefling" tags="" position="834,445" size="100,100">Got it. You&#39;re a tiefling. You devil, you. Now let&#39;s pick a class.
 
 (set: $race to &quot;tiefling&quot;)
-[[Fighter]]
-[[Rogue]]
 [[Cleric]]
+[[Druid]]
+[[Fighter]]
 [[Ranger]]
-[[Wizard]]
+[[Rogue]]
 [[Warlock]]
-[[Druid]]</tw-passagedata><tw-passagedata pid="15" name="Fighter" tags="" position="120,593" size="100,100">Got it. You&#39;re a fighter. Nothing like the direct path.
+[[Wizard]]
+</tw-passagedata><tw-passagedata pid="15" name="Fighter" tags="" position="120,593" size="100,100">Got it. You&#39;re a fighter. Nothing like the direct path.
 
 (set: $class to &quot;fighter&quot;)
 
@@ -241,7 +250,7 @@ GARTHIR: It craves an audience only Baldur&#39;s Gate can provide.
 0. [[You don&#39;t see a lot of half-dragons about.-&gt;half dragon intro]]
 0. [[Let&#39;s talk of something else.]]</tw-passagedata><tw-passagedata pid="27" name="Baldur&#39;s Gate intro" tags="" position="5378,898" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;baldursgateintro&#39;, &#39;play&#39;)
-GARTHIR: Yes, the greatest play ever written *must* be performed in The Gate.
+GARTHIR: I shall perform my masterwork play in The Gate.
 
 [[Continue-&gt;bg2]]</tw-passagedata><tw-passagedata pid="28" name="Insight check" tags="" position="3203,3074" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;diceroll&#39;, &#39;play&#39;)
@@ -344,7 +353,7 @@ GARTHIR: Indeed, no. But I have little interest in my kind. Nor do I have any af
 (track: &#39;howdidyoumeet&#39;, &#39;play&#39;)
 GARTHIR: I&#39;m afraid that the play I have written is the best way to hear that story. 
 
-0. [[CHARISMA: Come on. I enjoy a good love story. I&#39;m sure yours must be quite special.-&gt;CHARISMA: I do love a good love story. I&#39;m sure yours must be quite special.]]
+0. [[CHARISMA: Come on. I enjoy a good love story. I&#39;m sure yours must be  special.-&gt;CHARISMA: I do love a good love story. I&#39;m sure yours must be quite special.]]
 0. [[I had more questions about Orielle.]]
 0. [[Let&#39;s talk of something else.]]
 0. [[*Take your leave.*]]</tw-passagedata><tw-passagedata pid="44" name="where3" tags="" position="6214,2111" size="100,100">(masteraudio: &#39;stopall&#39;)
@@ -445,7 +454,7 @@ GARTHIR: I&#39;ve learned all I wish to know about dragonkind, thank you very mu
 (unless: $dragonquestion is &quot;true&quot;)[&lt;li&gt;[[PERSUADE: What makes you feel so strongly about dragons?]]&lt;/li&gt;]
 &lt;li&gt;[[*Take your leave.*]]&lt;/li&gt;
 &lt;/ol&gt;
-}</tw-passagedata><tw-passagedata pid="61" name="I had more questions about you." tags="" position="4059,1395" size="100,100">(masteraudio: &#39;stopall&#39;)
+}</tw-passagedata><tw-passagedata pid="61" name="I had more questions about you." tags="" position="4059,1392" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;ihadmorequestionsaboutu&#39;, &#39;play&#39;)
 GARTHIR: Of course. Ask away.
 
@@ -482,9 +491,9 @@ GARTHIR: Dragons are self-important creatures, and I have no love for them.
 (track: &#39;whatisyourplay&#39;, &#39;play&#39;)
 GARTHIR: It&#39;s about a naive young half-dragon who falls into darkness and the muse who rescues him.
 
-[[Continue-&gt;playdescribe1]]</tw-passagedata><tw-passagedata pid="68" name="bg3" tags="" position="5770,892" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;playdescribe1]]</tw-passagedata><tw-passagedata pid="68" name="bg3" tags="" position="5766,892" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;bg3&#39;, &#39;play&#39;)
-GARTHIR: And I aim to live there. My play deserves no less a stage on the Sword Coast.
+GARTHIR: And I aim to live there. My play deserves the most prestigious stage on the Sword Coast.
 
 0. [[I had more questions about you.]]
 0. [[Let&#39;s talk of something else.]] 
@@ -603,7 +612,7 @@ GARTHIR: No. I&#39;m not an animal.
 (track: &#39;firebreathe2&#39;, &#39;play&#39;)
 GARTHIR: Just because I can breathe fire does not mean that I must.
 
-[[Continue-&gt;firenexus]]</tw-passagedata><tw-passagedata pid="85" name="firenexus" tags="" position="3501,4120" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;firenexus]]</tw-passagedata><tw-passagedata pid="85" name="firenexus" tags="" position="3498,4120" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firenexus&#39;, &#39;play&#39;)
 GARTHIR: I employ my draconic abilities rarely, and never in violence.
 
@@ -612,19 +621,19 @@ GARTHIR: I employ my draconic abilities rarely, and never in violence.
 0. [[PERSUADE: But I would love to see a real dragon&#39;s fire...-&gt;persuadefirecheck]]
 0. [[Let&#39;s talk of something else.]] </tw-passagedata><tw-passagedata pid="86" name="whyfire1" tags="" position="3858,3953" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whyfire1&#39;, &#39;play&#39;)
-GARTHIR: Let&#39;s just say I have no desire to become like dear old dad.
+GARTHIR: Let&#39;s just say I have no desire to become like dear old Dad.
 
-[[Continue-&gt;whyfire2]]</tw-passagedata><tw-passagedata pid="87" name="Can you prove this fire isn&#39;t your doing?" tags="" position="3822,4166" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;whyfire2]]</tw-passagedata><tw-passagedata pid="87" name="Can you prove this fire isn&#39;t your doing?" tags="" position="3822,4163" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;canyouprovethisfire&#39;, &#39;play&#39;)
-GARTHIR: Guilt by association from the walking armory? 
+GARTHIR: Because I&#39;m responsible for every fire now, is that it?
 
-[[Continue-&gt;provefire2]]</tw-passagedata><tw-passagedata pid="88" name="whyfire2" tags="" position="4070,3933" size="100,100">(masteraudio: &#39;stopall&#39;)
+[[Continue-&gt;provefire1]]</tw-passagedata><tw-passagedata pid="88" name="whyfire2" tags="" position="4102,3911" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;whyfire2&#39;, &#39;play&#39;)
 GARTHIR: Leave the conflagrations to the lizards, so say I.
 
 0. [[I had more questions about fire breathing.-&gt;firenexus2]]
 0. [[Let&#39;s talk of something else.]] 
-0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="89" name="firenexus2" tags="" position="3508,4242" size="100,100">(masteraudio: &#39;stopall&#39;)
+0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="89" name="firenexus2" tags="" position="3516,4295" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firenexus2&#39;, &#39;play&#39;)
 GARTHIR: Of course you did. 
 
@@ -646,7 +655,7 @@ You needed to roll a 2 to succeed. You rolled a $fireroll.
 
 (else:)[[[Continue-&gt;Fire Failure]]]}</tw-passagedata><tw-passagedata pid="91" name="Fire Success" tags="" position="3979,4404" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firesuccess&#39;, &#39;play&#39;)
-GARTHIR: Well ... you *have* been relatively polite.
+GARTHIR: Well... you *have* been relatively polite.
 
 (set: $firequestion to &quot;true&quot;)
 
@@ -669,13 +678,13 @@ GARTHIR: I suppose I can&#39;t disappoint a potential fan.
 
 [[Continue-&gt;firesuccess4]]</tw-passagedata><tw-passagedata pid="96" name="firefailure2" tags="" position="4165,4609" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firefailure2&#39;, &#39;play&#39;)
-GARTHIR: I&#39;m afraid you&#39;ll have to wait to see it on stage.
+GARTHIR: I&#39;m afraid you&#39;ll have to wait to see it upon the stage.
 
 0. [[I had more questions about fire breathing.-&gt;firenexus2]]
 0. [[Let&#39;s talk of something else.]] 
 0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="97" name="firesuccess4" tags="" position="4508,4373" size="100,100">(masteraudio: &#39;stopall&#39;)
 (track: &#39;firesuccess4&#39;, &#39;play&#39;)
-GARTHIR: There. Not as exciting as good prose, surely, but I hope the flashy lights amuse.
+GARTHIR: There. Not as exciting as good prose, surely, but I hope the  light show amuses.
 
 {
 	&lt;ol&gt;
@@ -695,7 +704,7 @@ You needed to roll a 9 to succeed. You rolled a $investigateroll.
 
 (else:)[[[Continue-&gt;Investigation Failure]]]}</tw-passagedata><tw-passagedata pid="99" name="Investigation Success" tags="" position="4838,4225" size="100,100">*Garthir&#39;s fire burns merrily, reminding you of the welcoming fire of your camp.*
 
-[[Continue-&gt;investigationsuccess2]]</tw-passagedata><tw-passagedata pid="100" name="Investigation Failure" tags="" position="4831,4415" size="100,100">*The fire is warm and relaxing, but you notice nothing strange about it.*
+[[Continue-&gt;investigationsuccess2]]</tw-passagedata><tw-passagedata pid="100" name="Investigation Failure" tags="" position="4831,4415" size="100,100">*Garthir&#39;s fire is warm and relaxing, but you notice nothing strange about it.*
 
 [[Continue-&gt;investigationend]] </tw-passagedata><tw-passagedata pid="101" name="investigationsuccess2" tags="" position="5006,4224" size="100,100">*In comparison, the building&#39;s flames creep slowly, with a sickly greenish-yellow hue.*
 
@@ -707,7 +716,7 @@ GARTHIR: Transfixed by the pretty lights, are we?
 
 0. [[Sorry, I was just distracted. I had more questions about fire.-&gt;firenexus2]]
 0. [[My apologies. I had other questions.-&gt;Let&#39;s talk of something else.]]
-0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="104" name="classfire" tags="" position="4669,4564" size="100,100">*Compared to Garthir&#39;s pleasant flame, the building&#39;s fire feels far more sinister.*
+0. [[*Take your leave.*]] </tw-passagedata><tw-passagedata pid="104" name="classfire" tags="" position="4627,4561" size="100,100">*Compared to Garthir&#39;s dancing flame, the building&#39;s fire moves with great effort.*
 
 [[Continue-&gt;classfire2]]</tw-passagedata><tw-passagedata pid="105" name="classfire2" tags="" position="4829,4570" size="100,100">*You realize that the building&#39;s fire was guided by a poorly performed magic spell.*
 
@@ -791,7 +800,7 @@ GARTHIR: My life is far more interesting than that of some roaming lizard anyway
 (track: &#39;postaccuse2&#39;, &#39;play&#39;)
 GARTHIR: I am no beast, however. I have avowed to keep my flame in my belly.
 
-[[Continue-&gt;Main Nexus]] </tw-passagedata><tw-passagedata pid="130" name="provefire1" tags="" position="4047.366739908854,4155" size="100,100">GARTHIR: You know what they say about those with glass houses.
+[[Continue-&gt;Main Nexus]] </tw-passagedata><tw-passagedata pid="130" name="provefire1" tags="" position="4001.366739908854,4156" size="100,100">GARTHIR: I should accuse you of every murder across the Sword Coast, walking armory that you are.
 
 [[Continue-&gt;provefire2]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
