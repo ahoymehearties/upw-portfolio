@@ -55,14 +55,83 @@ body {background-color: #6b4c71; !important}
 
 [[Continue-&gt;Intro5]]</tw-passagedata><tw-passagedata pid="5" name="Intro5" tags="" position="556,213.5" size="100,100">Ah. It seems my first patient of the day has arrived. Let&#39;s see whether we can change an unlife today.
 
-[[Continue-&gt;Francesca Intro]]</tw-passagedata><tw-passagedata pid="6" name="Francesca Intro" tags="" position="81,351.5" size="100,100">FRANCESCA: Hello Dr. Lundqvist.
+[[Continue-&gt;Francesca Intake]]</tw-passagedata><tw-passagedata pid="6" name="Francesca Intro init word inventory" tags="" position="81,351.5" size="100,100">FRANCESCA: Hello Dr. Lundqvist.
 HUGO: Please, call me Hugo. 
 FRANCESCA: Very well, Hugo. You know why I am here, yes?
 HUGO: I read your e-mail, yes.
 FRANCESCA: So you know I wish to die.
 HUGO: Yes. But you are here now.
 FRANCESCA: Yes. I am here now. For what it is worth.
-HUGO: I think it&#39;s worth quite a lot, Francesca. But why don&#39;t you start by telling me how you came to wish for death.</tw-passagedata></tw-storydata>
+HUGO: I think it&#39;s worth quite a lot, Francesca. But why don&#39;t you start by telling me how you came to wish for death.
+
+[[Continue-&gt;FrancescaInitPrompt]]
+
+(set: $words to (a:))</tw-passagedata><tw-passagedata pid="7" name="FrancescaInitPrompt" tags="" position="254,350.5" size="100,100">You are a vampire. You have been around a long time. Surely you&#39;ve noticed what I have noticed. [[Everything *sucks*-&gt;Francesca-everythingsucks]]. And not in the good way. What is [[erotic-&gt;Francesca-erotic]] now? What displays [[pain-&gt;Francesca-pain]]? Where are the [[souls to love and consume?-&gt;Francesca-&gt;soulstoconsume]] Where are the ones with [[passion?-&gt;Francesca-passion]] </tw-passagedata><tw-passagedata pid="8" name="Francesca-everythingsucks" tags="" position="0,498.5" size="100,100">That&#39;s right. Everything sucks. There is nothing of beauty left. Have you seen the latest Star Wars movie? What is it? What does it say? Why does anyone do anything? And yet, the masses drank of it, even knowing they gained nothing from it. I used to like Star Wars. Original trilogy, of course. Even the prequels had passion, however misplaced. I adore them.</tw-passagedata><tw-passagedata pid="9" name="Francesca-erotic" tags="" position="120,498.5" size="100,100">Erotic? Yes. Eroticism. The thing that is gone. Do you know, these people, they no longer fuck? Or when they do, it is all about them. Do you remember the 1960s, Doctor? Or perhaps you were in France in the late 1700s? There was such delicious depravity! Now they cower in shame.</tw-passagedata><tw-passagedata pid="10" name="Francesca-pain" tags="" position="240,495.5" size="100,100">Pain. Yes. Suffering. And the art that comes from it. There are so many kinds of pain, doctor. And when the human expresses it, it can be so marvelous, so beautiful. Have you seen Judith Beheading Holofernes? It&#39;s a Caravaggio. I sponspored the little beast, you know.</tw-passagedata><tw-passagedata pid="11" name="soulstoconsume" tags="" position="351,498.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Francesca-passion" tags="" position="493,500.5" size="100,100">Passion! Yes. I want art to *mean* something again. All it does it get bigger and flashier and richer, but where are the *artists*? Where are those who would kill themselves, or even other people, because they are so consumed by art? </tw-passagedata><tw-passagedata pid="13" name="Francesca Intake" tags="" position="543.5,331.5" size="100,100">HUGO: Hello?
+FRANCESCO: Dr. Lundqvist? Vampire Therapist?
+HUGO: Yes, how can I help you? 
+FRANCESCA: Doctor... if I do not see you soon I shall bake in the sun.
+HUGO: We should avoid this at all costs, yes? What are you looking for out of therapy, Miss ...
+FRANCESCA: My name is Francesca, and I am hungry, my dear man. 
+HUGO: We are vampires, Francesca. We are always hungry.
+FRANCESCA: Not for blood! No, I starve for art, but art, I fear, is dead.
+HUGO: Okay. Now can you tell me about--
+FRANCESCA: &lt;angry opossum sounds&gt; Carina! Calm down, I am trying not to kill myself here!
+HUGO: Francesca, are you okay? 
+FRANCESCA: I am fine. It&#39;s my opossum, Carina. She is always angry. Please, I can&#39;t talk right now...
+HUGO: Let&#39;s meet tomorrow right after sundown, soon as you can, yes?
+FRANCESCA: Yes, yes, thank you, doctor.
+
+HUGO: Hm. She has an opossum. Bizarre for a pet. I would have preferred a human. I should write that down.
+
+(set: $inventory to (a:&quot;opossum&quot;))
+
+[[Continue-&gt;Session1Therapy1]]</tw-passagedata><tw-passagedata pid="14" name="Session1Therapy1" tags="" position="685,426.5" size="100,100">FRANCESCA: I was staying up [[late at morning-&gt;Session1Therapy1PressA1]] watching the television with [[Carina-&gt;Session1Therapy1PressB1]]. 
+
+[[Continue-&gt;Session1Therapy2]]</tw-passagedata><tw-passagedata pid="15" name="Session1Therapy2" tags="" position="803,422.5" size="100,100">I ended up watching [[Robocop-&gt;Session1Therapy2PressA1]] for the second time. And you know what? It actually holds up quite well.
+
+[[Continue-&gt;Session1Therapy3]]</tw-passagedata><tw-passagedata pid="16" name="Session1Therapy3" tags="" position="940,414.5" size="100,100">But I am [[500 years old-&gt;Session1Therapy3PressA1]]. Why would I watch a movie more than once when I could [[see all of them?-&gt;Session1Therapy3PressB1]]
+
+[[Continue-&gt;Session1Therapy4]]</tw-passagedata><tw-passagedata pid="17" name="Session1Therapy4" tags="" position="1220,423.5" size="100,100">If I cannot find any joy in today, why should I continue? [[No one would miss an art critic anyway.-&gt;Session1Therapy4PressA1]]
+
+[[Review Patient Transcript-&gt;Session1Therapy1]]</tw-passagedata><tw-passagedata pid="18" name="Session1Therapy1PressA1" tags="" position="619,566.5" size="100,100">HUGO: Did you say you&#39;ve been staying up late into the daytime?
+
+[[Continue-&gt;Session1Therapy1PressA2]]</tw-passagedata><tw-passagedata pid="19" name="Session1Therapy1PressA2" tags="" position="617,714.5" size="100,100">FRANCESCA: Yes. I cover the windows. It is safe enough. If I should die, perhaps it is my time.
+
+[[Back to Patient Transcript-&gt;Session1Therapy1]]</tw-passagedata><tw-passagedata pid="20" name="Session1Therapy1PressB1" tags="" position="736,564.5" size="100,100">HUGO: Tell me about Carina. Opossums are rare as pets.
+
+[[Continue-&gt;Session1Therapy1PressB2]]</tw-passagedata><tw-passagedata pid="21" name="Session1Therapy1PressB2" tags="" position="736,714.5" size="100,100">FRANCESCA: Carina is special. Look at her. She hates me. She cannot be tamed. That is why I keep her. She has that spark. Don&#39;t you, Carina? &lt;growls&gt; You see? She hates me.
+
+[[Back to Patient Transcript-&gt;Session1Therapy1]]</tw-passagedata><tw-passagedata pid="22" name="Session1Therapy2PressA1" tags="" position="856,569.5" size="100,100">HUGO: You like Robocop?
+
+[[Continue-&gt;Session1Therapy2PressA2]]
+</tw-passagedata><tw-passagedata pid="23" name="Session1Therapy2PressA2" tags="" position="853,719.5" size="100,100">FRANCESCA: Robocop! You have seen it, yes? The man who becomes a machine, then regains his humanity? An utterly ridiculous film. But one with passion. Amazon owns the intellectual property now. I shudder to think of what they will do with it.
+
+[[Back to Patient Transcript-&gt;Session1Therapy2]]</tw-passagedata><tw-passagedata pid="24" name="Session1Therapy3PressA1" tags="" position="976,564.5" size="100,100">HUGO: You are 500 years old? What was life like when you were a child?
+
+[[Continue-&gt;Session1Therapy3PressA2]]</tw-passagedata><tw-passagedata pid="25" name="Session1Therapy3PressB1" tags="" position="1096,564.5" size="100,100">HUGO: You want to see every movie there is?
+
+[[Continue-&gt;Session1Therapy3PressB2]]</tw-passagedata><tw-passagedata pid="26" name="Session1Therapy3PressA2" tags="" position="976,716.5" size="100,100">FRANCESCA: I was born in 1471, the bastardi of Lorenzo di Medici, so I did not exist. In fact, as soon as I was born, he stopped sleeping with my mother. I guess a baby was not in his plans.
+
+[[Continue-&gt;Session1Therapy3PressA3]]</tw-passagedata><tw-passagedata pid="27" name="Session1Therapy3PressA3" tags="" position="976,866.5" size="100,100">FRANCESCA: So my childhood was not pleasant. The work I did as a child to simply to eat dinner would be unheard of today, so much the better. But I knew my way out of hell. The same route my mother took.
+
+[[Continue-&gt;Session1Therapy3PressA4]]</tw-passagedata><tw-passagedata pid="28" name="Session1Therapy3PressA4" tags="" position="976,1016.5" size="100,100">I fucked Lorenzo di Medici.
+
+(set: $inventory to it + (a:&quot;LorenzodiMedici&quot;))
+[[Review Patient Transcript-&gt;Session1Therapy1]]</tw-passagedata><tw-passagedata pid="29" name="Session1Therapy3PressB2" tags="" position="1096,714.5" size="100,100">FRANCESCA: Of course I would! I have all the time in the world. Why would I not consume everything? I just wish there was something worth consuming!
+
+[[Review Patient Transcript-&gt;Session1Therapy1]]</tw-passagedata><tw-passagedata pid="30" name="Session1Therapy4PressA1" tags="" position="1220,573.5" size="100,100">HUGO: Francesca, when we live, or unlive, as the case may be, we don&#39;t always know who notice us. We may be blind to it, or they may be quiet. But our passing is noticed. We change the lives of those around us.
+
+[[Continue-&gt;Session1Therapy4PressA2]]</tw-passagedata><tw-passagedata pid="31" name="Session1Therapy4PressA2" tags="" position="1220,723.5" size="100,100">FRANCESCA: No! At least at one point in my life, my death would have been celebrated. Now no one cares at all!
+
+[[Counter Statement-&gt;Session1Therapy5PressA3]]
+[[Review Patient Transcript-&gt;</tw-passagedata><tw-passagedata pid="32" name="Session1Therapy5PressA3" tags="" position="1220,873.5" size="100,100">HUGO: I have a very strong reason to believe that&#39;s not true, Francesca. I know of at least one who would miss you.
+
+[[Continue-&gt;Session1Therapy5PressA4]]</tw-passagedata><tw-passagedata pid="33" name="Session1Therapy5PressA4" tags="" position="1220,1023.5" size="100,100">FRANCESCA: Nonsense. You know nothing.
+
+[[Continue-&gt;Session1Therapy5PressA5]]</tw-passagedata><tw-passagedata pid="34" name="Session1Therapy5PressA5" tags="" position="1220,1171.5" size="100,100">HUGO: It&#39;s true. And the one who will miss you is...
+
+(if: $inventory contains &quot;opossum&quot;)[[Carina!-&gt;Session1Therapy5PressA6]]
+(if: $inventory contains &quot;LorenzodiMedici&quot;)[[Lorenzo di Medici!-&gt;Session1Therapy5PressALorenzodiMedici]]</tw-passagedata><tw-passagedata pid="35" name="Session1Therapy5PressA6" tags="" position="1220,1323.5" size="100,100">FRANCESCA: You are right! My poor Carina would be lost without me. Where would she direct her hate?</tw-passagedata><tw-passagedata pid="36" name="Session1Therapy5PressALorenzodiMedici" tags="" position="1074,1325.5" size="100,100">FRANCESCO: Lorenzo Di Medici died almost 500 years ago, idiota! I made sure he stayed dead, too!</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
