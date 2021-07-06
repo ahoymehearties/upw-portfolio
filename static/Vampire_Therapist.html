@@ -179,7 +179,7 @@ HUGO: Hm. She has an opossum. Bizarre for a pet. I would have preferred a human.
 
 [[Return to Patient Transcript-&gt;-&gt;Session2Therapy3]]</tw-passagedata><tw-passagedata pid="57" name="Session2Therapy4PressA1" tags="" position="1955,1641" size="100,100">HUGO: You turned her into a vampire? This is a taboo you are breaking, isn&#39;t it?
 
-[[Continue-&gt;Session2Therapy4PressA2]]</tw-passagedata><tw-passagedata pid="58" name="Session2Therapy4PressA2" tags="" position="1955,1791" size="100,100">FRANCESCA: I don&#39;t give a fuck about taboos. Besides, she took the blood herself. I did not give it to her.
+[[Continue-&gt;Session2Therapy4PressA2]]</tw-passagedata><tw-passagedata pid="58" name="Session2Therapy4PressA2" tags="" position="1955,1789" size="100,100">FRANCESCA: I don&#39;t give a fuck about taboos. Besides, she took the blood herself. I did not give it to her.
 
 [[Continue-&gt;Session2Therapy4PressA3]]</tw-passagedata><tw-passagedata pid="59" name="Session2Therapy4PressA3" tags="" position="1955,1941" size="100,100">FRANCESCA: I told you, she is full of hatred. She does not fear me as other animals do. Or at least, her hate is stronger than her fear.
 
@@ -198,13 +198,49 @@ HUGO: Hm. She has an opossum. Bizarre for a pet. I would have preferred a human.
 
 [[Return to Patient Transcript-&gt;-&gt;Session2Therapy5]]</tw-passagedata><tw-passagedata pid="65" name="Session2Therapy5PressLorenzodiMedici" tags="" position="2020,2231" size="100,100">HUGO: The reason you care for Carina can only be Lorenzo di Medici!
 
-[[Return to Patient Transcript-&gt;-&gt;Session2Therapy5]]</tw-passagedata><tw-passagedata pid="66" name="Session2Therapy5PressEmotionalVampire" tags="" position="2320,2231" size="100,100">HUGO: I fear the reason you keep Carina around is because you may be an emotional vampire.
+[[Continue-&gt;Session2Therapy5PressLorenzodiMedici2]]</tw-passagedata><tw-passagedata pid="66" name="Session2Therapy5PressEmotionalVampire" tags="" position="2323,2231" size="100,100">HUGO: I fear the reason you keep Carina around is because you may be an emotional vampire.
 
-[[Continue-&gt;Session2Therapy5PressEmotionalVampire2]]</tw-passagedata><tw-passagedata pid="67" name="Session2Therapy5PressCrazyFucking" tags="" position="2148,2231" size="100,100">HUGO: The reason you care for Carina is because of the crazy fucking!
+[[Continue-&gt;Session2Therapy5PressEmotionalVampire2]]</tw-passagedata><tw-passagedata pid="67" name="Session2Therapy5PressCrazyFucking" tags="" position="2148,2229" size="100,100">HUGO: The reason you care for Carina is because of the crazy fucking!
 
 [[Continue-&gt;Session2Therapy5PressCrazyFucking2]]</tw-passagedata><tw-passagedata pid="68" name="Session2Therapy5PressCrazyFucking2" tags="" position="2148,2381" size="100,100">FRANCESCA: Dr. Lundqvist! I may be a bit of a slut, who isn&#39;t after the first 200 years, but I do have a line!
 
-[[Return to Patient Transcript-&gt;-&gt;Session2Therapy5]]</tw-passagedata><tw-passagedata pid="69" name="Session2Therapy5PressEmotionalVampire2" tags="" position="2320,2381" size="100,100">FRANCESCA: Do not use your beastly pop psychology on me! I know what I am, Dr. Lundqvist! </tw-passagedata></tw-storydata>
+[[Return to Patient Transcript-&gt;-&gt;Session2Therapy5]]</tw-passagedata><tw-passagedata pid="69" name="Session2Therapy5PressEmotionalVampire2" tags="" position="2320,2381" size="100,100">FRANCESCA: Do not use your beastly pop psychology on me! I know what I am, Dr. Lundqvist! 
+
+[[Continue-&gt;Session2Therapy5PressEmotionalVampire3]]</tw-passagedata><tw-passagedata pid="70" name="Session2Therapy5PressEmotionalVampire3" tags="" position="2320,2531" size="100,100">FRANCESCA: I want to give you an opportunity to take back what you said. If you do, I&#39;ll give you a tag that you can use to confirm that Carina is Lorenzo di Medici. If you don&#39;t, I&#39;ll get so angry you&#39;ll need to wipe my mind.
+
+The tag should be set now. So what confirms that the opossum is Lorenzo di Medici? Obviously, because Franesca threatens the doctor with turning him into some wretched creature. 
+
+(set: $inventory to it + (a:&quot;Fleshcrafter&quot;))</tw-passagedata><tw-passagedata pid="71" name="Session2Therapy5PressLorenzodiMedici2" tags="" position="2020,2381" size="100,100">FRANCESCA: You are an absolute idiot. Carina, she is a trash rat. Like a regular rat, but for trash.
+
+[[Continue-&gt;Session2Therapy5PressLorenzodiMedici3]]</tw-passagedata><tw-passagedata pid="72" name="Session2Therapy5PressLorenzodiMedici3" tags="" position="2020,2531" size="100,100">FRANCESCA: I can see where they have their similarities, though. Such a hateful beast.
+
+[[Continue-&gt;Session2Therapy5PressLorenzodiMedici4]]</tw-passagedata><tw-passagedata pid="73" name="Session2Therapy5PressLorenzodiMedici4" tags="" position="2020,2681" size="100,100">FRANCESCA: What? Why are you looking at me like that? 
+
+[[Continue-&gt;Session2Therapy5PressLorenzodiMedici5]]</tw-passagedata><tw-passagedata pid="74" name="Session2Therapy5PressLorenzodiMedici5" tags="" position="2020,2831" size="100,100">FRANCESCA: You gonna ask me something serious or not?
+
+[[I think there&#39;s something you&#39;re not telling me.-&gt;Session2Therapy5PressLorenzodiMedici5PressY]]
+
+[[Of course. Let&#39;s go back to what we were talking about a moment ago.-&gt;Session2Therapy5]]</tw-passagedata><tw-passagedata pid="75" name="Session2Therapy5PressLorenzodiMedici5PressY" tags="" position="2020,2981" size="100,100">DR. LUNDQVIST: Yes, I do in fact believe that Carina *is* Lorenzo di Medici, and I will tell you why.
+
+(if: $inventory contains &quot;opossum&quot;)[[Carina!-&gt;Session2Therapy5PressLorenzodiMedici5PressYopossum]]
+(if: $inventory contains &quot;LorenzodiMedici&quot;)[[Lorenzo di Medici!-&gt;Session2Therapy5PressLorenzodiMedici5PressYLorenzodiMedici]]
+(if: $inventory contains &quot;CrazyFucking&quot;)[[Crazy Fucking-&gt;Session2Therapy5PressLorenzodiMedici5PressYCrazyFucking]]
+(if: $inventory contains &quot;EmotionalVampire&quot;)[[Emotional vampire-&gt;Session2Therapy5PressLorenzodiMedici5PressYEmotionalVampire]]
+(if: $inventory contains &quot;Fleshcrafter&quot;)[[Fleshcrafter-&gt;Session2Therapy5PressLorenzodiMedici5PressYFleshcrafter]]</tw-passagedata><tw-passagedata pid="76" name="Session2Therapy5PressLorenzodiMedici5PressYopossum" tags="" position="1720,3131" size="100,100">DR. LUNDQVIST: It&#39;s because of the opossum!</tw-passagedata><tw-passagedata pid="77" name="Session2Therapy5PressLorenzodiMedici5PressYLorenzodiMedici" tags="" position="1870,3131" size="100,100">DR. LUNDQVIST: I just know he is! I don&#39;t know why, but I know it is true!</tw-passagedata><tw-passagedata pid="78" name="Session2Therapy5PressLorenzodiMedici5PressYCrazyFucking" tags="" position="2020,3131" size="100,100">DR: LUNDQVIST: I am telling you, it is the crazy fucking!</tw-passagedata><tw-passagedata pid="79" name="Session2Therapy5PressLorenzodiMedici5PressYEmotionalVampire" tags="" position="2173,3131" size="100,100">DR. LUNDQVIST: It is as I was saying before, you are an emotional vampire.
+
+(playerdeath)</tw-passagedata><tw-passagedata pid="80" name="Session2Therapy5PressLorenzodiMedici5PressYFleshcrafter" tags="" position="2320,3131" size="100,100">DR. LUNDQVIST: Didn&#39;t you say that you were a Fleshcrafter, Francesca?
+
+[[Continue-&gt;Session2Therapy5PressLorenzodiMedici5PressYFleshcrafter1]] </tw-passagedata><tw-passagedata pid="81" name="Session2Therapy5PressLorenzodiMedici5PressYFleshcrafter1" tags="" position="2320,3281" size="100,100">FRANCESCA: Ah. I told you that, did I? Then perhaps I have not been forthright with you, Doctor.
+
+[[Continue-&gt;Session2Therapy5PressLorenzodiMedici5PressYFleshcrafter2]]</tw-passagedata><tw-passagedata pid="82" name="Session2Therapy5PressLorenzodiMedici5PressYFleshcrafter2" tags="" position="2320,3431" size="100,100">FRANCESCA: I did not believe it mattered. Or perhaps, I did not want it to matter.
+
+[[Continue-&gt;Session2Therapy5PressLorenzodiMedici5PressYFleshcrafter3]]</tw-passagedata><tw-passagedata pid="83" name="Session2Therapy5PressLorenzodiMedici5PressYFleshcrafter3" tags="" position="2320,3581" size="100,100">FRANCESCA: I suppose it&#39;s no surprise that you focused on it so quickly.
+
+[[Continue-&gt;Session2Therapy5PressLorenzodiMedici5PressYFleshcrafter4]]</tw-passagedata><tw-passagedata pid="84" name="Session2Therapy5PressLorenzodiMedici5PressYFleshcrafter4" tags="" position="2320,3731" size="100,100">FRANCESCA: Yes. This wretched creature is Lorenzo di Medici. And he will hate me forever. And he is mine.
+
+DUN DUN DUN
+
+[[End Day]]</tw-passagedata><tw-passagedata pid="85" name="End Day" tags="" position="2320,3881" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
