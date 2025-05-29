@@ -13,6 +13,7 @@ export const query = graphql`
       year
       developer
       website
+      publishedDate
       headerImage {
         fluid {
           src

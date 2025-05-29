@@ -33,6 +33,7 @@ const IndexPage = () => {
             description
             featured
             category
+            publishedDate
 
             thumbnail {
               fluid(maxWidth: 1024, quality: 100) {
@@ -50,6 +51,7 @@ const IndexPage = () => {
             description
             featured
             category
+            publishedDate
             thumbnail {
               fluid(maxWidth: 1024, quality: 100) {
                 src
