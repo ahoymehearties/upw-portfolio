@@ -95,6 +95,8 @@ const IndexPage = () => {
     featured.node.featured && featuredPosts.push(featured.node)
   })
 
+  featuredPosts.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
+
   return (
     <>
       <Head title="Home | Cyrus on the Internet" />
