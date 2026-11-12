@@ -1,0 +1,17 @@
+[build]
+  # Install dependencies if the build environment hasn't already done so (e.g. when
+  # yarn isn't preinstalled), then run Gatsby. Node 17+ needs the legacy OpenSSL
+  # provider for webpack 4 (Gatsby 2); Node 16 rejects that flag, so add it conditionally.
+  command = """
+    set -e
+    if [ ! -x node_modules/.bin/gatsby ]; then npx --yes yarn@1.22.19 install --ignore-engines --network-timeout 600000; fi
+    if [ "$(node -p 'process.versions.node.split(".")[0]')" -ge 17 ]; then export NODE_OPTIONS="--openssl-legacy-provider ${NODE_OPTIONS:-}"; fi
+    ./node_modules/.bin/gatsby build
+  """
+  publish = "public/"
+
+[build.environment]
+  # Gatsby 2 (webpack 4) is pinned to Node 16 via .nvmrc. Some transitive
+  # dependencies (e.g. node-releases) now declare "node >= 18" in their engines
+  # field even though they run fine on Node 16, so skip Yarn's strict engine check.
+  YARN_FLAGS = "--ignore-engines"
